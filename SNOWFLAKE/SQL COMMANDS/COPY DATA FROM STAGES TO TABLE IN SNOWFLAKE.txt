@@ -1,0 +1,58 @@
+-- Creating ORDERS table
+CREATE OR REPLACE TABLE DEMODB.PUBLIC.ORDERS (
+    ORDER_ID VARCHAR(30),
+    AMOUNT INT,
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));
+
+-- Selecting data from ORDERS table
+SELECT * FROM DEMODB.PUBLIC.ORDERS;
+
+-- First copy command from the default stage
+COPY INTO DEMODB.PUBLIC.ORDERS
+    FROM @aws_stage
+    FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1);
+
+-- Copy command with fully qualified stage object
+COPY INTO DEMODB.PUBLIC.ORDERS
+    FROM @DEMODB.external_stages.aws_stage
+    FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1);
+
+-- List files contained in the external stage
+LIST @DEMODB.external_stages.aws_stage;
+
+-- Copy command with specified file(s)
+COPY INTO DEMODB.PUBLIC.ORDERS
+    FROM @DEMODB.external_stages.aws_stage
+    FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1)
+    FILES = ('OrderDetails.csv');
+
+-- Copy command with pattern for file names
+COPY INTO DEMODB.PUBLIC.ORDERS
+    FROM @DEMODB.external_stages.aws_stage
+    FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1)
+    PATTERN = '.*Order.*';
+
+-- Creating ORDER_EX table
+CREATE OR REPLACE TABLE DEMODB.PUBLIC.ORDER_EX (
+    ORDER_ID VARCHAR(30),
+    AMOUNT INT,
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));
+
+-- Copy data from external stage to the ORDER_EX table, calculating PROFITABLE_FLAG
+COPY INTO DEMODB.PUBLIC.ORDER_EX
+FROM (
+    SELECT
+        s.$1,
+        s.$2,
+        s.$3,
+        CASE WHEN CAST(s.$3 AS INT) < 0 THEN 'NOT PROFITABLE' ELSE 'PROFITABLE' END AS PROFITABLE_FLAG
+    FROM @DEMODB.external_stages.aws_stage s
+)
+FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1)
+FILES = ('OrderDetails.csv');

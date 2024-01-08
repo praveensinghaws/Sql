@@ -1,0 +1,84 @@
+https://youtu.be/xPSbxrMe7VU?si=I5fwDMdIs_SsjXjF
+
+========================================================
+Step 1: Download all the software from given link below
+========================================================
+
+1. Oracle 21C xe(Express edition) 
+
+Option 1: https://drive.google.com/file/d/1fxO5...
+
+2. Download SQL developer application
+
+Option 1: https://drive.google.com/file/d/1vxx7...
+
+Option 2: https://www.oracle.com/tools/download...
+
+3. Download HR schema dump
+
+Option 1: https://drive.google.com/file/d/1om_v...
+
+
+Step 2: Unzip all the software by using winrar or winzip
+
+Step 3: Install Oracle 21C XE
+
+Step 4: Connect ADMIN schema with SQL developer
+
+
+Place the un Zipped HR schema dump file in the below path:
+=================================================
+
+C:\app\LENOVO\product\21c\dbhomeXE\demo\schema
+
+
+Execute the below steps in ADMIN schema (In SQL Developer)
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_main.sql
+
+
+Parameter 1 :
+------------
+hr
+
+Parameter 2 :
+-------------
+users
+
+Parameter 3 :
+-------------
+temp
+
+Parameter 4 :
+----------------------
+admin
+
+Parameter 5 ::
+----------------------
+$ORACLE_HOME/demo/schema/log
+
+Parameter 6 ::
+----------------------
+localhost:1521/XEPDB1
+
+
+
+Create the connection for HR schema
+
+
+Execute the below steps in HR schema (make sure to change the corresponding file path as per your system name) 
+=======================================================================
+
+select * from employees;  -- No data will be present initially. Then execute the below commands in HR
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_cre.sql
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_popul.sql
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_idx.sql
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_code.sql
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_comnt.sql
+
+@ C:\app\prave\product\21c\dbhomeXE\demo\schema\human_resources\hr_analz.sql

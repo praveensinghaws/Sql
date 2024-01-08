@@ -1,0 +1,6 @@
+Exercise - Calculated Columns (IF, CASE, YEAR, CURYEAR)
+Write SQL queries for the following,
+
+1. Print profit % for all the movies
+
+Solution: The solution is available when you click on the Download Files button BUT I know that you are a sincere student so you will first make a sincere effort to solve this exercise and then only look at the ready-made solution. I wish you all the best 😊👍

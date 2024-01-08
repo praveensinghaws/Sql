@@ -1,0 +1,14 @@
+Fact vs Dimension Table, Star vs Snowflake Schema, Data Import
+In this video, we will cover the following topics that are the interviewer’s favorite,
+
+
+1. Fact vs Dimension tables
+
+
+2. Start vs Snowflake schema
+
+
+3. What is a fiscal year?
+
+
+4. Import data for AtliQ Hardware and explore the tables

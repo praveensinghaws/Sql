@@ -1,0 +1,63 @@
+-- RECURSIVE  CTE DEMO 
+
+-- Create the database named PRAVEENDB if it doesn't exist
+CREATE DATABASE IF NOT EXISTS PRAVEENDB;
+
+-- Show available databases
+SHOW DATABASES;
+
+-- Use the database named PRAVEENDB
+USE PRAVEENDB;
+
+-- Show existing tables in the current database
+SHOW TABLES;
+
+-- Drop the employees table if it exists
+DROP TABLE IF EXISTS employees;
+
+-- Query to create the employees table
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY AUTO_INCREMENT,
+    emp_name VARCHAR(20) NOT NULL,
+    manager_id INT
+);
+
+-- Insert data into the employees table
+INSERT INTO employees (emp_id, emp_name, manager_id) VALUES
+    (1, 'Madhav', NULL),
+    (2, 'Sam', 1),
+    (3, 'Tom', 2),
+    (4, 'Arjun', 6),
+    (5, 'Shiva', 4),
+    (6, 'Keshav', 1),
+    (7, 'Damodar', 5);
+
+-- Recursive Common Table Expression (CTE) to retrieve employee hierarchy
+WITH RECURSIVE EMPCTE AS (
+    -- Anchor Query: Select the starting point (EMP_ID = 7)
+    SELECT
+        EMP_ID,
+        EMP_NAME,
+        MANAGER_ID
+    FROM
+        EMPLOYEES
+    WHERE
+        EMP_ID = 7
+
+    UNION ALL
+
+    -- Recursive Query: Join the EMPLOYEES table with the EMPCTE CTE to fetch the hierarchy
+    SELECT
+        EMPLOYEES.EMP_ID,
+        EMPLOYEES.EMP_NAME,
+        EMPLOYEES.MANAGER_ID
+    FROM
+        EMPLOYEES
+    JOIN EMPCTE ON EMPLOYEES.EMP_ID = EMPCTE.MANAGER_ID
+)
+
+-- Select and display the results from the recursive CTE
+SELECT
+    *
+FROM
+    EMPCTE;

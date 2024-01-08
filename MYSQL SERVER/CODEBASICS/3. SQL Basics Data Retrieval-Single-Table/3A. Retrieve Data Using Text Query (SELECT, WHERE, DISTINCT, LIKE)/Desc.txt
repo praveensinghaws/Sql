@@ -1,0 +1,13 @@
+In this session, we will cover the following SQL clauses:
+
+
+
+1. WHERE
+
+2. COUNT
+
+3. DISTINCT
+
+4. LIKE
+
+5. USE

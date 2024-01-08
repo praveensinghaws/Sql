@@ -1,0 +1,6 @@
+Database Indexes: Overview
+A gentle introduction to database indexes.
+
+
+
+How does B Tree work? https://www.programiz.com/dsa/b-tree 

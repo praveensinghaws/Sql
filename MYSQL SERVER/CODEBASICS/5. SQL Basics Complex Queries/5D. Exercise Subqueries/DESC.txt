@@ -1,0 +1,10 @@
+Exercise: Subqueries
+Write SQL queries for the following,
+
+1. Select all the movies with minimum and maximum release_year. Note that there
+can be more than one movie in min and a max year hence output rows can be more than 2
+    
+2. Select all the rows from the movies table whose imdb_rating is higher than the average rating
+    
+
+Solution: The solution is available when you click on the Download Files button BUT I know that you are a sincere student so you will first make a sincere effort to solve this exercise and then only look at the ready-made solution. I wish you all the best 😊👍

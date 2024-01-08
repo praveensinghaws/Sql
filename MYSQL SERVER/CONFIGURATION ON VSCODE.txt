@@ -1,0 +1,29 @@
+STEP-1
+
+mysql --version
+mysql  Ver 8.0.34 for Win64 on x86_64 (MySQL Community Server - GPL)
+
+STEP-2
+mysql -h localhost -P 3306 -u root -p
+
+STEP-3
+
+CREATE USER 'praveen'@'%' IDENTIFIED WITH mysql_native_password BY 'Admin260';
+
+GRANT ALL PRIVILEGES ON *.* TO 'praveen'@'%';
+
+FLUSH PRIVILEGES;
+
+SELECT user, host FROM mysql.user WHERE user = 'praveen';
+
+=====================================================================
+
+MARIADB
+
+mysql -h localhost -P 3307 -u root -p
+
+CREATE USER 'praveen'@'%' IDENTIFIED BY 'Admin260';
+
+
+GRANT ALL PRIVILEGES ON *.* TO 'praveen'@'%';
+FLUSH PRIVILEGES;

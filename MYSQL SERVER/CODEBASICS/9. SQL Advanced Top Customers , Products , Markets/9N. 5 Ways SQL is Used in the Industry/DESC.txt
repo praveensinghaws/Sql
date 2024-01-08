@@ -1,0 +1,14 @@
+5 Ways SQL is Used in the Industry
+In this session, we will look into 5 ways SQL is used in the Data Industry,
+
+
+
+1. Ad hoc Analysis
+
+2. Report Generation
+
+3. EDA and Machine Learning
+
+4. ETL and Data Migration
+
+5. Inside BI Tools

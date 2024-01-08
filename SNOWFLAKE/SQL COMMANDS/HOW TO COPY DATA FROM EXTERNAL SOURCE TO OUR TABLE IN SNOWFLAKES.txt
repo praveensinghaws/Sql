@@ -1,0 +1,29 @@
+-- Creating the table / Meta data
+CREATE TABLE "DEMODB"."PUBLIC"."LOAN_PAYMENT" (
+  "Loan_ID" STRING,
+  "loan_status" STRING,
+  "Principal" STRING,
+  "terms" STRING,
+  "effective_date" STRING,
+  "due_date" STRING,
+  "paid_off_time" STRING,
+  "past_due_days" STRING,
+  "age" STRING,
+  "education" STRING,
+  "Gender" STRING);
+
+-- Check that the table is empty
+USE DATABASE DEMODB;
+
+SELECT * FROM "PUBLIC"."LOAN_PAYMENT";
+
+-- Loading the data from the S3 bucket
+COPY INTO "DEMODB"."PUBLIC"."LOAN_PAYMENT"
+FROM 's3://bucketsnowflakes3/Loan_payments_data.csv'
+FILE_FORMAT = (TYPE = CSV 
+               FIELD_OPTIONALLY_ENCLOSED_BY = '"'
+               FIELD_DELIMITER = ',' 
+               SKIP_HEADER = 1);
+
+-- Validate
+SELECT * FROM "DEMODB"."PUBLIC"."LOAN_PAYMENT";

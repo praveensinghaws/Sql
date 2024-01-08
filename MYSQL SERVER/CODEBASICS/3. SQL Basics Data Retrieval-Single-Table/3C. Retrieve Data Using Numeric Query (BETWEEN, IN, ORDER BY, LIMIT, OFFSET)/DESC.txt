@@ -1,0 +1,20 @@
+Retrieve Data Using Numeric Query (BETWEEN, IN, ORDER BY, LIMIT, OFFSET)
+In this lecture, we will discuss,
+
+
+
+1. SQL queries based on numerical conditions
+
+2. AND, OR operator
+
+3. <, ≤, >, ≥ operator
+
+4. BETWEEN
+
+5. IN
+
+6. NULL values
+
+7. ORDER BY
+
+8. LIMIT & OFFSET

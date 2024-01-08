@@ -1,0 +1,6 @@
+User Accounts and Privileges
+Let’s talk about user accounts and privileges.
+
+
+
+Documentation link for User Accounts and Privileges in MySQL: https://dev.mysql.com/doc/refman/5.7/en/connection-access.html

@@ -1,0 +1,24 @@
+-- Database to manage stage objects, file formats, etc.
+CREATE OR REPLACE DATABASE DEMODB;
+
+-- Creating or replacing schema for external stages
+CREATE OR REPLACE SCHEMA external_stages;
+
+-- Creating an external stage with AWS S3 integration
+CREATE OR REPLACE STAGE DEMODB.external_stages.aws_stage
+    URL='s3://bucketsnowflakes3'
+    CREDENTIALS=(AWS_KEY_ID='ABCD_DUMMY_ID' AWS_SECRET_KEY='1234abcd_key');
+
+-- Describing the structure and details of the external stage
+DESC STAGE DEMODB.external_stages.aws_stage;
+
+-- Altering the credentials for the external stage
+ALTER STAGE DEMODB.external_stages.aws_stage
+    SET CREDENTIALS=(AWS_KEY_ID='XYZ_DUMMY_ID' AWS_SECRET_KEY='987xyz');
+
+-- Creating or replacing a publicly accessible staging area without changing credentials
+CREATE OR REPLACE STAGE DEMODB.external_stages.aws_stage
+    URL='s3://bucketsnowflakes3';
+
+-- Listing files in the external stage
+LIST @DEMODB.external_stages.aws_stage;

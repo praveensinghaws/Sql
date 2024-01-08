@@ -1,0 +1,12 @@
+Database Indexes: Index Types
+In this session, we will discuss the following database index types,
+
+
+
+1. Regular or Normal Index
+
+2. Unique Index
+
+3. Primary Index
+
+4. FULLTEXT Index

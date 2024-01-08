@@ -1,0 +1,22 @@
+
+Sir, I am not understanding why my comments are being removed automatically.
+
+Here are the timestamps for each chapter in the video:
+
+00:00:00 - CHAPTER-1 Getting Started With SQL
+00:34:59 - CHAPTER-2 Database: The Basics					
+01:12:23 - CHAPTER-3 Primary Key VS Inuque Key				
+01:39:15 - CHAPTER-4 Update , Delete , Alter , DDL vs DML, Truncate VS Delete
+02:18:26 - CHAPTER-5 Foreign Key Constraint - Complete Demonstration		 
+03:01:13 - CHAPTER-6 Distinct , Order By , Limit and Like			
+03:33:13 - CHAPTER-7 Order of execution in SQL					 
+03:47:48 - CHAPTER-8 Aggregate Functions						 
+04:20:10 - CHAPTER-9 A Few More Data Types					
+04:40:01 - CHAPTER-10 Logical Operators						
+05:07:33 - CHAPTER-11 Joins in SQL - Very Important for Interviews		
+05:40:23 - CHAPTER-12 Very Important SQL Interview Question			
+05:58:33 - CHAPTER-13 Over() and Partition by clauses			 
+06:16:12 - CHAPTER-14 Windows function ROW Number				
+06:31:19 - CHAPTER-15 Windows function (rank(), dense_rank())		 
+06:49:35 - CHAPTER-16 Indexes and Order of Execution in SQL			
+07:53:04 - CHAPTER-17 SQL WITH clause (common table expression)			

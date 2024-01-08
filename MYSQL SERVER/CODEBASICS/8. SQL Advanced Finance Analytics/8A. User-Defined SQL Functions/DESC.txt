@@ -1,0 +1,6 @@
+User-Defined SQL Functions
+In this session, we will discuss user-defined SQL functions.
+
+
+
+MySQL documentation for creating procedure: https://dev.mysql.com/doc/refman/8.0/en/create-procedure.html

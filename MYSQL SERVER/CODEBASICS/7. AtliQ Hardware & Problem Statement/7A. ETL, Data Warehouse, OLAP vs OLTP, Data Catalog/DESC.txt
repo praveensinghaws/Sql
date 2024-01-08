@@ -1,0 +1,14 @@
+ETL, Data Warehouse, OLAP vs OLTP, Data Catalog
+In this session, we will discuss a few important concepts that are the interviewer’s favourite topics.
+
+
+
+1. What is ETL?
+
+2. What is Data Warehouse?
+
+3. What are OLAP and OLTP? Differences between the two. 
+
+4. What is Data Catalog?
+
+5. What do software engineers, data engineers, data analysts and data scientists do in terms of their career roles?

@@ -1,0 +1,2839 @@
+
+============+
+Session- 1  |
+============+
+{database ,table , Relational Vs NOSQL Databsaes ,SQL — Structured Query Language, MySQL vs SQL , create select drop use Databases & create select drop Tables }
+
+what is a database :— 
+- A collection of data and holds this data in the form of tables. 
+
+what is a table:-
+— holds the data in form of rows and columns. 
+It is similar to excel spreadsheet 
+
+The database provides us the capability to access and manipulate this data. 
+
+===================
+Types of Databases    [Relational Vs NOSQL Databsaes]
+===================
+1. 1. Relational Database 
+— rows & columns and also the tables have relation between them. 
+MySQL 
+SQL server 
+PostgreSQL 
+SQLite 
+MariaDB 
+
+2. NOSQL Database — Key value, Document, Graph 
+Hbase 
+mongodb 
+cassandra 
+
+SQL — Structured Query Language and is used to query a relational DB 
+
+MySQL vs SQL 
+
+================================================
+INSTALLATION : GOORMIDE - https://ide.goorm.io/
+================================================
+
+=================
+STARTED LEARNING:
+=================
+\! cls  		[Clear Screen]
+
+mysql> SHOW DATABASES;  [List of Databases]
+
+CREATE DATABASE pksdb; 	[Create Database pksdb]
+
+CREATE DATABASE pksdb;  [drop pksdb Database]
+
+mysql> USE PKSDB;  	[Database changed]
+
+mysql> SELECT DATABASE(); [To Check Which Database is being Used]
++------------+
+| DATABASE() |
++------------+
+| pksdb      |
++------------+	
+
+				[Creating New Table]
+CREATE TABLE employee (      
+    Name VARCHAR(50),
+    Age INT,
+    Salary INT
+);
+
+
+mysql> show tables;		[Display the Tables]
++-----------------+
+| Tables_in_pksdb |
++-----------------+
+| employee        |
++-----------------+
+
+mysql> describe employee;   [Check Structure of Table]
+OR desc employee;	    [Check Structure of Table]
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| Name   | varchar(50) | YES  |     | NULL    |       |
+| Age    | int         | YES  |     | NULL    |       |
+| Salary | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+
+mysql> drop table employee;   		[Drop employee Table]
+
+
+
+mysql> select database();		[When we are not connected to any Database] 
++------------+
+| database() |
++------------+
+| NULL       |
++------------+
+
+				[Creating New Table Without Selecting/Connected Database]
+CREATE TABLE PKSDB.employee (      
+    Name VARCHAR(50),
+    Age INT,
+    Salary INT
+);
+
+
+============+
+Session- 2  |
+============+
+{CRUD OPERATION , SIMPLE INSERTS , MULTIPLE INSARTS , DATATYPE MISMATCH , NULL AND NOT NULL , DEFAULT , NOT NULL & DEAFULT }
+
+CRUD Operatings
+
+create — insert statements
+read - select statements 
+update — update statements 
+delete — delete statements 
+
+Creation of Tables and Insert Statements
+You prefer to hire from bangalore
+
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+firstname varchar(20),
+middlename varchar(20),
+lastname varchar(20),
+age int,
+salary int,
+location varchar(20)
+);
+
+mysql> desc employee;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| firstname  | varchar(20) | YES  |     | NULL    |       |
+| middlename | varchar(20) | YES  |     | NULL    |       |
+| lastname   | varchar(20) | YES  |     | NULL    |       |
+| age        | int         | YES  |     | NULL    |       |
+| salary     | int         | YES  |     | NULL    |       |
+| location   | varchar(20) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+Example 1- 
+
+INSERT INTO employee (firstname,middlename,lastname,age,salary,location)
+
+VALUES ('Kapil' , 'Kumar' , 'Sharma' , 23, 8000 , 'Bangalore');
+
+mysql> select * from employee;
++-----------+------------+----------+------+--------+-----------+
+| firstname | middlename | lastname | age  | salary | location  |
++-----------+------------+----------+------+--------+-----------+
+| Kapil     | Kumar      | Sharma   |   23 |   8000 | Bangalore |
++-----------+------------+----------+------+--------+-----------+
+1 row in set (0.00 sec)
+
+Example 2- 
+
+INSERT INTO employee (firstname,lastname,age,salary,location)
+
+VALUES ('Praveen' ,'Singh' , 32, 10000 , 'Bangalore');
+
+mysql> select * from employee;
++-----------+------------+----------+------+--------+-----------+
+| firstname | middlename | lastname | age  | salary | location  |
++-----------+------------+----------+------+--------+-----------+
+| Kapil     | Kumar      | Sharma   |   23 |   8000 | Bangalore |
+| Praveen   | NULL       | Singh    |   32 |  10000 | Bangalore |
++-----------+------------+----------+------+--------+-----------+
+2 rows in set (0.00 sec)
+
+Example 3- 
+
+INSERT INTO employee 
+
+VALUES ('Rahul' ,NULL ,'Gandhi' , 45, 20000 , 'Delhi');
+
+mysql> select * from employee;
++-----------+------------+----------+------+--------+-----------+
+| firstname | middlename | lastname | age  | salary | location  |
++-----------+------------+----------+------+--------+-----------+
+| Kapil     | Kumar      | Sharma   |   23 |   8000 | Bangalore |
+| Praveen   | NULL       | Singh    |   32 |  10000 | Bangalore |
+| Rahul     | NULL       | Gandhi   |   45 |  20000 | Delhi     |
++-----------+------------+----------+------+--------+-----------+
+3 rows in set (0.00 sec)
+
+
+Example 4- 
+
+INSERT INTO employee 
+
+VALUES ("Rajesh's" ,NULL ,'Yadav' , 35, 13000 , 'Lucknow');
+
+mysql> select * from employee;
++-----------+------------+----------+------+--------+-----------+
+| firstname | middlename | lastname | age  | salary | location  |
++-----------+------------+----------+------+--------+-----------+
+| Kapil     | Kumar      | Sharma   |   23 |   8000 | Bangalore |
+| Praveen   | NULL       | Singh    |   32 |  10000 | Bangalore |
+| Rahul     | NULL       | Gandhi   |   45 |  20000 | Delhi     |
+| Rajesh's  | NULL       | Yadav    |   35 |  13000 | Lucknow   |
++-----------+------------+----------+------+--------+-----------+
+4 rows in set (0.00 sec)
+
+Example 5- 
+
+INSERT INTO employee 
+
+VALUES ('Rajesh\'s' ,NULL ,'Pandey' , 30, 16000 , 'Mumbai');
+
+mysql> select * from employee;
++-----------+------------+----------+------+--------+-----------+
+| firstname | middlename | lastname | age  | salary | location  |
++-----------+------------+----------+------+--------+-----------+
+| Kapil     | Kumar      | Sharma   |   23 |   8000 | Bangalore |
+| Praveen   | NULL       | Singh    |   32 |  10000 | Bangalore |
+| Rahul     | NULL       | Gandhi   |   45 |  20000 | Delhi     |
+| Rajesh's  | NULL       | Yadav    |   35 |  13000 | Lucknow   |
+| Rajesh's  | NULL       | Pandey   |   30 |  16000 | Mumbai    |
+| Rajesh's  | NULL       | Pandey   |   30 |  16000 | Mumbai    |
++-----------+------------+----------+------+--------+-----------+
+6 rows in set (0.00 sec)
+
+Example 6-
+ 
+INSERT INTO employee (firstname, middlename, lastname, age, salary, location) VALUES
+('Rahul', NULL, 'Sharma', 28, 50000, 'Delhi'),
+('Priya', NULL, 'Yadav', 35, 60000, 'Mumbai'),
+('Amit', NULL, 'Verma', 22, 45000, 'Bangalore'),
+('Neha', NULL, 'Mishra', 30, 55000, 'Hyderabad'),
+('Ananya', NULL, 'Jha', 25, 48000, 'Kolkata');
+
+
+mysql> SELECT * FROM EMPLOYEE;
++-----------+------------+----------+------+--------+-----------+
+| firstname | middlename | lastname | age  | salary | location  |
++-----------+------------+----------+------+--------+-----------+
+| Kapil     | Kumar      | Sharma   |   23 |   8000 | Bangalore |
+| Praveen   | NULL       | Singh    |   32 |  10000 | Bangalore |
+| Rahul     | NULL       | Gandhi   |   45 |  20000 | Delhi     |
+| Rajesh's  | NULL       | Yadav    |   35 |  13000 | Lucknow   |
+| Rajesh's  | NULL       | Pandey   |   30 |  16000 | Mumbai    |
+| Rajesh's  | NULL       | Pandey   |   30 |  16000 | Mumbai    |
+| Rahul     | NULL       | Sharma   |   28 |  50000 | Delhi     |
+| Priya     | NULL       | Yadav    |   35 |  60000 | Mumbai    |
+| Amit      | NULL       | Verma    |   22 |  45000 | Bangalore |
+| Neha      | NULL       | Mishra   |   30 |  55000 | Hyderabad |
+| Ananya    | NULL       | Jha      |   25 |  48000 | Kolkata   |
++-----------+------------+----------+------+--------+-----------+
+11 rows in set (0.00 sec)
+
+
+======
+NULL
+======
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+firstname varchar(20) NOT NULL,
+middlename varchar(20),
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20) NOT NULL
+);
+
+mysql> DESC EMPLOYEE;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| firstname  | varchar(20) | NO   |     | NULL    |       |
+| middlename | varchar(20) | YES  |     | NULL    |       |
+| lastname   | varchar(20) | NO   |     | NULL    |       |
+| age        | int         | NO   |     | NULL    |       |
+| salary     | int         | NO   |     | NULL    |       |
+| location   | varchar(20) | NO   |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+INSERT INTO employee (middlename , lastname ,age ,salary,location )
+VALUES ('Kumar' , 'Sharma' ,20 , 10000 , 'Bangalore');   [ERROR 1364 (HY000): Field 'firstname' doesn't have a default value]
+
+
+==================
+DEFAULT VALUES
+==================
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+firstname varchar(20) NOT NULL,
+middlename varchar(20),
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20)  DEFAULT 'Bangalore'
+);
+
+mysql> desc employee;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| firstname  | varchar(20) | NO   |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | YES  |     | Bangalore |       |
++------------+-------------+------+-----+-----------+-------+
+6 rows in set (0.01 sec)
+
+INSERT INTO employee (firstname , lastname ,age ,salary )
+VALUES ('Kapil' , 'Sharma' ,28 , 10000 );   
+
+mysql> select * from employee;
++-----------+------------+----------+-----+--------+-----------+
+| firstname | middlename | lastname | age | salary | location  |
++-----------+------------+----------+-----+--------+-----------+
+| Kapil     | NULL       | Sharma   |  28 |  10000 | Bangalore |
++-----------+------------+----------+-----+--------+-----------+
+1 row in set (0.00 sec)
+
+
+INSERT INTO employee (firstname , lastname ,age ,salary, location )
+VALUES ('Pawan' , 'Soni' ,33 , 20000 , 'Hyderabad');  
+
+mysql> select * from employee;
++-----------+------------+----------+-----+--------+-----------+
+| firstname | middlename | lastname | age | salary | location  |
++-----------+------------+----------+-----+--------+-----------+
+| Kapil     | NULL       | Sharma   |  28 |  10000 | Bangalore |
+| Pawan     | NULL       | Soni     |  33 |  20000 | Hyderabad |
++-----------+------------+----------+-----+--------+-----------+
+2 rows in set (0.00 sec)
+
+INSERT INTO employee (firstname , lastname ,age ,salary, location )
+VALUES ('Ritu' , 'Soni' ,23 , 40000 , NULL); 
+
+mysql> select * from employee;
++-----------+------------+----------+-----+--------+-----------+
+| firstname | middlename | lastname | age | salary | location  |
++-----------+------------+----------+-----+--------+-----------+
+| Kapil     | NULL       | Sharma   |  28 |  10000 | Bangalore |
+| Pawan     | NULL       | Soni     |  33 |  20000 | Hyderabad |
+| Ritu      | NULL       | Soni     |  23 |  40000 | NULL      |
++-----------+------------+----------+-----+--------+-----------+
+3 rows in set (0.00 sec)
+
+============================================
+COMBINATION OF DEFAULT VALUES & NOT NULL
+============================================
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+firstname varchar(20) NOT NULL,
+middlename varchar(20),
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20) NOT NULL  DEFAULT 'Bangalore'
+);
+
+mysql> INSERT INTO employee (firstname , lastname ,age ,salary, location )
+    -> VALUES ('Ritu' , 'Soni' ,23 , 40000 , NULL);	[ERROR 1048 (23000): Column 'location' cannot be null
+]
+
+============+
+Session- 3  |
+============+
+{PRIMARY KEY , AUTO INCREMENT KEYS , UNIQUE KEY , PRIMARY KEY VS UNIQUE KEY}
+
+
+==============
+PRIMARY KEY
+==============
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+empid int primary key,   ==> [FOR A PRIMARY KEY NULL IS NOT ALLOWED AND ALSO REPEATED VALUES ARE NOT ALLOWED ]
+firstname varchar(20) NOT NULL,
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20) NOT NULL  DEFAULT 'Bangalore'
+);
+
+OR
+
+DROP TABLE IF EXISTS employee;
+CREATE TABLE employee (
+empid int ,
+firstname varchar(20) NOT NULL,
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20) NOT NULL  DEFAULT 'Bangalore',
+primary key(empid)
+);
+mysql> desc employee;
++-----------+-------------+------+-----+-----------+-------+
+| Field     | Type        | Null | Key | Default   | Extra |
++-----------+-------------+------+-----+-----------+-------+
+| empid     | int         | NO   | PRI | NULL      |       |
+| firstname | varchar(20) | NO   |     | NULL      |       |
+| lastname  | varchar(20) | NO   |     | NULL      |       |
+| age       | int         | NO   |     | NULL      |       |
+| salary    | int         | NO   |     | NULL      |       |
+| location  | varchar(20) | NO   |     | Bangalore |       |
++-----------+-------------+------+-----+-----------+-------+
+6 rows in set (0.00 sec)
+
+
+INSERT INTO employee (empid , firstname , lastname ,age ,salary )
+    VALUES (1, 'Praveen' , 'Soni' ,30 , 40000 );	
+
+mysql> SELECT * FROM EMPLOYEE;
++-------+-----------+----------+-----+--------+-----------+
+| empid | firstname | lastname | age | salary | location  |
++-------+-----------+----------+-----+--------+-----------+
+|     1 | Praveen   | Soni     |  30 |  40000 | Bangalore |
++-------+-----------+----------+-----+--------+-----------+
+1 row in set (0.00 sec)
+
+INSERT INTO employee (empid , firstname , lastname ,age ,salary )
+    VALUES (2, 'Praveen' , 'Soni' ,30 , 40000 );
+
+mysql> SELECT * FROM EMPLOYEE;
++-------+-----------+----------+-----+--------+-----------+
+| empid | firstname | lastname | age | salary | location  |
++-------+-----------+----------+-----+--------+-----------+
+|     1 | Praveen   | Soni     |  30 |  40000 | Bangalore |
+|     2 | Praveen   | Soni     |  30 |  40000 | Bangalore |
++-------+-----------+----------+-----+--------+-----------+
+
+
+
+
+
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+empid int AUTO_INCREMENT,
+firstname varchar(20) NOT NULL,
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20) NOT NULL  DEFAULT 'Bangalore',
+PRIMARY KEY (empid)
+);
+
+
+mysql> DESC EMPLOYEE;
++-----------+-------------+------+-----+-----------+----------------+
+| Field     | Type        | Null | Key | Default   | Extra          |
++-----------+-------------+------+-----+-----------+----------------+
+| empid     | int         | NO   | PRI | NULL      | auto_increment |
+| firstname | varchar(20) | NO   |     | NULL      |                |
+| lastname  | varchar(20) | NO   |     | NULL      |                |
+| age       | int         | NO   |     | NULL      |                |
+| salary    | int         | NO   |     | NULL      |                |
+| location  | varchar(20) | NO   |     | Bangalore |                |
++-----------+-------------+------+-----+-----------+----------------+
+6 rows in set (0.00 sec)
+
+
+INSERT INTO employee (firstname , lastname ,age ,salary )
+VALUES ('Amitabh' , 'Bacchan' ,75 , 50000 );
+
+INSERT INTO employee (firstname , lastname ,age ,salary )
+VALUES ('Kapil' , 'Sharma' ,45 , 60000 );
+
+mysql> select * from employee;
++-------+-----------+----------+-----+--------+-----------+
+| empid | firstname | lastname | age | salary | location  |
++-------+-----------+----------+-----+--------+-----------+
+|     1 | Amitabh   | Bacchan  |  75 |  50000 | Bangalore |
+|     2 | Kapil     | Sharma   |  45 |  60000 | Bangalore |
++-------+-----------+----------+-----+--------+-----------+
+2 rows in set (0.00 sec)
+
+
+==============
+UNIQUE KEY  
+==============
+
+You can have only one Primary key.
+
+and the Primary key can not hold any NULL.
+
+we should use primary key  when we have to uniquely identify each record.
+
+unique key can not also hold duplicate but can hold NULL.
+
+For Example in MySQL a unique key can hold any number of NULL values.
+
+in some of the other famous DB's unique key hold only one NULL.
+
+SO THE PURPOSE OF UNIQUE KEY IS TO MAKE SURE THE VALUES DO NOT DUPLICATE .
+
+we can have only one primary key but multiple unique keys in a table. 
+
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+firstname varchar(20) NOT NULL,
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+PRIMARY KEY (firstname,lastname)
+);
+
+mysql> DESC EMPLOYEE;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| firstname | varchar(20) | NO   | PRI | NULL    |       |
+| lastname  | varchar(20) | NO   | PRI | NULL    |       |
+| age       | int         | NO   |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
+
+INSERT INTO employee VALUES('Kapil' , 'Sharma' , 33);
+
+mysql> select * from employee;
++-----------+----------+-----+
+| firstname | lastname | age |
++-----------+----------+-----+
+| Kapil     | Sharma   |  33 |
+| Kapil     | Sinha    |  33 |
++-----------+----------+-----+
+2 rows in set (0.00 sec)
+
+mysql> INSERT INTO employee VALUES('Kapil' , 'Sharma' , 33); [ERROR 1062 (23000): Duplicate entry 'Kapil-Sharma' for key 'employee.PRIMARY']
+
+INSERT INTO employee VALUES('Kapil' ,NULL , 33); [ERROR 1048 (23000): Column 'lastname' cannot be null]
+
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+id int UNIQUE KEY,
+firstname varchar(20) NOT NULL,
+lastname varchar(20) NOT NULL,
+age int NOT NULL
+);
+
+mysql> DESC EMPLOYEE;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| id        | int         | YES  | UNI | NULL    |       |
+| firstname | varchar(20) | NO   |     | NULL    |       |
+| lastname  | varchar(20) | NO   |     | NULL    |       |
+| age       | int         | NO   |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 se
+
+INSERT INTO employee VALUES(1, 'KAPIL' , 'SHARMA' , 20);
+
+
+mysql> INSERT INTO employee VALUES(1, 'KAPIL' , 'SHARMA' , 20);
+[ERROR 1062 (23000): Duplicate entry '1' for key 'employee.id']
+
+INSERT INTO employee VALUES(NULL, 'KAPIL' , 'SHARMA' , 20); [NULL ALLOWED WITH UNIQUE KEY CONSTRAINT BUT NOT ALLOWED WITH PRIMARY KEY]
+
+mysql> SELECT * FROM EMPLOYEE;
++------+-----------+----------+-----+
+| id   | firstname | lastname | age |
++------+-----------+----------+-----+
+|    1 | KAPIL     | SHARMA   |  20 |
+| NULL | KAPIL     | SHARMA   |  20 |
++------+-----------+----------+-----+
+2 rows in set (0.00 sec)
+
+
+=============+
+Session- 4   |
+=============+
+
+{UPDATE , DELETE , ALTER , DDL VS DML , TRUNCATE VS DELETE}
+
+CRUD 
+
+create — insert statements 	 [DONE]
+read - select statements 	[PENDING]	
+update — update statements 	[PENDING]
+delete — delete statements 	[PENDING]
+
+
+
+DROP TABLE IF EXISTS employee;
+
+CREATE TABLE employee (
+id int Primary key,
+firstname varchar(20) NOT NULL,
+middlename varchar(20),
+lastname varchar(20) NOT NULL,
+age int NOT NULL,
+salary int NOT NULL,
+location varchar(20) NOT NULL  DEFAULT 'Bangalore'
+);
+
+mysql> desc employee;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| id         | int         | NO   | PRI | NULL      |       |
+| firstname  | varchar(20) | NO   |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | NO   |     | Bangalore |       |
++------------+-------------+------+-----+-----------+-------+
+7 rows in set (0.03 sec)
+
+INSERT INTO employee (id, firstname, lastname, age, salary) VALUES
+(1, 'Rahul', 'Sharma', 28, 50000),
+(2, 'Priya', 'Yadav', 35, 60000),
+(3, 'Amit', 'Verma', 22, 45000),
+(4, 'Neha', 'Mishra', 30, 55000),
+(5, 'Ananya', 'Jha', 25, 48000),
+(6, 'PRAVEEN', 'SINGH', 32, 75000),
+(7, 'sonu', 'singh', 40, 5000);
+
+
+
+==============
+SELECT 
+==============
+[by default it is case insensitive.]
+
+mysql> SELECT * FROM EMPLOYEE;
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  1 | Rahul     | NULL       | Sharma   |  28 |  50000 | Bangalore |
+|  2 | Priya     | NULL       | Yadav    |  35 |  60000 | Bangalore |
+|  3 | Amit      | NULL       | Verma    |  22 |  45000 | Bangalore |
+|  4 | Neha      | NULL       | Mishra   |  30 |  55000 | Bangalore |
+|  5 | Ananya    | NULL       | Jha      |  25 |  48000 | Bangalore |
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  75000 | Bangalore |
+|  7 | sonu      | NULL       | singh    |  40 |   5000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+7 rows in set (0.00 sec)
+
+--------------------------------------------------------------------+
+[CASE INSENSTIVE STATEMENTS ARE :]
+--------------------------------------------------------------------+
+
+[THE BELOW STATEMENT WILL NOT MATCH THE EXACT CASE .]
+
+mysql> SELECT * from employee WHERE AGE >29;
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  2 | Priya     | NULL       | Yadav    |  35 |  60000 | Bangalore |
+|  4 | Neha      | NULL       | Mishra   |  30 |  55000 | Bangalore |
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  75000 | Bangalore |
+|  7 | sonu      | NULL       | singh    |  40 |   5000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+4 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM EMPLOYEE WHERE FIRSTNAME = 'NEHA';
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  4 | Neha      | NULL       | Mishra   |  30 |  55000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+1 row in set (0.00 sec)
+
+
+--------------------------------------------------------------------+
+[CASE SENSTIVE STATEMENTS ARE :]
+--------------------------------------------------------------------+
+mysql> select * from employee where binary lastname ='singh';       |
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  7 | sonu      | NULL       | singh    |  40 |   5000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+1 row in set, 1 warning (0.00 sec)
+
+
+mysql> select * from employee where binary lastname ='SINGH';
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  75000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+1 row in set, 1 warning (0.00 sec)
+
+
+[THE ABOVE STATEMENT WILL MATCH THE EXACT CASE AND IS CASE SENSITIVE.]
+
+
+mysql> SELECT FIRSTNAME AS NAME , LASTNAME AS SURNAME FROM EMPLOYEE;
++---------+---------+
+| NAME    | SURNAME |
++---------+---------+
+| Rahul   | Sharma  |
+| Priya   | Yadav   |
+| Amit    | Verma   |
+| Neha    | Mishra  |
+| Ananya  | Jha     |
+| PRAVEEN | SINGH   |
+| sonu    | singh   |
++---------+---------+
+7 rows in set (0.00 sec)
+
+
+================
+UPDATE
+================
+
+UPDATE employee SET lastname = 'Sinha'where firstname = "Amit";
+
+mysql> SELECT * FROM EMPLOYEE where firstname = 'amit';
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  3 | Amit      | NULL       | Sinha    |  22 |  45000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+1 row in set (0.00 sec)
+
+
+
+UPDATE employee SET location = 'Hyderabad'where binary firstname = "PRAVEEN";
+
+mysql> SELECT * FROM EMPLOYEE where binary firstname = 'PRAVEEN';
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  75000 | Hyderabad |
++----+-----------+------------+----------+-----+--------+-----------+
+1 row in set, 1 warning (0.00 sec)
+
+
+
+UPDATE employee SET location = 'Lucknow' where id in (2,4);
+
+mysql> SELECT * FROM EMPLOYEE;
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  1 | Rahul     | NULL       | Sharma   |  28 |  50000 | Bangalore |
+|  2 | Priya     | NULL       | Yadav    |  35 |  60000 | Lucknow   |
+|  3 | Amit      | NULL       | Sinha    |  22 |  45000 | Bangalore |
+|  4 | Neha      | NULL       | Mishra   |  30 |  55000 | Lucknow   |
+|  5 | Ananya    | NULL       | Jha      |  25 |  48000 | Bangalore |
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  75000 | Hyderabad |
+|  7 | sonu      | NULL       | singh    |  40 |   5000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+7 rows in set (0.00 sec)
+
+
+UPDATE employee set salary = salary+5000; 
+
+mysql> SELECT * FROM EMPLOYEE;
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  1 | Rahul     | NULL       | Sharma   |  28 |  55000 | Bangalore |
+|  2 | Priya     | NULL       | Yadav    |  35 |  65000 | Lucknow   |
+|  3 | Amit      | NULL       | Sinha    |  22 |  50000 | Bangalore |
+|  4 | Neha      | NULL       | Mishra   |  30 |  60000 | Lucknow   |
+|  5 | Ananya    | NULL       | Jha      |  25 |  53000 | Bangalore |
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  80000 | Hyderabad |
+|  7 | sonu      | NULL       | singh    |  40 |  10000 | Bangalore |
++----+-----------+------------+----------+-----+--------+-----------+
+7 rows in set (0.00 sec)
+
+
+UPDATE employee SET location= 'Sultanpur' where firstname = 'sonu' and lastname = 'singh';
+
+mysql> select * from employee;
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  1 | Rahul     | NULL       | Sharma   |  28 |  55000 | Bangalore |
+|  2 | Priya     | NULL       | Yadav    |  35 |  65000 | Lucknow   |
+|  3 | Amit      | NULL       | Sinha    |  22 |  50000 | Bangalore |
+|  4 | Neha      | NULL       | Mishra   |  30 |  60000 | Lucknow   |
+|  5 | Ananya    | NULL       | Jha      |  25 |  53000 | Bangalore |
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  80000 | Hyderabad |
+|  7 | sonu      | NULL       | singh    |  40 |  10000 | Sultanpur |
++----+-----------+------------+----------+-----+--------+-----------+
+7 rows in set (0.00 sec)
+
+============
+DELETE
+============
+
+DELETE FROM employee WHERE id = 3;
+
+mysql> SELECT * FROM EMPLOYEE;
++----+-----------+------------+----------+-----+--------+-----------+
+| id | firstname | middlename | lastname | age | salary | location  |
++----+-----------+------------+----------+-----+--------+-----------+
+|  1 | Rahul     | NULL       | Sharma   |  28 |  55000 | Bangalore |
+|  2 | Priya     | NULL       | Yadav    |  35 |  65000 | Lucknow   |
+|  4 | Neha      | NULL       | Mishra   |  30 |  60000 | Lucknow   |
+|  5 | Ananya    | NULL       | Jha      |  25 |  53000 | Bangalore |
+|  6 | PRAVEEN   | NULL       | SINGH    |  32 |  80000 | Hyderabad |
+|  7 | sonu      | NULL       | singh    |  40 |  10000 | Sultanpur |
++----+-----------+------------+----------+-----+--------+-----------+
+6 rows in set (0.00 sec)
+
+DELETE FROM employee; [WILL DELETE ALL THE RECORDS OF THE TABLE]
+
+
+==============
+ALTER COMMAND
+==============
+
+{ALTER IS TO ALTER THE STRUCTURE OF THE TABLE.}
+
+ALTER TABLE employee ADD COLUMN jobtitle varchar(50);
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc employee;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| id         | int         | NO   | PRI | NULL      |       |
+| firstname  | varchar(20) | NO   |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | NO   |     | Bangalore |       |
+| jobtitle   | varchar(50) | YES  |     | NULL      |       |
++------------+-------------+------+-----+-----------+-------+
+8 rows in set (0.00 sec)
+
+
+
+ALTER TABLE employee DROP COLUMN jobtitle;
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC EMPLOYEE;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| id         | int         | NO   | PRI | NULL      |       |
+| firstname  | varchar(20) | NO   |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | NO   |     | Bangalore |       |
++------------+-------------+------+-----+-----------+-------+
+7 rows in set (0.00 sec)
+
+ALTER TABLE employee MODIFY COLUMN firstname varchar(30);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC EMPLOYEE;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| id         | int         | NO   | PRI | NULL      |       |
+| firstname  | varchar(30) | YES  |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | NO   |     | Bangalore |       |
++------------+-------------+------+-----+-----------+-------+
+7 rows in set (0.00 sec)
+
+ALTER TABLE employee drop primary key;
+Query OK, 7 rows affected (0.06 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> DESC EMPLOYEE;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| id         | int         | NO   |     | NULL      |       |
+| firstname  | varchar(30) | YES  |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | NO   |     | Bangalore |       |
++------------+-------------+------+-----+-----------+-------+
+7 rows in set (0.00 sec)
+
+
+ALTER TABLE employee add primary key(id);
+Query OK, 0 rows affected (0.05 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESC EMPLOYEE;
++------------+-------------+------+-----+-----------+-------+
+| Field      | Type        | Null | Key | Default   | Extra |
++------------+-------------+------+-----+-----------+-------+
+| id         | int         | NO   | PRI | NULL      |       |
+| firstname  | varchar(30) | YES  |     | NULL      |       |
+| middlename | varchar(20) | YES  |     | NULL      |       |
+| lastname   | varchar(20) | NO   |     | NULL      |       |
+| age        | int         | NO   |     | NULL      |       |
+| salary     | int         | NO   |     | NULL      |       |
+| location   | varchar(20) | NO   |     | Bangalore |       |
++------------+-------------+------+-----+-----------+-------+
+7 rows in set (0.00 sec)
+
+
+-- DDL COMMANDS: CREATE, ALTER, DROP, AND TRUNCATE
+-- ===============================================
+-- DROP
+DROP TABLE IF EXISTS VILLAGE;
+
+-- CREATE
+CREATE TABLE VILLAGE (
+    VILLAGE_ID INT PRIMARY KEY AUTO_INCREMENT,
+    VILLAGE_NAME VARCHAR(50) NOT NULL,
+    POPULATION INT NOT NULL,
+    GRAM_PRADHAN VARCHAR(30) NOT NULL,
+    RECORD_BY VARCHAR(30) NOT NULL DEFAULT 'PRAVEEN SINGH',
+    UNIQUE KEY (GRAM_PRADHAN)
+);
+
+
+-- Display table structure
+DESC VILLAGE;
+
+-- Display all records in the VILLAGE table
+SELECT * FROM VILLAGE;
+
+-- INSERT
+INSERT INTO VILLAGE (VILLAGE_NAME, POPULATION, GRAM_PRADHAN)
+VALUES
+    ('BELWAI', 2500, 'DILEEP MODANAWAL'),
+    ('GHATAMPUR', 3400, 'PINTU SINGH'),
+    ('MEERPUR', 5000, 'RAJ KUMAR');
+
+-- TRUNCATE
+TRUNCATE TABLE VILLAGE;
+
+-- UPDATE
+UPDATE VILLAGE SET POPULATION = 4000 WHERE VILLAGE_ID = 2;
+
+-- DELETE
+DELETE FROM VILLAGE WHERE VILLAGE_NAME = 'MEERPUR';
+
+-- ALTER TABLE COMMANDS
+-- =====================
+-- Modify column data type
+ALTER TABLE VILLAGE MODIFY COLUMN VILLAGE_ID INT;
+
+-- Drop primary key
+ALTER TABLE VILLAGE DROP PRIMARY KEY;
+
+-- Add primary key
+ALTER TABLE VILLAGE ADD PRIMARY KEY (VILLAGE_ID);
+
+-- Add new column
+ALTER TABLE VILLAGE ADD COLUMN VOTER_LIST VARCHAR(255) NULL;
+
+-- Rename column
+ALTER TABLE VILLAGE RENAME COLUMN VOTER_LIST TO STUDENTS;
+
+-- Drop column
+ALTER TABLE VILLAGE DROP COLUMN STUDENTS;
+
+
+
+
+==============
+DDL vs DML
+==============
+
+DDL-  Data Definition Language [Deals with Table Structure]
+CREATE , ALTER , DROP - DDL COMMANDS
+
+
+DML-  Data Manipulation Language [here we deal with the Data directly]
+
+INSERT , UPDATE , DELETE - DML COMMANDS
+
+DELETE FROM EMPLOYEE; --DML
+
+TRUNCATE TABLE EMPLOYEE; -- DDL [TRUNCATE ALSO REMOVES ALL RECORDS ,TRUNCATE INTERNALLY DROPS THE TABLE AND RECREATES IT.]
+
+
+================+
+Session- 5	|
+================+
+
+{Foreign key constraint}
+
+{
+Parent — Courses 
+
+Child — Students 
+
+the foreign key constraint is used to prevent actions that would destroy links between two tables.. 
+
+A foreign key is a field in one table that refers to the primary key in another table. 
+
+selected_course is a foreign key in students table to course_id (primary key) in courses table. 
+
+the table with the foreign key is called the child table ,
+
+the table with primary key is called the parent or referenced table
+
+}
+
+
+===============
+CONSTRAINT
+===============
+NOT NULL
+UNIQUE KEY
+PRIMARY KEY
+FOREIGN KEY
+CHECK CONSTRAINT [NOT SUPPORTED IN MYSQL]
+
+constraints are used to limit the type of data that can go into a table. 
+
+This ensures the accuracy and reliability of the data is maintaineed. 
+
+If there is any violation then the action is aborted. 
+-----------------------------------------------------------------------------------------------------------------
+
+DROP TABLE IF EXISTS students;
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT,
+    student_fname VARCHAR(50) NOT NULL,
+    student_lname VARCHAR(50) NOT NULL,
+    student_mname VARCHAR(50),
+    student_email VARCHAR(50) NOT NULL,
+    student_phone VARCHAR(20) NOT NULL,
+    student_alternate_phone VARCHAR(20),
+    enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+    selected_course INT NOT NULL DEFAULT 2,
+    year_of_exp INT NOT NULL,
+    student_company VARCHAR(50),
+    batch_date VARCHAR(50) NOT NULL,
+    source_of_joining VARCHAR(50) NOT NULL,
+    location VARCHAR(50) NOT NULL,
+    PRIMARY KEY (student_id),
+    UNIQUE KEY(student_email),
+    FOREIGN KEY (selected_course) REFERENCES courses(course_id)
+);
+
+mysql> desc students;
++-------------------------+-------------+------+-----+-------------------+-----------------------------------------------+
+| Field                   | Type        | Null | Key | Default           | Extra                                         |
++-------------------------+-------------+------+-----+-------------------+-----------------------------------------------+
+| student_id              | int         | NO   | PRI | NULL              | auto_increment                                |
+| student_fname           | varchar(50) | NO   |     | NULL              |                                               |
+| student_lname           | varchar(50) | NO   |     | NULL              |                                               |
+| student_mname           | varchar(50) | YES  |     | NULL              |                                               |
+| student_email           | varchar(50) | NO   | UNI | NULL              |                                               |
+| student_phone           | varchar(20) | NO   |     | NULL              |                                               |
+| student_alternate_phone | varchar(20) | YES  |     | NULL              |                                               |
+| enrollment_date         | timestamp   | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
+| selected_course         | int         | NO   | MUL | 2                 |                                               |
+| year_of_exp             | int         | NO   |     | NULL              |                                               |
+| student_company         | varchar(50) | YES  |     | NULL              |                                               |
+| batch_date              | varchar(50) | NO   |     | NULL              |                                               |
+| source_of_joining       | varchar(50) | NO   |     | NULL              |                                               |
+| location                | varchar(50) | NO   |     | NULL              |                                               |
++-------------------------+-------------+------+-----+-------------------+-----------------------------------------------+
+14 rows in set (0.00 sec)
+
+
+
+INSERT INTO students (student_fname, student_lname, student_mname, student_email, student_phone, student_alternate_phone, year_of_exp, student_company, batch_date, source_of_joining, location, selected_course)
+VALUES
+('Rahul', 'Sharma', 'K', 'rahul.sharma@example.com', '9876543210', '8765432109', 2, 'Tech Solutions', '2023-01-15', 'Campus Placement', 'Mumbai', 1),
+('Priya', 'Patel', 'L', 'priya.patel@example.com', '8765432109', '7654321098', 1, 'Info Systems', '2023-02-20', 'Internship Program', 'Ahmedabad', 3),
+('Amit', 'Singh', 'M', 'amit.singh@example.com', '7654321098', '6543210987', 3, 'InnoTech', '2023-03-10', 'Employee Referral', 'Delhi', 2),
+('Neha', 'Verma', 'N', 'neha.verma@example.com', '6543210987', '5432109876', 2, 'Global Innovations', '2023-04-05', 'Recruitment Drive', 'Bangalore', 4),
+('Vikram', 'Rajput', 'O', 'vikram.rajput@example.com', '5432109876', '4321098765', 4, 'Smart Solutions', '2023-05-12', 'Job Fair', 'Hyderabad', 1),
+('Ananya', 'Das', 'P', 'ananya.das@example.com', '4321098765', '3210987654', 1, 'Future Tech', '2023-06-18', 'Online Application', 'Kolkata', 5),
+('Sachin', 'Choudhary', 'Q', 'sachin.choudhary@example.com', '3210987654', '2109876543', 3, 'Coders Hub', '2023-07-22', 'Walk-in Interview', 'Chennai', 2);
+
+
+
+mysql> select * from students;
++------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+| student_id | student_fname | student_lname | student_mname | student_email                | student_phone | student_alternate_phone | enrollment_date     | selected_course | year_of_exp | student_company    | batch_date | source_of_joining  | location  |
++------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+|          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-24 01:58:22 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-24 01:58:22 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-24 01:58:22 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-24 01:58:22 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-24 01:58:22 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-24 01:58:22 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-24 01:58:22 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
++------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+7 rows in set (0.00 sec)
+
+INSERT INTO students (student_fname, student_lname, student_mname, student_email, student_phone, student_alternate_phone, year_of_exp, student_company, batch_date, source_of_joining, location, selected_course)
+VALUES
+('Sara', 'Khan', 'A', 'sara.khan@example.com', '1234567890', '9876543210', 3, 'Tech Innovators', '2023-11-05', 'Campus Placement', 'Delhi', 6);
+
+ [ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`pksdb`.`students`, CONSTRAINT `students_ibfk_1` FOREIGN KEY (`selected_course`) REFERENCES `courses` (`course_id`))]
+
+
+mysql> select * from students;
++------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+| student_id | student_fname | student_lname | student_mname | student_email                | student_phone | student_alternate_phone | enrollment_date     | selected_course | year_of_exp | student_company    | batch_date | source_of_joining  | location  |
++------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+|          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-24 01:58:22 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-24 01:58:22 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-24 01:58:22 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-24 01:58:22 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-24 01:58:22 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-24 01:58:22 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-24 01:58:22 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         10 | Sara          | Khan          | A             | sara.khan@example.com        | 1234567890    | 9876543210              | 2023-10-24 02:04:39 |               2 |           3 | Tech Innovators    | 2023-11-05 | Campus Placement   | Delhi     |
++------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+
+
+
+
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT NOT NULL,
+    course_name VARCHAR(50) NOT NULL,
+    course_duration_months INT NOT NULL,
+    course_fee INT NOT NULL,
+    PRIMARY KEY (course_id)
+);
+
+mysql> DESC COURSES;
++------------------------+-------------+------+-----+---------+----------------+
+| Field                  | Type        | Null | Key | Default | Extra          |
++------------------------+-------------+------+-----+---------+----------------+
+| course_id              | int         | NO   | PRI | NULL    | auto_increment |
+| course_name            | varchar(50) | NO   |     | NULL    |                |
+| course_duration_months | int         | NO   |     | NULL    |                |
+| course_fee             | int         | NO   |     | NULL    |                |
++------------------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO courses (course_name, course_duration_months, course_fee) VALUES
+('Web Development', 6, 1500.00),
+('Data Science', 12, 2500.00),
+('Mobile App Development', 8, 2000.00),
+('Digital Marketing', 6, 1800.00),
+('Graphic Design', 4, 1200.00);
+
+
+mysql> SELECT * FROM courses;
++-----------+------------------------+------------------------+------------+
+| course_id | course_name            | course_duration_months | course_fee |
++-----------+------------------------+------------------------+------------+
+|         1 | Web Development        |                      6 |       1500 |
+|         2 | Data Science           |                     12 |       2500 |
+|         3 | Mobile App Development |                      8 |       2000 |
+|         4 | Digital Marketing      |                      6 |       1800 |
+|         5 | Graphic Design         |                      4 |       1200 |
++-----------+------------------------+------------------------+------------+
+5 rows in set (0.00 sec)
+
+
+
+SELECT 
+    s.student_fname,
+    s.student_lname,
+    s.enrollment_date,
+    s.selected_course,
+    c.course_name,
+    c.course_fee,
+    s.location
+FROM
+    students s
+        JOIN
+    courses c ON c.course_id = s.selected_course;
+
++---------------+---------------+---------------------+-----------------+------------------------+------------+-----------+
+| student_fname | student_lname | enrollment_date     | selected_course | course_name            | course_fee | location  |
++---------------+---------------+---------------------+-----------------+------------------------+------------+-----------+
+| Rahul         | Sharma        | 2023-10-24 01:58:22 |               1 | Web Development        |       1500 | Mumbai    |
+| Vikram        | Rajput        | 2023-10-24 01:58:22 |               1 | Web Development        |       1500 | Hyderabad |
+| Amit          | Singh         | 2023-10-24 01:58:22 |               2 | Data Science           |       2500 | Delhi     |
+| Sachin        | Choudhary     | 2023-10-24 01:58:22 |               2 | Data Science           |       2500 | Chennai   |
+| Sara          | Khan          | 2023-10-24 02:04:39 |               2 | Data Science           |       2500 | Delhi     |
+| Priya         | Patel         | 2023-10-24 01:58:22 |               3 | Mobile App Development |       2000 | Ahmedabad |
+| Neha          | Verma         | 2023-10-24 01:58:22 |               4 | Digital Marketing      |       1800 | Bangalore |
+| Ananya        | Das           | 2023-10-24 01:58:22 |               5 | Graphic Design         |       1200 | Kolkata   |
++---------------+---------------+---------------------+-----------------+------------------------+------------+-----------+
+8 rows in set (0.00 sec)
+
+mysql> DELETE FROM courses where course_id = 5;
+ERROR 1451 (23000): Cannot delete or update a parent row: a foreign key constraint fails (`pksdb`.`students`, CONSTRAINT `students_ibfk_1` FOREIGN KEY (`selected_course`) REFERENCES `courses` (`course_id`))
+mysql>
+
+mysql> delete from students where selected_course =5;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> DELETE FROM courses where course_id = 5;
+Query OK, 1 row affected (0.01 sec)
+
+
+create DATABASE praveendb;
+use praveendb;
+/*
+
+
+===================
+CONSTRAINT TYPES
+===================
+NOT NULL
+UNIQUE KEY
+PRIMARY KEY
+FOREIGN KEY
+CHECK CONSTRAINT [NOT SUPPORTED IN MYSQL]
+*/
+
+DROP TABLE IF EXISTS courses;
+-- CREATE TABLE FOR COURSES
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT NOT NULL,
+    course_name VARCHAR(50) NOT NULL,
+    course_duration_months INT NOT NULL,
+    course_fee INT NOT NULL,
+    PRIMARY KEY (course_id)
+);
+
+
+DROP TABLE IF EXISTS students;
+
+-- DROP AND CREATE TABLE FOR STUDENTS
+DROP TABLE IF EXISTS students;
+CREATE TABLE students (
+    student_id INT AUTO_INCREMENT,
+    student_fname VARCHAR(50) NOT NULL,
+    student_lname VARCHAR(50) NOT NULL,
+    student_mname VARCHAR(50),
+    student_email VARCHAR(50) NOT NULL,
+    student_phone VARCHAR(20) NOT NULL,
+    student_alternate_phone VARCHAR(20),
+    enrollment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+    selected_course INT NOT NULL DEFAULT 2,
+    year_of_exp INT NOT NULL,
+    student_company VARCHAR(50),
+    batch_date VARCHAR(50) NOT NULL,
+    source_of_joining VARCHAR(50) NOT NULL,
+    location VARCHAR(50) NOT NULL,
+    PRIMARY KEY (student_id),
+    UNIQUE KEY(student_email),
+    FOREIGN KEY (selected_course) REFERENCES courses(course_id)
+);
+
+
+-- Inserting courses data
+INSERT INTO courses (course_name, course_duration_months, course_fee) VALUES
+    ('Web Development', 3, 1500.00),       -- Course: Web Development, Duration: 6 months, Fee: $1500.00
+    ('Data Science', 12, 2500.00),          -- Course: Data Science, Duration: 12 months, Fee: $2500.00
+    ('Mobile App Development', 9, 2000.00), -- Course: Mobile App Development, Duration: 8 months, Fee: $2000.00
+    ('Digital Marketing', 6, 1800.00),      -- Course: Digital Marketing, Duration: 6 months, Fee: $1800.00
+    ('Graphic Design', 15, 1200.00);         -- Course: Graphic Design, Duration: 4 months, Fee: $1200.00
+
+
+-- Inserting students data
+INSERT INTO students (student_fname, student_lname, student_mname, student_email, student_phone, student_alternate_phone, year_of_exp, student_company, batch_date, source_of_joining, location, selected_course)
+VALUES
+    ('Rahul', 'Sharma', 'K', 'rahul.sharma@example.com', '9876543210', '8765432109', 2, 'Tech Solutions', '2023-01-15', 'Campus Placement', 'Mumbai', 1),
+    ('Priya', 'Patel', 'L', 'priya.patel@example.com', '8765432109', '7654321098', 1, 'Info Systems', '2023-02-20', 'Internship Program', 'Ahmedabad', 3),
+    ('Amit', 'Singh', 'M', 'amit.singh@example.com', '7654321098', '6543210987', 3, 'InnoTech', '2023-03-10', 'Employee Referral', 'Delhi', 2),
+    ('Neha', 'Verma', 'N', 'neha.verma@example.com', '6543210987', '5432109876', 2, 'Global Innovations', '2023-04-05', 'Recruitment Drive', 'Bangalore', 4),
+    ('Vikram', 'Rajput', 'O', 'vikram.rajput@example.com', '5432109876', '4321098765', 4, 'Smart Solutions', '2023-05-12', 'Job Fair', 'Hyderabad', 1),
+    ('Ananya', 'Das', 'P', 'ananya.das@example.com', '4321098765', '3210987654', 1, 'Future Tech', '2023-06-18', 'Online Application', 'Kolkata', 5),
+    ('Sachin', 'Choudhary', 'Q', 'sachin.choudhary@example.com', '3210987654', '2109876543', 3, 'Coders Hub', '2023-07-22', 'Walk-in Interview', 'Chennai', 2);
+
+
+INSERT INTO students (student_fname, student_lname, student_mname, student_email, student_phone, student_alternate_phone, year_of_exp, student_company, batch_date, source_of_joining, location, selected_course)
+VALUES
+('Sara', 'Khan', 'A', 'sara.khan@example.com', '1234567890', '9876543210', 3, 'Tech Innovators', '2023-11-05', 'Campus Placement', 'Delhi', 6);
+
+Error: Cannot add or update a child row: a foreign key constraint fails (`praveendb`.`students`, CONSTRAINT `students_ibfk_1` FOREIGN KEY (`selected_course`) REFERENCES `courses` (`course_id`))
+Error Code: ER_NO_REFERENCED_ROW_2
+
+--========================================================---
+-- Selecting specific columns from students and courses tables
+SELECT 
+    student_fname,
+    student_lname,
+    enrollment_date,
+    selected_course,
+    course_name,
+    course_fee,
+    location
+FROM
+    students
+JOIN
+    courses ON courses.course_id = students.selected_course
+LIMIT 100;
+
+
+
+  
+=================
+CHECK CONSTRAINT
+=================
+
+
+CREATE TABLE CHECK_TABLE (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    value INT CHECK (value > 0 AND value < 100)
+);
+
+
+mysql> DESC CHECK_TABLE;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| id    | int  | NO   | PRI | NULL    | auto_increment |
+| value | int  | YES  |     | NULL    |                |
++-------+------+------+-----+---------+----------------+
+2 rows in set (0.00 sec)
+
+INSERT INTO CHECK_TABLE (value) VALUES
+(10),
+(35),
+(75),
+(50),
+(90);
+
+
+mysql> INSERT INTO CHECK_TABLE (value) VALUES (0);
+ERROR 3819 (HY000): Check constraint 'check_table_chk_1' is violated.
+
+
+
+============+
+Session- 6  |
+============+
+
+DISTINCT
+
+ORDER BY 
+
+LIMIT
+
+LIKE
+
+
+============
+DISTINCT
+============
+
+mysql> SELECT DISTINCT INDUSTRY FROM MOVIES;
++-----------+
+| INDUSTRY  |
++-----------+
+| Bollywood |
+| Hollywood |
++-----------+
+2 rows in set (0.00 sec)
+
+
+mysql> select distinct language_id from movies;
++-------------+
+| language_id |
++-------------+
+|           1 |
+|           2 |
+|           3 |
+|           5 |
+|           7 |
++-------------+
+5 rows in set (0.01 sec)
+
+
+
+mysql> SELECT COUNT(DISTINCT STUDIO) AS TOTAL_STUDIO FROM MOVIES;
++--------------+
+| TOTAL_STUDIO |
++--------------+
+|           23 |
++--------------+
+1 row in set (0.01 sec)
+
+
+
+============
+ORDER BY
+============
+
+ |     select * from movies order by title;
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      108 | 3 Idiots                                    | Bollywood |         2009 |         8.4 | Vinod Chopra Films        |           1 |
+|      119 | Avatar                                      | Hollywood |         2009 |         7.8 | 20th Century Fox          |           5 |
+|      125 | Avengers: Endgame                           | Hollywood |         2019 |         8.4 | Marvel Studios            |           5 |
+|      126 | Avengers: Infinity War                      | Hollywood |         2018 |         8.4 | Marvel Studios            |           5 |
+|      134 | Baahubali: The Beginning                    | Bollywood |         2015 |         8.0 | Arka Media Works          |           2 |
+|      110 | Bajirao Mastani                             | Bollywood |         2015 |         7.2 |                           |           1 |
+|      136 | Bajrangi Bhaijaan                           | Bollywood |         2015 |         8.1 | Salman Khan Films         |           1 |
+|      137 | Captain America: The First Avenger          | Hollywood |         2011 |         6.9 | Marvel Studios            |           5 |
+|      138 | Captain America: The Winter Soldier         | Hollywood |         2014 |         7.8 | Marvel Studios            |           5 |
+|      107 | Dilwale Dulhania Le Jayenge                 | Bollywood |         1995 |         8.0 | Yash Raj Films            |           1 |
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios            |           5 |
+|      116 | Gladiator                                   | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      112 | Inception                                   | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar                                | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      118 | It's a Wonderful Life                       | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      123 | Jurassic Park                               | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      101 | K.G.F: Chapter 2                            | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      109 | Kabhi Khushi Kabhie Gham                    | Bollywood |         2001 |         7.4 | Dharma Productions        |           1 |
+|      129 | Munna Bhai M.B.B.S.                         | Bollywood |         2003 |         8.1 | Vinod Chopra Productions  |           1 |
+|      124 | Parasite                                    | Hollywood |         2019 |         8.5 |                           |           5 |
+|      127 | Pather Panchali                             | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      130 | PK                                          | Bollywood |         2014 |         8.1 | Vinod Chopra Films        |           1 |
+|      132 | Pushpa: The Rise - Part 1                   | Bollywood |         2021 |         7.6 | Mythri Movie Makers       |           2 |
+|      139 | Race 3                                      | Bollywood |         2018 |         1.9 | Salman Khan Films         |           1 |
+|      133 | RRR                                         | Bollywood |         2022 |         8.0 | DVV Entertainment         |           2 |
+|      131 | Sanju                                       | Bollywood |         2018 |        NULL | Vinod Chopra Films        |           1 |
+|      122 | Schindler's List                            | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      140 | Shershaah                                   | Bollywood |         2021 |         8.4 | Dharma Productions        |           1 |
+|      106 | Sholay                                      | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      128 | Taare Zameen Par                            | Bollywood |         2007 |         8.3 |                           |           1 |
+|      121 | The Dark Knight                             | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      120 | The Godfather                               | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      135 | The Kashmir Files                           | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
+|      115 | The Pursuit of Happyness                    | Hollywood |         2006 |         8.0 | Columbia Pictures         |           5 |
+|      111 | The Shawshank Redemption                    | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      105 | Thor: Love and Thunder                      | Hollywood |         2022 |         6.8 | Marvel Studios            |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios            |           5 |
+|      103 | Thor: The Dark World                        | Hollywood |         2013 |         6.8 | Marvel Studios            |           5 |
+|      117 | Titanic                                     | Hollywood |         1997 |         7.9 | Paramount Pictures        |           5 |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+39 rows in set (0.00 sec)
+
+mysql> select * from movies order by industry,title;
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      108 | 3 Idiots                                    | Bollywood |         2009 |         8.4 | Vinod Chopra Films        |           1 |
+|      134 | Baahubali: The Beginning                    | Bollywood |         2015 |         8.0 | Arka Media Works          |           2 |
+|      110 | Bajirao Mastani                             | Bollywood |         2015 |         7.2 |                           |           1 |
+|      136 | Bajrangi Bhaijaan                           | Bollywood |         2015 |         8.1 | Salman Khan Films         |           1 |
+|      107 | Dilwale Dulhania Le Jayenge                 | Bollywood |         1995 |         8.0 | Yash Raj Films            |           1 |
+|      101 | K.G.F: Chapter 2                            | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      109 | Kabhi Khushi Kabhie Gham                    | Bollywood |         2001 |         7.4 | Dharma Productions        |           1 |
+|      129 | Munna Bhai M.B.B.S.                         | Bollywood |         2003 |         8.1 | Vinod Chopra Productions  |           1 |
+|      127 | Pather Panchali                             | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      130 | PK                                          | Bollywood |         2014 |         8.1 | Vinod Chopra Films        |           1 |
+|      132 | Pushpa: The Rise - Part 1                   | Bollywood |         2021 |         7.6 | Mythri Movie Makers       |           2 |
+|      139 | Race 3                                      | Bollywood |         2018 |         1.9 | Salman Khan Films         |           1 |
+|      133 | RRR                                         | Bollywood |         2022 |         8.0 | DVV Entertainment         |           2 |
+|      131 | Sanju                                       | Bollywood |         2018 |        NULL | Vinod Chopra Films        |           1 |
+|      140 | Shershaah                                   | Bollywood |         2021 |         8.4 | Dharma Productions        |           1 |
+|      106 | Sholay                                      | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      128 | Taare Zameen Par                            | Bollywood |         2007 |         8.3 |                           |           1 |
+|      135 | The Kashmir Files                           | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
+|      119 | Avatar                                      | Hollywood |         2009 |         7.8 | 20th Century Fox          |           5 |
+|      125 | Avengers: Endgame                           | Hollywood |         2019 |         8.4 | Marvel Studios            |           5 |
+|      126 | Avengers: Infinity War                      | Hollywood |         2018 |         8.4 | Marvel Studios            |           5 |
+|      137 | Captain America: The First Avenger          | Hollywood |         2011 |         6.9 | Marvel Studios            |           5 |
+|      138 | Captain America: The Winter Soldier         | Hollywood |         2014 |         7.8 | Marvel Studios            |           5 |
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios            |           5 |
+|      116 | Gladiator                                   | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      112 | Inception                                   | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar                                | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      118 | It's a Wonderful Life                       | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      123 | Jurassic Park                               | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      124 | Parasite                                    | Hollywood |         2019 |         8.5 |                           |           5 |
+|      122 | Schindler's List                            | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      121 | The Dark Knight                             | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      120 | The Godfather                               | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      115 | The Pursuit of Happyness                    | Hollywood |         2006 |         8.0 | Columbia Pictures         |           5 |
+|      111 | The Shawshank Redemption                    | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      105 | Thor: Love and Thunder                      | Hollywood |         2022 |         6.8 | Marvel Studios            |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios            |           5 |
+|      103 | Thor: The Dark World                        | Hollywood |         2013 |         6.8 | Marvel Studios            |           5 |
+|      117 | Titanic                                     | Hollywood |         1997 |         7.9 | Paramount Pictures        |           5 |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+39 rows in set (0.00 sec)
+
+============
+LIMIT
+============
+
+mysql> SELECT * FROM FINANCIALS ORDER BY REVENUE DESC LIMIT 5;
++----------+----------+-----------+-----------+----------+
+| movie_id | budget   | revenue   | unit      | currency |
++----------+----------+-----------+-----------+----------+
+|      127 | 70000.00 | 100000.00 | Thousands | INR      |
+|      136 |   900.00 |  11690.00 | Millions  | INR      |
+|      130 |   850.00 |   8540.00 | Millions  | INR      |
+|      108 |   550.00 |   4000.00 | Millions  | INR      |
+|      135 |   250.00 |   3409.00 | Millions  | INR      |
++----------+----------+-----------+-----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM FINANCIALS ORDER BY REVENUE  LIMIT 5 OFFSET 1;
++----------+--------+---------+----------+----------+
+| movie_id | budget | revenue | unit     | currency |
++----------+--------+---------+----------+----------+
+|      118 |   3.18 |    3.30 | Millions | USD      |
+|      110 |   1.40 |    3.50 | Billions | INR      |
+|      132 |   2.00 |    3.60 | Billions | INR      |
+|      131 |   1.00 |    5.90 | Billions | INR      |
+|      134 |   1.80 |    6.50 | Billions | INR      |
++----------+--------+---------+----------+----------+
+5 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM MOVIES LIMIT 5 OFFSET 34; [LAST 5 MOVIES]
++----------+-------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+| movie_id | title                               | industry  | release_year | imdb_rating | studio             | language_id |
++----------+-------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+|      136 | Bajrangi Bhaijaan                   | Bollywood |         2015 |         8.1 | Salman Khan Films  |           1 |
+|      137 | Captain America: The First Avenger  | Hollywood |         2011 |         6.9 | Marvel Studios     |           5 |
+|      138 | Captain America: The Winter Soldier | Hollywood |         2014 |         7.8 | Marvel Studios     |           5 |
+|      139 | Race 3                              | Bollywood |         2018 |         1.9 | Salman Khan Films  |           1 |
+|      140 | Shershaah                           | Bollywood |         2021 |         8.4 | Dharma Productions |           1 |
++----------+-------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+5 rows in set (0.00 sec)
+
+SELECT DISTINCT studio
+FROM MOVIES
+WHERE studio IS NOT NULL
+ORDER BY movie_id DESC
+LIMIT 5;
+
+ERROR 3065 (HY000): Expression #1 of ORDER BY clause is not in SELECT list, references column 'moviesdb.MOVIES.movie_id' which is not in SELECT list; this is incompatible with DISTINCT
+
+
+SELECT DISTINCT studio, title
+FROM MOVIES
+WHERE studio = '';
+
++--------+------------------+
+| studio | title            |
++--------+------------------+
+|        | Bajirao Mastani  |
+|        | Parasite         |
+|        | Taare Zameen Par |
++--------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM MOVIES LIMIT 0,3;
++----------+---------------------------------------------+-----------+--------------+-------------+----------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio         | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+----------------+-------------+
+|      101 | K.G.F: Chapter 2                            | Bollywood |         2022 |         8.4 | Hombale Films  |           3 |
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios |           5 |
+|      103 | Thor: The Dark World                        | Hollywood |         2013 |         6.8 | Marvel Studios |           5 |
++----------+---------------------------------------------+-----------+--------------+-------------+----------------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM MOVIES LIMIT 3,2;
++----------+-------------------------+-----------+--------------+-------------+----------------+-------------+
+| movie_id | title                   | industry  | release_year | imdb_rating | studio         | language_id |
++----------+-------------------------+-----------+--------------+-------------+----------------+-------------+
+|      104 | Thor: Ragnarok          | Hollywood |         2017 |         7.9 | Marvel Studios |           5 |
+|      105 | Thor: Love and Thunder  | Hollywood |         2022 |         6.8 | Marvel Studios |           5 |
++----------+-------------------------+-----------+--------------+-------------+----------------+-------------+
+2 rows in set (0.00 sec)
+
+
+=============
+LIKE
+=============
+
+mysql> SELECT * FROM movies where title like '%ra%';    [ % is a wildcard character , before and after 'ra' anything ]
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio             | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios     |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios     |           5 |
+|      110 | Bajirao Mastani                             | Bollywood |         2015 |         7.2 |                    |           1 |
+|      123 | Jurassic Park                               | Hollywood |         1993 |         8.2 | Universal Pictures |           5 |
+|      124 | Parasite                                    | Hollywood |         2019 |         8.5 |                    |           5 |
+|      136 | Bajrangi Bhaijaan                           | Bollywood |         2015 |         8.1 | Salman Khan Films  |           1 |
+|      139 | Race 3                                      | Bollywood |         2018 |         1.9 | Salman Khan Films  |           1 |
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+7 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM movies where title like 'ra%';  [start with 'ra']
++----------+--------+-----------+--------------+-------------+-------------------+-------------+
+| movie_id | title  | industry  | release_year | imdb_rating | studio            | language_id |
++----------+--------+-----------+--------------+-------------+-------------------+-------------+
+|      139 | Race 3 | Bollywood |         2018 |         1.9 | Salman Khan Films |           1 |
++----------+--------+-----------+--------------+-------------+-------------------+-------------+
+1 row in set (0.00 sec
+
+
+mysql> SELECT * FROM movies where title like '%ay'; [end with 'ay']
++----------+--------+-----------+--------------+-------------+------------------+-------------+
+| movie_id | title  | industry  | release_year | imdb_rating | studio           | language_id |
++----------+--------+-----------+--------------+-------------+------------------+-------------+
+|      106 | Sholay | Bollywood |         1975 |         8.1 | United Producers |           1 |
++----------+--------+-----------+--------------+-------------+------------------+-------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SELECT * FROM movies where title like '______';  [title with 6 character ]
++----------+--------+-----------+--------------+-------------+-------------------+-------------+
+| movie_id | title  | industry  | release_year | imdb_rating | studio            | language_id |
++----------+--------+-----------+--------------+-------------+-------------------+-------------+
+|      106 | Sholay | Bollywood |         1975 |         8.1 | United Producers  |           1 |
+|      119 | Avatar | Hollywood |         2009 |         7.8 | 20th Century Fox  |           5 |
+|      139 | Race 3 | Bollywood |         2018 |         1.9 | Salman Khan Films |           1 |
++----------+--------+-----------+--------------+-------------+-------------------+-------------+
+3 rows in set (0.00 sec)
+
+
+
+-- Select all columns from the 'movies' table
+-- where the 'title' column ends with the character 'at'
+SELECT * FROM movies WHERE title LIKE '%\_at';
+
+
+-- Select all columns from the 'movies' table
+-- where the 'title' column ends with a literal '%' followed by 'at'
+SELECT * FROM movies WHERE title LIKE '%\%at' ESCAPE '\';
+
+
+============+
+Session- 7  |
+============+
+
+
+SELECT DISTINCT studio, movie_id
+FROM MOVIES
+WHERE studio = ''
+ORDER BY movie_id DESC
+LIMIT 5;
+
+
+DISTINCT & ORDER BY
+
+SELECT studio FROM MOVIES;
+
+ORDER OF EXECUTION:
+------------------------
+FROM (LOADING THE TABLE)
+
+SELECT (PROJECTING studio)
+
+*****************************************
+SELECT studio, movie_id FROM MOVIES;
+
+ORDER OF EXECUTION:
+------------------------
+FROM (LOADING THE TABLE)
+
+SELECT (PROJECTING studio, movie_id )
+
+*****************************************
+
+SELECT studio, movie_id FROM MOVIES ORDER BY movie_id;
+
+ORDER OF EXECUTION:
+------------------------
+FROM (LOADING THE TABLE)
+
+SELECT (PROJECTING studio, movie_id )
+
+ORDER BY (BASED ON MOVIE_ID IT  WILL BE ORDER)
+
+*****************************************************
+
+SELECT DISTINCT studio , movie_id FROM MOVIES ORDER BY movie_id;
+
+
+ORDER OF EXECUTION: 
+
+FROM clause
+WHERE clause
+SELECT clause
+GROUP BY clause
+HAVING clause
+ORDER BY clause
+
+
+============+
+Session- 8  |	{AGGREGATE FUNCTIONS}
+============+
+
+==========
+{COUNT} 
+==========
+
+SELECT COUNT(*) FROM movies;
+
++----------+
+| COUNT(*) |
++----------+
+|       39 |
++----------+
+1 row in set (0.01 sec)
+
+
+mysql> SELECT COUNT(DISTINCT STUDIO) AS NUM_OF_STUDIOS FROM movies;
++----------------+
+| NUM_OF_STUDIOS |
++----------------+
+|             23 |
++----------------+
+1 row in set (0.00 sec)
+
+
+mysql> SELECT * FROM ACTORS WHERE BIRTH_YEAR LIKE '%50%';
++----------+--------------------+------------+
+| actor_id | name               | birth_year |
++----------+--------------------+------------+
+|      162 | Mithun Chakraborty |       1950 |
++----------+--------------------+------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SELECT * FROM ACTORS WHERE ACTOR_ID LIKE '17%';
++----------+--------------+------------+
+| actor_id | name         | birth_year |
++----------+--------------+------------+
+|      170 | Kiara Advani |       1991 |
++----------+--------------+------------+
+1 row in set (0.00 sec)
+
+
+============
+{ GROUP BY } 
+============
+
+mysql> SELECT INDUSTRY , COUNT(*) AS NUM_OF_MOVIES FROM MOVIES GROUP BY INDUSTRY;
++-----------+---------------+
+| INDUSTRY  | NUM_OF_MOVIES |
++-----------+---------------+
+| Bollywood |            18 |
+| Hollywood |            21 |
++-----------+---------------+
+2 rows in set (0.00 sec)
+
+
+
+mysql> SELECT unit as Unit, COUNT(*) AS Count FROM FINANCIALS GROUP BY unit;
++-----------+-------+
+| Unit      | Count |
++-----------+-------+
+| Billions  |     7 |
+| Millions  |    32 |
+| Thousands |     1 |
++-----------+-------+
+3 rows in set (0.00 sec
+
+
+
+SELECT industry, studio, COUNT(*) AS Count
+FROM movies
+GROUP BY industry, studio
+ORDER BY industry;
+
++-----------+---------------------------+-------+
+| industry  | studio                    | Count |
++-----------+---------------------------+-------+
+| Bollywood |                           |     2 |
+| Bollywood | Arka Media Works          |     1 |
+| Bollywood | Dharma Productions        |     2 |
+| Bollywood | DVV Entertainment         |     1 |
+| Bollywood | Government of West Bengal |     1 |
+| Bollywood | Hombale Films             |     1 |
+| Bollywood | Mythri Movie Makers       |     1 |
+| Bollywood | Salman Khan Films         |     2 |
+| Bollywood | United Producers          |     1 |
+| Bollywood | Vinod Chopra Films        |     3 |
+| Bollywood | Vinod Chopra Productions  |     1 |
+| Bollywood | Yash Raj Films            |     1 |
+| Bollywood | Zee Studios               |     1 |
+| Hollywood |                           |     1 |
+| Hollywood | 20th Century Fox          |     1 |
+| Hollywood | Castle Rock Entertainment |     1 |
+| Hollywood | Columbia Pictures         |     1 |
+| Hollywood | Liberty Films             |     1 |
+| Hollywood | Marvel Studios            |     8 |
+| Hollywood | Paramount Pictures        |     2 |
+| Hollywood | Syncopy                   |     1 |
+| Hollywood | Universal Pictures        |     2 |
+| Hollywood | Universal Pictures        |     1 |
+| Hollywood | Warner Bros. Pictures     |     2 |
++-----------+---------------------------+-------+
+24 rows in set (0.03 sec)
+
+==========
+MIN & MAX
+==========
+
+mysql> SELECT MIN(IMDB_RATING) AS MIN_RATING FROM MOVIES;
++------------+
+| MIN_RATING |
++------------+
+|        1.9 |
++------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT MAX(IMDB_RATING) AS MAX_RATING FROM MOVIES;
++------------+
+| MAX_RATING |
++------------+
+|        9.3 |
++------------+
+1 row in set (0.00 sec)
+
+
+
+
+mysql> SELECT INDUSTRY , MIN(IMDB_RATING) AS MIN_RATING FROM MOVIES GROUP BY INDUSTRY;
++-----------+------------+
+| INDUSTRY  | MIN_RATING |
++-----------+------------+
+| Bollywood |        1.9 |
+| Hollywood |        6.8 |
++-----------+------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT INDUSTRY , MAX(IMDB_RATING) AS MAX_RATING FROM MOVIES GROUP BY INDUSTRY;
++-----------+------------+
+| INDUSTRY  | MAX_RATING |
++-----------+------------+
+| Bollywood |        8.4 |
+| Hollywood |        9.3 |
++-----------+------------+
+2 rows in set (0.00 sec)
+
+==========
+SUM 
+==========
+
+mysql> select movie_id , sum(revenue) as Total_Revenue , sum(budget) as Total_Budget from financials group by movie_id;
++----------+---------------+--------------+
+| movie_id | Total_Revenue | Total_Budget |
++----------+---------------+--------------+
+|      101 |         12.50 |         1.00 |
+|      102 |        954.80 |       200.00 |
+|      103 |        644.80 |       165.00 |
+|      104 |        854.00 |       180.00 |
+|      105 |        670.00 |       250.00 |
+|      107 |       2000.00 |       400.00 |
+|      108 |       4000.00 |       550.00 |
+|      109 |       1360.00 |       390.00 |
+|      110 |          3.50 |         1.40 |
+|      111 |         73.30 |        25.00 |
+|      113 |        701.80 |       165.00 |
+|      114 |        365.30 |       205.00 |
+|      115 |        307.10 |        55.00 |
+|      116 |        460.50 |       103.00 |
+|      117 |       2202.00 |       200.00 |
+|      118 |          3.30 |         3.18 |
+|      119 |       2847.00 |       237.00 |
+|      120 |        291.00 |         7.20 |
+|      121 |       1006.00 |       185.00 |
+|      122 |        322.20 |        22.00 |
+|      123 |       1046.00 |        63.00 |
+|      124 |        263.10 |        15.50 |
+|      125 |       2798.00 |       400.00 |
+|      126 |       2048.00 |       400.00 |
+|      127 |     100000.00 |     70000.00 |
+|      128 |       1350.00 |       120.00 |
+|      129 |        410.00 |       100.00 |
+|      130 |       8540.00 |       850.00 |
+|      131 |          5.90 |         1.00 |
+|      132 |          3.60 |         2.00 |
+|      133 |         12.00 |         5.50 |
+|      134 |          6.50 |         1.80 |
+|      135 |       3409.00 |       250.00 |
+|      136 |      11690.00 |       900.00 |
+|      137 |        370.60 |       216.70 |
+|      138 |        714.40 |       177.00 |
+|      139 |          3.10 |         1.80 |
+|      140 |        950.00 |       500.00 |
+|      406 |        350.00 |        30.00 |
+|      412 |        836.80 |       160.00 |
++----------+---------------+--------------+
+40 rows in set (0.01 sec)
+
+==========
+AVG
+==========
+
+mysql> SELECT STUDIO , ROUND(AVG(IMDB_RATING),2) AS AVG_RATING FROM MOVIES GROUP BY STUDIO;
++---------------------------+------------+
+| STUDIO                    | AVG_RATING |
++---------------------------+------------+
+| Hombale Films             |       8.40 |
+| Marvel Studios            |       7.50 |
+| United Producers          |       8.10 |
+| Yash Raj Films            |       8.00 |
+| Vinod Chopra Films        |       8.25 |
+| Dharma Productions        |       7.90 |
+|                           |       8.00 |
+| Castle Rock Entertainment |       9.30 |
+| Warner Bros. Pictures     |       8.70 |
+| Columbia Pictures         |       8.00 |
+| Universal Pictures        |       8.50 |
+| Paramount Pictures        |       8.55 |
+| Liberty Films             |       8.60 |
+| 20th Century Fox          |       7.80 |
+| Syncopy                   |       9.00 |
+| Universal Pictures        |       8.60 |
+| Government of West Bengal |       8.30 |
+| Vinod Chopra Productions  |       8.10 |
+| Mythri Movie Makers       |       7.60 |
+| DVV Entertainment         |       8.00 |
+| Arka Media Works          |       8.00 |
+| Zee Studios               |       8.30 |
+| Salman Khan Films         |       5.00 |
++---------------------------+------------+
+23 rows in set (0.01 sec)
+
+
+
+
+SELECT INDUSTRY, ROUND(AVG(IMDB_RATING), 2) AS AVG_RATING
+FROM MOVIES
+GROUP BY INDUSTRY;
+
+
++-----------+------------+
+| INDUSTRY  | AVG_RATING |
++-----------+------------+
+| Bollywood |       7.68 |
+| Hollywood |       8.16 |
++-----------+------------+
+2 rows in set (0.00 sec)
+
+
+
+============+
+Session- 9  |
+============+
+{DECIMAL (5,2) ==>  134.88
+
+TIMESTAMP() 
+}
+
+DROP TABLE IF EXISTS courses;
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT NOT NULL,
+    course_name VARCHAR(50) NOT NULL,
+    course_duration_months DECIMAL(10, 2) NOT NULL,
+    course_fee INT NOT NULL,
+    PRIMARY KEY (course_id)
+);
+
+mysql> DESC courses;
++------------------------+---------------+------+-----+---------+----------------+
+| Field                  | Type          | Null | Key | Default | Extra          |
++------------------------+---------------+------+-----+---------+----------------+
+| course_id              | int           | NO   | PRI | NULL    | auto_increment |
+| course_name            | varchar(50)   | NO   |     | NULL    |                |
+| course_duration_months | decimal(10,2) | NO   |     | NULL    |                |
+| course_fee             | int           | NO   |     | NULL    |                |
++------------------------+---------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec
+
+
+INSERT INTO courses (course_name, course_duration_months, course_fee) VALUES
+('Introduction to Programming', 3.5, 99),
+('Web Development Basics', 6.5, 199),
+('Data Science Fundamentals', 8.5, 299),
+('Machine Learning Essentials', 12.5, 499),
+('Advanced Database Management', 9.5, 399);
+
+
+mysql> SELECT * FROM courses;
++-----------+------------------------------+------------------------+------------+
+| course_id | course_name                  | course_duration_months | course_fee |
++-----------+------------------------------+------------------------+------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 |
+|         2 | Web Development Basics       |                   6.50 |        199 |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 |
+|         5 | Advanced Database Management |                   9.50 |        399 |
++-----------+------------------------------+------------------------+------------+
+5 rows in set (0.00 sec)
+
+
+UPDATE COURSES SET course_fee = 5000 WHERE course_id = 3;
+
+mysql> SELECT * FROM courses;
++-----------+------------------------------+------------------------+------------+
+| course_id | course_name                  | course_duration_months | course_fee |
++-----------+------------------------------+------------------------+------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 |
+|         2 | Web Development Basics       |                   6.50 |        199 |
+|         3 | Data Science Fundamentals    |                   8.50 |       5000 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 |
+|         5 | Advanced Database Management |                   9.50 |        399 |
++-----------+------------------------------+------------------------+------------+
+5 rows in set (0.00 sec)
+
+
+DROP TABLE IF EXISTS courses;
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT NOT NULL,
+    course_name VARCHAR(50) NOT NULL,
+    course_duration_months DECIMAL(10, 2) NOT NULL,
+    course_fee INT NOT NULL,
+    change_at TIMESTAMP DEFAULT NOW(),
+    PRIMARY KEY (course_id)
+    
+);
+
+mysql> DESC courses;
++------------------------+---------------+------+-----+-------------------+-------------------+
+| Field                  | Type          | Null | Key | Default           | Extra             |
++------------------------+---------------+------+-----+-------------------+-------------------+
+| course_id              | int           | NO   | PRI | NULL              | auto_increment    |
+| course_name            | varchar(50)   | NO   |     | NULL              |                   |
+| course_duration_months | decimal(10,2) | NO   |     | NULL              |                   |
+| course_fee             | int           | NO   |     | NULL              |                   |
+| change_at              | timestamp     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
++------------------------+---------------+------+-----+-------------------+-------------------+
+5 rows in set (0.00 sec)
+
+INSERT INTO courses (course_name, course_duration_months, course_fee) VALUES
+('Introduction to Programming', 3.5, 99),
+('Web Development Basics', 6.5, 199),
+('Data Science Fundamentals', 8.5, 299),
+('Machine Learning Essentials', 12.5, 499),
+('Advanced Database Management', 9.5, 399);
+
+mysql> SELECT * FROM courses;
++-----------+------------------------------+------------------------+------------+---------------------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           |
++-----------+------------------------------+------------------------+------------+---------------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-24 17:39:50 |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-24 17:39:50 |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-24 17:39:50 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-24 17:39:50 |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-24 17:39:50 |
++-----------+------------------------------+------------------------+------------+---------------------+
+5 rows in set (0.00 sec)
+
+
+
+INSERT INTO courses (course_name, course_duration_months, course_fee) VALUES
+('Devops', 6.5, 10000);
+
+
+mysql> select * from courses;
++-----------+------------------------------+------------------------+------------+---------------------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           |
++-----------+------------------------------+------------------------+------------+---------------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-24 17:39:50 |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-24 17:39:50 |
+|         3 | Data Science Fundamentals    |                   8.50 |       5000 | 2023-10-24 17:39:50 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-24 17:39:50 |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-24 17:39:50 |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-24 17:43:20 |
++-----------+------------------------------+------------------------+------------+---------------------+
+6 rows in set (0.00 sec)
+
+
+DROP TABLE IF EXISTS courses;
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT NOT NULL,
+    course_name VARCHAR(50) NOT NULL,
+    course_duration_months DECIMAL(10, 2) NOT NULL,
+    course_fee INT NOT NULL,
+    change_at TIMESTAMP DEFAULT NOW() ON UPDATE NOW() ,
+    PRIMARY KEY (course_id)
+    
+);
+
+OR 							[BOTH ARE SAME SYSTEX WE CAN USE NOW() INSTED OF CURRENT_TIMESTAMP()]
+
+DROP TABLE IF EXISTS courses;
+CREATE TABLE courses (
+    course_id INT AUTO_INCREMENT NOT NULL,
+    course_name VARCHAR(50) NOT NULL,
+    course_duration_months DECIMAL(10, 2) NOT NULL,
+    course_fee INT NOT NULL,
+    change_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP() ,
+    PRIMARY KEY (course_id)
+    
+);
+
+
+mysql> DESC courses;
++------------------------+---------------+------+-----+-------------------+-----------------------------------------------+
+| Field                  | Type          | Null | Key | Default           | Extra                                         |
++------------------------+---------------+------+-----+-------------------+-----------------------------------------------+
+| course_id              | int           | NO   | PRI | NULL              | auto_increment                                |
+| course_name            | varchar(50)   | NO   |     | NULL              |                                               |
+| course_duration_months | decimal(10,2) | NO   |     | NULL              |                                               |
+| course_fee             | int           | NO   |     | NULL              |                                               |
+| change_at              | timestamp     | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
++------------------------+---------------+------+-----+-------------------+-----------------------------------------------+
+5 rows in set (0.00 sec)
+
+INSERT INTO courses (course_name, course_duration_months, course_fee) VALUES
+('Introduction to Programming', 3.5, 99),
+('Web Development Basics', 6.5, 199),
+('Data Science Fundamentals', 8.5, 299),
+('Machine Learning Essentials', 12.5, 499),
+('Advanced Database Management', 9.5, 399);
+
+
+mysql> SELECT * FROM courses;
++-----------+------------------------------+------------------------+------------+---------------------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           |
++-----------+------------------------------+------------------------+------------+---------------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-24 17:49:33 |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-24 17:49:33 |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-24 17:49:33 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-24 17:49:33 |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-24 17:49:33 |
++-----------+------------------------------+------------------------+------------+---------------------+
+5 rows in set (0.00 sec)
+
+
+UPDATE courses SET course_fee = 100000 where course_name = 'Devops';
+
+mysql> select * from courses;
++-----------+------------------------------+------------------------+------------+---------------------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           |
++-----------+------------------------------+------------------------+------------+---------------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-24 17:49:33 |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-24 17:49:33 |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-24 17:49:33 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-24 17:49:33 |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-24 17:49:33 |
+|         6 | Devops                       |                   6.50 |     100000 | 2023-10-24 17:51:29 |
++-----------+------------------------------+------------------------+------------+---------------------+
+6 rows in set (0.00 sec)
+
+
+mysql> update courses set course_duration_months = 12 where course_name = 'Devops';
+Query OK, 1 row affected (0.03 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from courses;
++-----------+------------------------------+------------------------+------------+---------------------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           |
++-----------+------------------------------+------------------------+------------+---------------------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-24 17:49:33 |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-24 17:49:33 |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-24 17:49:33 |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-24 17:49:33 |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-24 17:49:33 |
+|         6 | Devops                       |                  12.00 |     100000 | 2023-10-24 17:55:40 |
++-----------+------------------------------+------------------------+------------+---------------------+
+6 rows in set (0.00 sec)
+
+
+RECAP :
+
+DECIMAL (5,2) ==>  134.88
+
+TIMESTAMP() 
+
+
+============+
+Session- 10  |
+============+
+
+mysql> select * from entries where resources != 'CPU';
++------+-----------+--------------+-------+-----------+
+| name | address   | email        | floor | resources |
++------+-----------+--------------+-------+-----------+
+| A    | Bangalore | A2@gmail.com |     2 | DESKTOP   |
+| B    | Bangalore | B@gmail.com  |     2 | DESKTOP   |
+| B    | Bangalore | B1@gmail.com |     2 | DESKTOP   |
+| B    | Bangalore | B2@gmail.com |     1 | MONITOR   |
++------+-----------+--------------+-------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select * from movies where studio != "Marvel Studios" and studio != 'Salman Khan Films';
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                       | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      101 | K.G.F: Chapter 2            | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      106 | Sholay                      | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      107 | Dilwale Dulhania Le Jayenge | Bollywood |         1995 |         8.0 | Yash Raj Films            |           1 |
+|      108 | 3 Idiots                    | Bollywood |         2009 |         8.4 | Vinod Chopra Films        |           1 |
+|      109 | Kabhi Khushi Kabhie Gham    | Bollywood |         2001 |         7.4 | Dharma Productions        |           1 |
+|      110 | Bajirao Mastani             | Bollywood |         2015 |         7.2 |                           |           1 |
+|      111 | The Shawshank Redemption    | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      112 | Inception                   | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar                | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      115 | The Pursuit of Happyness    | Hollywood |         2006 |         8.0 | Columbia Pictures         |           5 |
+|      116 | Gladiator                   | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      117 | Titanic                     | Hollywood |         1997 |         7.9 | Paramount Pictures        |           5 |
+|      118 | It's a Wonderful Life       | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      119 | Avatar                      | Hollywood |         2009 |         7.8 | 20th Century Fox          |           5 |
+|      120 | The Godfather               | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      121 | The Dark Knight             | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      122 | Schindler's List            | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      123 | Jurassic Park               | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      124 | Parasite                    | Hollywood |         2019 |         8.5 |                           |           5 |
+|      127 | Pather Panchali             | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      128 | Taare Zameen Par            | Bollywood |         2007 |         8.3 |                           |           1 |
+|      129 | Munna Bhai M.B.B.S.         | Bollywood |         2003 |         8.1 | Vinod Chopra Productions  |           1 |
+|      130 | PK                          | Bollywood |         2014 |         8.1 | Vinod Chopra Films        |           1 |
+|      131 | Sanju                       | Bollywood |         2018 |        NULL | Vinod Chopra Films        |           1 |
+|      132 | Pushpa: The Rise - Part 1   | Bollywood |         2021 |         7.6 | Mythri Movie Makers       |           2 |
+|      133 | RRR                         | Bollywood |         2022 |         8.0 | DVV Entertainment         |           2 |
+|      134 | Baahubali: The Beginning    | Bollywood |         2015 |         8.0 | Arka Media Works          |           2 |
+|      135 | The Kashmir Files           | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
+|      140 | Shershaah                   | Bollywood |         2021 |         8.4 | Dharma Productions        |           1 |
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+
+
+
+mysql> select * from movies where studio like '%Chopra%';
++----------+---------------------+-----------+--------------+-------------+--------------------------+-------------+
+| movie_id | title               | industry  | release_year | imdb_rating | studio                   | language_id |
++----------+---------------------+-----------+--------------+-------------+--------------------------+-------------+
+|      108 | 3 Idiots            | Bollywood |         2009 |         8.4 | Vinod Chopra Films       |           1 |
+|      129 | Munna Bhai M.B.B.S. | Bollywood |         2003 |         8.1 | Vinod Chopra Productions |           1 |
+|      130 | PK                  | Bollywood |         2014 |         8.1 | Vinod Chopra Films       |           1 |
+|      131 | Sanju               | Bollywood |         2018 |        NULL | Vinod Chopra Films       |           1 |
++----------+---------------------+-----------+--------------+-------------+--------------------------+-------------+
+4 rows in set (0.01 sec)
+
+
+
+mysql> select * from movies where studio not like '%Chopra%';
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      101 | K.G.F: Chapter 2                            | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios            |           5 |
+|      103 | Thor: The Dark World                        | Hollywood |         2013 |         6.8 | Marvel Studios            |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios            |           5 |
+|      105 | Thor: Love and Thunder                      | Hollywood |         2022 |         6.8 | Marvel Studios            |           5 |
+|      106 | Sholay                                      | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      107 | Dilwale Dulhania Le Jayenge                 | Bollywood |         1995 |         8.0 | Yash Raj Films            |           1 |
+|      109 | Kabhi Khushi Kabhie Gham                    | Bollywood |         2001 |         7.4 | Dharma Productions        |           1 |
+|      110 | Bajirao Mastani                             | Bollywood |         2015 |         7.2 |                           |           1 |
+|      111 | The Shawshank Redemption                    | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      112 | Inception                                   | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar                                | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      115 | The Pursuit of Happyness                    | Hollywood |         2006 |         8.0 | Columbia Pictures         |           5 |
+|      116 | Gladiator                                   | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      117 | Titanic                                     | Hollywood |         1997 |         7.9 | Paramount Pictures        |           5 |
+|      118 | It's a Wonderful Life                       | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      119 | Avatar                                      | Hollywood |         2009 |         7.8 | 20th Century Fox          |           5 |
+|      120 | The Godfather                               | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      121 | The Dark Knight                             | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      122 | Schindler's List                            | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      123 | Jurassic Park                               | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      124 | Parasite                                    | Hollywood |         2019 |         8.5 |                           |           5 |
+|      125 | Avengers: Endgame                           | Hollywood |         2019 |         8.4 | Marvel Studios            |           5 |
+|      126 | Avengers: Infinity War                      | Hollywood |         2018 |         8.4 | Marvel Studios            |           5 |
+|      127 | Pather Panchali                             | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      128 | Taare Zameen Par                            | Bollywood |         2007 |         8.3 |                           |           1 |
+|      132 | Pushpa: The Rise - Part 1                   | Bollywood |         2021 |         7.6 | Mythri Movie Makers       |           2 |
+|      133 | RRR                                         | Bollywood |         2022 |         8.0 | DVV Entertainment         |           2 |
+|      134 | Baahubali: The Beginning                    | Bollywood |         2015 |         8.0 | Arka Media Works          |           2 |
+|      135 | The Kashmir Files                           | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
+|      136 | Bajrangi Bhaijaan                           | Bollywood |         2015 |         8.1 | Salman Khan Films         |           1 |
+|      137 | Captain America: The First Avenger          | Hollywood |         2011 |         6.9 | Marvel Studios            |           5 |
+|      138 | Captain America: The Winter Soldier         | Hollywood |         2014 |         7.8 | Marvel Studios            |           5 |
+|      139 | Race 3                                      | Bollywood |         2018 |         1.9 | Salman Khan Films         |           1 |
+|      140 | Shershaah                                   | Bollywood |         2021 |         8.4 | Dharma Productions        |           1 |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------------+-------------+
+35 rows in set (0.03 sec)
+
+
+mysql> select * from movies where imdb_rating >=8 and industry = 'Bollywood' and studio = 'Vinod Chopra Films';  [IF these three conditions are mate then query will execute]
++----------+----------+-----------+--------------+-------------+--------------------+-------------+
+| movie_id | title    | industry  | release_year | imdb_rating | studio             | language_id |
++----------+----------+-----------+--------------+-------------+--------------------+-------------+
+|      108 | 3 Idiots | Bollywood |         2009 |         8.4 | Vinod Chopra Films |           1 |
+|      130 | PK       | Bollywood |         2014 |         8.1 | Vinod Chopra Films |           1 |
++----------+----------+-----------+--------------+-------------+--------------------+-------------+
+2 rows in set (0.00 sec)
+
+
+
+mysql> select * from movies where imdb_rating >=8 or imdb_rating <=6;
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                       | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      101 | K.G.F: Chapter 2            | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      106 | Sholay                      | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      107 | Dilwale Dulhania Le Jayenge | Bollywood |         1995 |         8.0 | Yash Raj Films            |           1 |
+|      108 | 3 Idiots                    | Bollywood |         2009 |         8.4 | Vinod Chopra Films        |           1 |
+|      111 | The Shawshank Redemption    | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      112 | Inception                   | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar                | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      115 | The Pursuit of Happyness    | Hollywood |         2006 |         8.0 | Columbia Pictures         |           5 |
+|      116 | Gladiator                   | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      118 | It's a Wonderful Life       | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      120 | The Godfather               | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      121 | The Dark Knight             | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      122 | Schindler's List            | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      123 | Jurassic Park               | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      124 | Parasite                    | Hollywood |         2019 |         8.5 |                           |           5 |
+|      125 | Avengers: Endgame           | Hollywood |         2019 |         8.4 | Marvel Studios            |           5 |
+|      126 | Avengers: Infinity War      | Hollywood |         2018 |         8.4 | Marvel Studios            |           5 |
+|      127 | Pather Panchali             | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      128 | Taare Zameen Par            | Bollywood |         2007 |         8.3 |                           |           1 |
+|      129 | Munna Bhai M.B.B.S.         | Bollywood |         2003 |         8.1 | Vinod Chopra Productions  |           1 |
+|      130 | PK                          | Bollywood |         2014 |         8.1 | Vinod Chopra Films        |           1 |
+|      133 | RRR                         | Bollywood |         2022 |         8.0 | DVV Entertainment         |           2 |
+|      134 | Baahubali: The Beginning    | Bollywood |         2015 |         8.0 | Arka Media Works          |           2 |
+|      135 | The Kashmir Files           | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
+|      136 | Bajrangi Bhaijaan           | Bollywood |         2015 |         8.1 | Salman Khan Films         |           1 |
+|      139 | Race 3                      | Bollywood |         2018 |         1.9 | Salman Khan Films         |           1 |
+|      140 | Shershaah                   | Bollywood |         2021 |         8.4 | Dharma Productions        |           1 |
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+27 rows in set (0.00 sec)
+
+
+mysql> select * from movies where imdb_rating between 7 and 8;
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio              | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------+-------------+
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios      |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios      |           5 |
+|      107 | Dilwale Dulhania Le Jayenge                 | Bollywood |         1995 |         8.0 | Yash Raj Films      |           1 |
+|      109 | Kabhi Khushi Kabhie Gham                    | Bollywood |         2001 |         7.4 | Dharma Productions  |           1 |
+|      110 | Bajirao Mastani                             | Bollywood |         2015 |         7.2 |                     |           1 |
+|      115 | The Pursuit of Happyness                    | Hollywood |         2006 |         8.0 | Columbia Pictures   |           5 |
+|      117 | Titanic                                     | Hollywood |         1997 |         7.9 | Paramount Pictures  |           5 |
+|      119 | Avatar                                      | Hollywood |         2009 |         7.8 | 20th Century Fox    |           5 |
+|      132 | Pushpa: The Rise - Part 1                   | Bollywood |         2021 |         7.6 | Mythri Movie Makers |           2 |
+|      133 | RRR                                         | Bollywood |         2022 |         8.0 | DVV Entertainment   |           2 |
+|      134 | Baahubali: The Beginning                    | Bollywood |         2015 |         8.0 | Arka Media Works    |           2 |
+|      138 | Captain America: The Winter Soldier         | Hollywood |         2014 |         7.8 | Marvel Studios      |           5 |
++----------+---------------------------------------------+-----------+--------------+-------------+---------------------+-------------+
+12 rows in set (0.01 sec)
+
+
+mysql> select * from movies where imdb_rating not between 5 and 8;
++----------+--------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                    | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+--------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      101 | K.G.F: Chapter 2         | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      106 | Sholay                   | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      108 | 3 Idiots                 | Bollywood |         2009 |         8.4 | Vinod Chopra Films        |           1 |
+|      111 | The Shawshank Redemption | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      112 | Inception                | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar             | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      116 | Gladiator                | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      118 | It's a Wonderful Life    | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      120 | The Godfather            | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      121 | The Dark Knight          | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      122 | Schindler's List         | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      123 | Jurassic Park            | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      124 | Parasite                 | Hollywood |         2019 |         8.5 |                           |           5 |
+|      125 | Avengers: Endgame        | Hollywood |         2019 |         8.4 | Marvel Studios            |           5 |
+|      126 | Avengers: Infinity War   | Hollywood |         2018 |         8.4 | Marvel Studios            |           5 |
+|      127 | Pather Panchali          | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      128 | Taare Zameen Par         | Bollywood |         2007 |         8.3 |                           |           1 |
+|      129 | Munna Bhai M.B.B.S.      | Bollywood |         2003 |         8.1 | Vinod Chopra Productions  |           1 |
+|      130 | PK                       | Bollywood |         2014 |         8.1 | Vinod Chopra Films        |           1 |
+|      135 | The Kashmir Files        | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
+|      136 | Bajrangi Bhaijaan        | Bollywood |         2015 |         8.1 | Salman Khan Films         |           1 |
+|      139 | Race 3                   | Bollywood |         2018 |         1.9 | Salman Khan Films         |           1 |
+|      140 | Shershaah                | Bollywood |         2021 |         8.4 | Dharma Productions        |           1 |
++----------+--------------------------+-----------+--------------+-------------+---------------------------+-------------+
+23 rows in set (0.00 sec)
+
+
+
+mysql> SELECT * FROM MOVIES WHERE STUDIO = 'Marvel Studios' OR STUDIO = 'Salman Khan Films' OR STUDIO = 'Dharma Productions';
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio             | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios     |           5 |
+|      103 | Thor: The Dark World                        | Hollywood |         2013 |         6.8 | Marvel Studios     |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios     |           5 |
+|      105 | Thor: Love and Thunder                      | Hollywood |         2022 |         6.8 | Marvel Studios     |           5 |
+|      109 | Kabhi Khushi Kabhie Gham                    | Bollywood |         2001 |         7.4 | Dharma Productions |           1 |
+|      125 | Avengers: Endgame                           | Hollywood |         2019 |         8.4 | Marvel Studios     |           5 |
+|      126 | Avengers: Infinity War                      | Hollywood |         2018 |         8.4 | Marvel Studios     |           5 |
+|      136 | Bajrangi Bhaijaan                           | Bollywood |         2015 |         8.1 | Salman Khan Films  |           1 |
+|      137 | Captain America: The First Avenger          | Hollywood |         2011 |         6.9 | Marvel Studios     |           5 |
+|      138 | Captain America: The Winter Soldier         | Hollywood |         2014 |         7.8 | Marvel Studios     |           5 |
+|      139 | Race 3                                      | Bollywood |         2018 |         1.9 | Salman Khan Films  |           1 |
+|      140 | Shershaah                                   | Bollywood |         2021 |         8.4 | Dharma Productions |           1 |
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+12 rows in set (0.00 sec)
+
+
+mysql> SELECT * FROM MOVIES WHERE STUDIO IN( 'Marvel Studios' ,  'Salman Khan Films' , 'Dharma Productions');
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+| movie_id | title                                       | industry  | release_year | imdb_rating | studio             | language_id |
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+|      102 | Doctor Strange in the Multiverse of Madness | Hollywood |         2022 |         7.0 | Marvel Studios     |           5 |
+|      103 | Thor: The Dark World                        | Hollywood |         2013 |         6.8 | Marvel Studios     |           5 |
+|      104 | Thor: Ragnarok                              | Hollywood |         2017 |         7.9 | Marvel Studios     |           5 |
+|      105 | Thor: Love and Thunder                      | Hollywood |         2022 |         6.8 | Marvel Studios     |           5 |
+|      109 | Kabhi Khushi Kabhie Gham                    | Bollywood |         2001 |         7.4 | Dharma Productions |           1 |
+|      125 | Avengers: Endgame                           | Hollywood |         2019 |         8.4 | Marvel Studios     |           5 |
+|      126 | Avengers: Infinity War                      | Hollywood |         2018 |         8.4 | Marvel Studios     |           5 |
+|      136 | Bajrangi Bhaijaan                           | Bollywood |         2015 |         8.1 | Salman Khan Films  |           1 |
+|      137 | Captain America: The First Avenger          | Hollywood |         2011 |         6.9 | Marvel Studios     |           5 |
+|      138 | Captain America: The Winter Soldier         | Hollywood |         2014 |         7.8 | Marvel Studios     |           5 |
+|      139 | Race 3                                      | Bollywood |         2018 |         1.9 | Salman Khan Films  |           1 |
+|      140 | Shershaah                                   | Bollywood |         2021 |         8.4 | Dharma Productions |           1 |
++----------+---------------------------------------------+-----------+--------------+-------------+--------------------+-------------+
+12 rows in set (0.00 sec)
+
+
+
+mysql> SELECT * FROM MOVIES WHERE STUDIO NOT IN( 'Marvel Studios' ,  'Salman Khan Films' , 'Dharma Productions');
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+| movie_id | title                       | industry  | release_year | imdb_rating | studio                    | language_id |
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+|      101 | K.G.F: Chapter 2            | Bollywood |         2022 |         8.4 | Hombale Films             |           3 |
+|      106 | Sholay                      | Bollywood |         1975 |         8.1 | United Producers          |           1 |
+|      107 | Dilwale Dulhania Le Jayenge | Bollywood |         1995 |         8.0 | Yash Raj Films            |           1 |
+|      108 | 3 Idiots                    | Bollywood |         2009 |         8.4 | Vinod Chopra Films        |           1 |
+|      110 | Bajirao Mastani             | Bollywood |         2015 |         7.2 |                           |           1 |
+|      111 | The Shawshank Redemption    | Hollywood |         1994 |         9.3 | Castle Rock Entertainment |           5 |
+|      112 | Inception                   | Hollywood |         2010 |         8.8 | Warner Bros. Pictures     |           5 |
+|      113 | Interstellar                | Hollywood |         2014 |         8.6 | Warner Bros. Pictures     |           5 |
+|      115 | The Pursuit of Happyness    | Hollywood |         2006 |         8.0 | Columbia Pictures         |           5 |
+|      116 | Gladiator                   | Hollywood |         2000 |         8.5 | Universal Pictures        |           5 |
+|      117 | Titanic                     | Hollywood |         1997 |         7.9 | Paramount Pictures        |           5 |
+|      118 | It's a Wonderful Life       | Hollywood |         1946 |         8.6 | Liberty Films             |           5 |
+|      119 | Avatar                      | Hollywood |         2009 |         7.8 | 20th Century Fox          |           5 |
+|      120 | The Godfather               | Hollywood |         1972 |         9.2 | Paramount Pictures        |           5 |
+|      121 | The Dark Knight             | Hollywood |         2008 |         9.0 | Syncopy                   |           5 |
+|      122 | Schindler's List            | Hollywood |         1993 |         9.0 | Universal Pictures        |           5 |
+|      123 | Jurassic Park               | Hollywood |         1993 |         8.2 | Universal Pictures        |           5 |
+|      124 | Parasite                    | Hollywood |         2019 |         8.5 |                           |           5 |
+|      127 | Pather Panchali             | Bollywood |         1955 |         8.3 | Government of West Bengal |           7 |
+|      128 | Taare Zameen Par            | Bollywood |         2007 |         8.3 |                           |           1 |
+|      129 | Munna Bhai M.B.B.S.         | Bollywood |         2003 |         8.1 | Vinod Chopra Productions  |           1 |
+|      130 | PK                          | Bollywood |         2014 |         8.1 | Vinod Chopra Films        |           1 |
+|      131 | Sanju                       | Bollywood |         2018 |        NULL | Vinod Chopra Films        |           1 |
+|      132 | Pushpa: The Rise - Part 1   | Bollywood |         2021 |         7.6 | Mythri Movie Makers       |           2 |
+|      133 | RRR                         | Bollywood |         2022 |         8.0 | DVV Entertainment         |           2 |
+|      134 | Baahubali: The Beginning    | Bollywood |         2015 |         8.0 | Arka Media Works          |           2 |
+|      135 | The Kashmir Files           | Bollywood |         2022 |         8.3 | Zee Studios               |           1 |
++----------+-----------------------------+-----------+--------------+-------------+---------------------------+-------------+
+27 rows in set (0.00 sec)
+
+mysql> SELECT title , imdb_rating , CASE WHEN imdb_rating > 8 THEN 'BEST_RATING' ELSE 'AVG_RATING'  END AS RATING_CAT FROM MOVIES ORDER BY RATING_CAT;
++---------------------------------------------+-------------+-------------+
+| title                                       | imdb_rating | RATING_CAT  |
++---------------------------------------------+-------------+-------------+
+| The Pursuit of Happyness                    |         8.0 | AVG_RATING  |
+| Doctor Strange in the Multiverse of Madness |         7.0 | AVG_RATING  |
+| Thor: The Dark World                        |         6.8 | AVG_RATING  |
+| Thor: Ragnarok                              |         7.9 | AVG_RATING  |
+| Thor: Love and Thunder                      |         6.8 | AVG_RATING  |
+| Avatar                                      |         7.8 | AVG_RATING  |
+| Dilwale Dulhania Le Jayenge                 |         8.0 | AVG_RATING  |
+| Titanic                                     |         7.9 | AVG_RATING  |
+| Kabhi Khushi Kabhie Gham                    |         7.4 | AVG_RATING  |
+| Bajirao Mastani                             |         7.2 | AVG_RATING  |
+| Sanju                                       |        NULL | AVG_RATING  |
+| Pushpa: The Rise - Part 1                   |         7.6 | AVG_RATING  |
+| RRR                                         |         8.0 | AVG_RATING  |
+| Baahubali: The Beginning                    |         8.0 | AVG_RATING  |
+| Captain America: The First Avenger          |         6.9 | AVG_RATING  |
+| Captain America: The Winter Soldier         |         7.8 | AVG_RATING  |
+| Race 3                                      |         1.9 | AVG_RATING  |
+| It's a Wonderful Life                       |         8.6 | BEST_RATING |
+| The Godfather                               |         9.2 | BEST_RATING |
+| The Dark Knight                             |         9.0 | BEST_RATING |
+| Schindler's List                            |         9.0 | BEST_RATING |
+| Jurassic Park                               |         8.2 | BEST_RATING |
+| Parasite                                    |         8.5 | BEST_RATING |
+| Avengers: Endgame                           |         8.4 | BEST_RATING |
+| Avengers: Infinity War                      |         8.4 | BEST_RATING |
+| Pather Panchali                             |         8.3 | BEST_RATING |
+| Taare Zameen Par                            |         8.3 | BEST_RATING |
+| Munna Bhai M.B.B.S.                         |         8.1 | BEST_RATING |
+| PK                                          |         8.1 | BEST_RATING |
+| K.G.F: Chapter 2                            |         8.4 | BEST_RATING |
+| Sholay                                      |         8.1 | BEST_RATING |
+| 3 Idiots                                    |         8.4 | BEST_RATING |
+| The Shawshank Redemption                    |         9.3 | BEST_RATING |
+| The Kashmir Files                           |         8.3 | BEST_RATING |
+| Bajrangi Bhaijaan                           |         8.1 | BEST_RATING |
+| Inception                                   |         8.8 | BEST_RATING |
+| Interstellar                                |         8.6 | BEST_RATING |
+| Gladiator                                   |         8.5 | BEST_RATING |
+| Shershaah                                   |         8.4 | BEST_RATING |
++---------------------------------------------+-------------+-------------+
+39 rows in set (0.00 sec)
+
+
+
+select
+    course_id,
+    course_name,
+    course_fee,
+    course_duration_months,
+    CASE
+        WHEN course_duration_months > 6 THEN 'MASTER'
+        ELSE 'DIPLOMA'
+    END AS COURSE_TYPE
+from
+    courses;
++-----------+------------------------------+------------+------------------------+-------------+
+| course_id | course_name                  | course_fee | course_duration_months | COURSE_TYPE |
++-----------+------------------------------+------------+------------------------+-------------+
+|         1 | Introduction to Programming  |         99 |                   3.50 | DIPLOMA     |
+|         2 | Web Development Basics       |        199 |                   6.50 | MASTER      |
+|         3 | Data Science Fundamentals    |        299 |                   8.50 | MASTER      |
+|         4 | Machine Learning Essentials  |        499 |                  12.50 | MASTER      |
+|         5 | Advanced Database Management |        399 |                   9.50 | MASTER      |
++-----------+------------------------------+------------+------------------------+-------------+
+5 rows in set (0.00 sec)
+
+
+select
+    student_fname,
+    student_lname,
+    student_company,
+    location,
+    student_company,
+    CASE
+        WHEN student_company IN ('InnoTech', 'Info Systems' 'Coders Hub') THEN 'product based'
+        WHEN student_company IS NULL THEN 'invalid company'
+        ELSE 'service based'
+    END AS company_type
+from
+    students;
+
+
++---------------+---------------+--------------------+-----------+--------------------+---------------+
+| student_fname | student_lname | student_company    | location  | student_company    | company_type  |
++---------------+---------------+--------------------+-----------+--------------------+---------------+
+| Rahul         | Sharma        | Tech Solutions     | Mumbai    | Tech Solutions     | service based |
+| Priya         | Patel         | Info Systems       | Ahmedabad | Info Systems       | service based |
+| Amit          | Singh         | InnoTech           | Delhi     | InnoTech           | product based |
+| Neha          | Verma         | Global Innovations | Bangalore | Global Innovations | service based |
+| Vikram        | Rajput        | Smart Solutions    | Hyderabad | Smart Solutions    | service based |
+| Ananya        | Das           | Future Tech        | Kolkata   | Future Tech        | service based |
+| Sachin        | Choudhary     | Coders Hub         | Chennai   | Coders Hub         | service based |
++---------------+---------------+--------------------+-----------+--------------------+---------------+
+7 rows in set (0.00 sec)
+
+
+
+============+
+Session- 11  |
+============+
+
+{joins}
+
+2 tables
+============ 
+Courses 
+Students 
+
+I want to know in which students course rahul has enrolled. 
+
+
+students 
+============ 
+student fname, rahul, 1 
+
+Courses 
+============ 
+selected course 
+course id,course name 1, big data  
+
+
+mysql> select course_name from courses where course_id =(select selected_course from students where student_fname ='rahul');
++-----------------------------+
+| course_name                 |
++-----------------------------+
+| Introduction to Programming |
++-----------------------------+
+1 row in set (0.00 sec)
+
+
+
+SELECT student_fname, selected_course, c.course_name
+FROM students s
+JOIN courses c ON s.selected_course = c.course_id
+WHERE student_id =1;
+
++---------------+-----------------+-----------------------------+
+| student_fname | selected_course | course_name                 |
++---------------+-----------------+-----------------------------+
+| Rahul         |               1 | Introduction to Programming |
++---------------+-----------------+-----------------------------+
+1 row in set (0.00 sec)
+
+INNTER JOIN 
+=================
+
+by default it is a inner join.. 
+
+only the matching records are considered. Non matching records are discarded. 
+
+
+LEFT OUTER JOIN 
+================
+All the matching records are considered 
+all the non matching records in the  left table which dose not have the match in the right padded with null.....
+
+
+
+select
+    student_fname,
+    student_lname,
+    selected_course,
+    course_name
+from
+    students
+    join courses on courses.course_id = students.selected_course;
+
++---------------+---------------+-----------------+------------------------------+
+| student_fname | student_lname | selected_course | course_name                  |
++---------------+---------------+-----------------+------------------------------+
+| Rahul         | Sharma        |               1 | Introduction to Programming  |
+| Vikram        | Rajput        |               1 | Introduction to Programming  |
+| Priya         | Patel         |               3 | Data Science Fundamentals    |
+| Neha          | Verma         |               4 | Machine Learning Essentials  |
+| Ananya        | Das           |               5 | Advanced Database Management |
+| Amit          | Singh         |               2 | NULL                         |
+| Sachin        | Choudhary     |               2 | NULL                         |
++---------------+---------------+-----------------+------------------------------+
+7 rows in set (0.00 sec)
+
+
+
+RIGHT OUTER JOIN 
+================
+All the matching records from left and right rable  are considered 
++ all the not matching records in the  right table which dose not have the match in the left padded with null....
+
+SELECT student_fname, student_lname, selected_course, c.course_name
+FROM students_latest s
+RIGHT outer JOIN courses_latest c ON s.selected_course = c.course_id;
+
++---------------+---------------+-----------------+------------------------------+
+| student_fname | student_lname | selected_course | course_name                  |
++---------------+---------------+-----------------+------------------------------+
+| Rahul         | Sharma        |               1 | Introduction to Programming  |
+| Priya         | Patel         |               3 | Data Science Fundamentals    |
+| Neha          | Verma         |               4 | Machine Learning Essentials  |
+| Vikram        | Rajput        |               1 | Introduction to Programming  |
+| Ananya        | Das           |               5 | Advanced Database Management |
+| NULL          | NULL          |            NULL | Devops                       |
++---------------+---------------+-----------------+------------------------------+
+6 rows in set (0.00 sec)
+
+
+
+FULL OUTER JOIN 
+================
+all the matching records 
++
+non matching records from left 
+non matching records from right 
+
+
+SELECT student_fname, student_lname, selected_course, c.course_name 
+FROM students_latest s
+left outer JOIN courses_latest c ON s.selected_course = c.course_id
+
+UNION
+
+SELECT student_fname, student_lname, selected_course, c.course_name
+FROM students_latest s
+RIGHT outer JOIN courses_latest c ON s.selected_course = c.course_id;
+
++---------------+---------------+-----------------+------------------------------+
+| student_fname | student_lname | selected_course | course_name                  |
++---------------+---------------+-----------------+------------------------------+
+| Rahul         | Sharma        |               1 | Introduction to Programming  |
+| Vikram        | Rajput        |               1 | Introduction to Programming  |
+| Priya         | Patel         |               3 | Data Science Fundamentals    |
+| Neha          | Verma         |               4 | Machine Learning Essentials  |
+| Ananya        | Das           |               5 | Advanced Database Management |
+| Amit          | Singh         |               2 | NULL                         |
+| Sachin        | Choudhary     |               2 | NULL                         |
+| NULL          | NULL          |            NULL | Devops                       |
++---------------+---------------+-----------------+------------------------------+
+8 rows in set (0.00 sec)
+
+
+
+UNION ALL 
+============
+
+SELECT student_fname, student_lname, selected_course, c.course_name 
+FROM students_latest s
+left outer JOIN courses_latest c ON s.selected_course = c.course_id
+
+UNION ALL 
+
+SELECT student_fname, student_lname, selected_course, c.course_name
+FROM students_latest s
+RIGHT outer JOIN courses_latest c ON s.selected_course = c.course_id;
+
+
++---------------+---------------+-----------------+------------------------------+
+| student_fname | student_lname | selected_course | course_name                  |
++---------------+---------------+-----------------+------------------------------+
+| Rahul         | Sharma        |               1 | Introduction to Programming  |
+| Vikram        | Rajput        |               1 | Introduction to Programming  |
+| Priya         | Patel         |               3 | Data Science Fundamentals    |
+| Neha          | Verma         |               4 | Machine Learning Essentials  |
+| Ananya        | Das           |               5 | Advanced Database Management |
+| Amit          | Singh         |               2 | NULL                         |
+| Sachin        | Choudhary     |               2 | NULL                         |
+| Rahul         | Sharma        |               1 | Introduction to Programming  |
+| Priya         | Patel         |               3 | Data Science Fundamentals    |
+| Neha          | Verma         |               4 | Machine Learning Essentials  |
+| Vikram        | Rajput        |               1 | Introduction to Programming  |
+| Ananya        | Das           |               5 | Advanced Database Management |
+| NULL          | NULL          |            NULL | Devops                       |
++---------------+---------------+-----------------+------------------------------+
+13 rows in set (0.00 sec)
+
+
+
+
+CROSS JOIN  
+============
+
+SELECT * FROM courses , students;
+
+mysql> SELECT * FROM courses , students;
++-----------+------------------------------+------------------------+------------+---------------------+------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           | student_id | student_fname | student_lname | student_mname | student_email                | student_phone | student_alternate_phone | enrollment_date     | selected_course | year_of_exp | student_company    | batch_date | source_of_joining  | location  |
++-----------+------------------------------+------------------------+------------+---------------------+------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
++-----------+------------------------------+------------------------+------------+---------------------+------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+
+
+
+SELECT * FROM courses JOIN  students;
+
+mysql> SELECT * FROM courses JOIN  students;
++-----------+------------------------------+------------------------+------------+---------------------+------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+| course_id | course_name                  | course_duration_months | course_fee | change_at           | student_id | student_fname | student_lname | student_mname | student_email                | student_phone | student_alternate_phone | enrollment_date     | selected_course | year_of_exp | student_company    | batch_date | source_of_joining  | location  |
++-----------+------------------------------+------------------------+------------+---------------------+------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          1 | Rahul         | Sharma        | K             | rahul.sharma@example.com     | 9876543210    | 8765432109              | 2023-10-25 15:19:02 |               1 |           2 | Tech Solutions     | 2023-01-15 | Campus Placement   | Mumbai    |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          2 | Priya         | Patel         | L             | priya.patel@example.com      | 8765432109    | 7654321098              | 2023-10-25 15:19:02 |               3 |           1 | Info Systems       | 2023-02-20 | Internship Program | Ahmedabad |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          3 | Amit          | Singh         | M             | amit.singh@example.com       | 7654321098    | 6543210987              | 2023-10-25 15:19:02 |               2 |           3 | InnoTech           | 2023-03-10 | Employee Referral  | Delhi     |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          4 | Neha          | Verma         | N             | neha.verma@example.com       | 6543210987    | 5432109876              | 2023-10-25 15:19:02 |               4 |           2 | Global Innovations | 2023-04-05 | Recruitment Drive  | Bangalore |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          5 | Vikram        | Rajput        | O             | vikram.rajput@example.com    | 5432109876    | 4321098765              | 2023-10-25 15:19:02 |               1 |           4 | Smart Solutions    | 2023-05-12 | Job Fair           | Hyderabad |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          6 | Ananya        | Das           | P             | ananya.das@example.com       | 4321098765    | 3210987654              | 2023-10-25 15:19:02 |               5 |           1 | Future Tech        | 2023-06-18 | Online Application | Kolkata   |
+|         1 | Introduction to Programming  |                   3.50 |         99 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         2 | Web Development Basics       |                   6.50 |        199 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         3 | Data Science Fundamentals    |                   8.50 |        299 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         4 | Machine Learning Essentials  |                  12.50 |        499 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         5 | Advanced Database Management |                   9.50 |        399 | 2023-10-25 01:03:54 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
+|         6 | Devops                       |                   6.50 |      10000 | 2023-10-25 15:42:43 |          7 | Sachin        | Choudhary     | Q             | sachin.choudhary@example.com | 3210987654    | 2109876543              | 2023-10-25 15:19:02 |               2 |           3 | Coders Hub         | 2023-07-22 | Walk-in Interview  | Chennai   |
++-----------+------------------------------+------------------------+------------+---------------------+------------+---------------+---------------+---------------+------------------------------+---------------+-------------------------+---------------------+-----------------+-------------+--------------------+------------+--------------------+-----------+
+42 rows in set (0.00 sec)
+
+
+
+
+
+
+

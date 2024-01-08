@@ -1,0 +1,16 @@
+CREATE TABLE STUDENTS
+(
+	ID VARCHAR(20) PRIMARY KEY,
+	FIRST_NAME VARCHAR(100) NOT NULL,
+	LAST_NAME VARCHAR(100) NOT NULL,
+	GENDER VARCHAR(10) CHECK (GENDER IN ('M','F','Male','Female')),
+	AGE INT,
+	DOB DATE,
+	CONSTRAINT CH_STUDENTS_AGE CHECK(AGE>0)
+);
+
+INSERT INTO STUDENTS VALUES (101, 'Raj' , 'Kumar' , 'Male' , 25 , current_date);
+INSERT INTO STUDENTS VALUES (102, 'Steve' , 'David' , 'Male' , 34 , current_date);
+INSERT INTO STUDENTS VALUES (103, 'Eshal' , 'Maryam' , 'F' , 18 , current_date);
+
+select * from students;

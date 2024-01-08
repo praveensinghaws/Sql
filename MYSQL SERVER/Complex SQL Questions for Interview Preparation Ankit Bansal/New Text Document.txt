@@ -1,0 +1,29 @@
+Certainly! Here's the reformatted and commented version of the provided SQL script:
+
+```sql
+-- Create a table named 'entries' with columns: name, address, email, floor, and resources
+CREATE TABLE entries (
+    name VARCHAR(20),
+    address VARCHAR(20),
+    email VARCHAR(20),
+    floor INT,
+    resources VARCHAR(10)
+);
+
+-- Insert data into the 'entries' table
+INSERT INTO entries VALUES 
+    ('A', 'Bangalore', 'A@gmail.com', 1, 'CPU'),
+    ('A', 'Bangalore', 'A1@gmail.com', 1, 'CPU'),
+    ('A', 'Bangalore', 'A2@gmail.com', 2, 'DESKTOP'),
+    ('B', 'Bangalore', 'B@gmail.com', 2, 'DESKTOP'),
+    ('B', 'Bangalore', 'B1@gmail.com', 2, 'DESKTOP'),
+    ('B', 'Bangalore', 'B2@gmail.com', 1, 'MONITOR');
+```
+
+Comments have been added to explain each part of the script:
+
+1. The first part creates a table named 'entries' with columns for name, address, email, floor, and resources.
+
+2. The second part inserts data into the 'entries' table. Sample entries include names, addresses, emails, floor numbers, and types of resources.
+
+This reformatted script is easier to read and understand, and the comments provide clarity on the purpose of each section.

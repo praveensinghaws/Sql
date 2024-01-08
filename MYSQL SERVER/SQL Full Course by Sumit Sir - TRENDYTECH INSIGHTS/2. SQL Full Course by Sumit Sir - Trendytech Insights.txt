@@ -1,0 +1,608 @@
+================+=======================+
+   SESSION 12	|  INTERVIEW QUESTIONS  | 
+================+=======================+
+
+{WHERE VS HAVING CLAUSE IN SQL}
+
+WHERE  ==> Where is used before group by and do filtering on individual records.
+
+HAVING ==> Having is used after groupby and do filtering on aggregated records.
+
+We can use where and having in the same query also.
+
+<<<<<<<<<============================================>>>>>>>>>>>>
+
+mysql> SELECT COUNT(*) AS TOTAL_MARVEL_MOVIES FROM MOVIES WHERE STUDIO = 'Marvel Studios';
++---------------------+
+| TOTAL_MARVEL_MOVIES |
++---------------------+
+|                   8 |
++---------------------+
+1 row in set (0.00 sec)
+
+OR
+mysql> SELECT STUDIO, COUNT(*) AS TOTAL_MARVEL_MOVIES FROM MOVIES WHERE STUDIO = 'Marvel Studios';
++----------------+---------------------+
+| STUDIO         | TOTAL_MARVEL_MOVIES |
++----------------+---------------------+
+| Marvel Studios |                   8 |
++----------------+---------------------+
+1 row in set (0.00 sec)
+
+OR
+mysql> SELECT STUDIO, COUNT(*) AS TOTAL_MARVEL_MOVIES FROM MOVIES GROUP BY STUDIO HAVING STUDIO = 'Marvel Studios';
++----------------+---------------------+
+| STUDIO         | TOTAL_MARVEL_MOVIES |
++----------------+---------------------+
+| Marvel Studios |                   8 |
++----------------+---------------------+
+1 row in set (0.00 sec)
+
+<<<<<<<=====================================>>>>>>>>>
+
+SELECT STUDIO, COUNT(*) AS TOTAL
+FROM movies
+GROUP BY STUDIO
+HAVING TOTAL >1;
+
++-----------------------+-------+
+| STUDIO                | TOTAL |
++-----------------------+-------+
+| Marvel Studios        |     8 |
+| Vinod Chopra Films    |     3 |
+| Dharma Productions    |     2 |
+|                       |     3 |
+| Warner Bros. Pictures |     2 |
+| Paramount Pictures    |     2 |
+| Universal Pictures    |     2 |
+| Salman Khan Films     |     2 |
++-----------------------+-------+
+8 rows in set (0.03 sec)
+
+<<<<<<<=====================================>>>>>>>>>
+
+WE CAN USE WHERE AND HAVING IN SAME QUERY 
+=====================================
+
+mysql> select studio , count(*) as total_movies  from movies where industry ='bollywood' group by studio having total_movies >=2;
++--------------------+--------------+
+| studio             | total_movies |
++--------------------+--------------+
+| Vinod Chopra Films |            3 |
+| Dharma Productions |            2 |
+|                    |            2 |
+| Salman Khan Films  |            2 |
++--------------------+--------------+
+4 rows in set (0.00 sec)
+
+================+
+   SESSION 13	|
+================+
+{OVER AND PARTITION BY CLAUSE}
+
+CREATE TABLE employee (
+    FIRSTNAME VARCHAR(20),
+    LASTNAME VARCHAR(20),
+    AGE INT,
+    SALARY INT,
+    LOCATION VARCHAR(20)
+);
+
+mysql> DESC EMPLOYEE;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| FIRSTNAME | varchar(20) | YES  |     | NULL    |       |
+| LASTNAME  | varchar(20) | YES  |     | NULL    |       |
+| AGE       | int         | YES  |     | NULL    |       |
+| SALARY    | int         | YES  |     | NULL    |       |
+| LOCATION  | varchar(20) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+5 rows in set (0.04 sec)
+
+INSERT INTO employee (FIRSTNAME, LASTNAME, AGE, SALARY, LOCATION) VALUES
+    ('Virat', 'Kohli', 32, 1000000, 'Delhi'),
+    ('Rohit', 'Sharma', 34, 900000, 'Mumbai'),
+    ('Jasprit', 'Bumrah', 27, 800000, 'Gujarat'),
+    ('Ravindra', 'Jadeja', 32, 850000, 'Saurashtra'),
+    ('Cheteshwar', 'Pujara', 33, 950000, 'Saurashtra'),
+    ('Ajinkya', 'Rahane', 33, 850000, 'Mumbai'),
+    ('KL', 'Rahul', 29, 800000, 'Karnataka'),
+    ('Rishabh', 'Pant', 24, 900000, 'Delhi'),
+    ('Hardik', 'Pandya', 28, 950000, 'Baroda'),
+    ('Shikhar', 'Dhawan', 35, 850000, 'Delhi'),
+    ('Sachin', 'Tendulkar', 48, 1200000, 'Mumbai'),
+    ('MS', 'Dhoni', 40, 1100000, 'Ranchi'),
+    ('Yuvraj', 'Singh', 39, 1000000, 'Chandigarh'),
+    ('Sourav', 'Ganguly', 49, 950000, 'Kolkata'),
+    ('Rahul', 'Dravid', 49, 1000000, 'Bangalore'),
+    ('Anil', 'Kumble', 50, 900000, 'Bangalore');
+
+
+mysql> select * from employee;
++------------+-----------+------+---------+------------+
+| FIRSTNAME  | LASTNAME  | AGE  | SALARY  | LOCATION   |
++------------+-----------+------+---------+------------+
+| Virat      | Kohli     |   32 | 1000000 | Delhi      |
+| Rohit      | Sharma    |   34 |  900000 | Mumbai     |
+| Jasprit    | Bumrah    |   27 |  800000 | Gujarat    |
+| Ravindra   | Jadeja    |   32 |  850000 | Saurashtra |
+| Cheteshwar | Pujara    |   33 |  950000 | Saurashtra |
+| Ajinkya    | Rahane    |   33 |  850000 | Mumbai     |
+| KL         | Rahul     |   29 |  800000 | Karnataka  |
+| Rishabh    | Pant      |   24 |  900000 | Delhi      |
+| Hardik     | Pandya    |   28 |  950000 | Baroda     |
+| Shikhar    | Dhawan    |   35 |  850000 | Delhi      |
+| Sachin     | Tendulkar |   48 | 1200000 | Mumbai     |
+| MS         | Dhoni     |   40 | 1100000 | Ranchi     |
+| Yuvraj     | Singh     |   39 | 1000000 | Chandigarh |
+| Sourav     | Ganguly   |   49 |  950000 | Kolkata    |
+| Rahul      | Dravid    |   49 | 1000000 | Bangalore  |
+| Anil       | Kumble    |   50 |  900000 | Bangalore  |
++------------+-----------+------+---------+------------+
+16 rows in set (0.00 sec)
+
+Q. How many people are from each location and avg salary at each location?
+
+SELECT
+    emp.firstname,
+    emp.lastname,
+    emp.location,
+    temp.total_count,
+    temp.avg_salary
+FROM
+    employee AS emp
+JOIN (
+    SELECT
+        location,
+        COUNT(location) AS total_count,
+        round(AVG(salary),2) AS avg_salary
+    FROM
+        employee
+    GROUP BY
+        location
+) AS temp ON emp.location = temp.location;
+
++------------+-----------+------------+-------------+------------+
+| firstname  | lastname  | location   | total_count | avg_salary |
++------------+-----------+------------+-------------+------------+
+| Virat      | Kohli     | Delhi      |           3 |  916666.67 |
+| Rohit      | Sharma    | Mumbai     |           3 |  983333.33 |
+| Jasprit    | Bumrah    | Gujarat    |           1 |  800000.00 |
+| Ravindra   | Jadeja    | Saurashtra |           2 |  900000.00 |
+| Cheteshwar | Pujara    | Saurashtra |           2 |  900000.00 |
+| Ajinkya    | Rahane    | Mumbai     |           3 |  983333.33 |
+| KL         | Rahul     | Karnataka  |           1 |  800000.00 |
+| Rishabh    | Pant      | Delhi      |           3 |  916666.67 |
+| Hardik     | Pandya    | Baroda     |           1 |  950000.00 |
+| Shikhar    | Dhawan    | Delhi      |           3 |  916666.67 |
+| Sachin     | Tendulkar | Mumbai     |           3 |  983333.33 |
+| MS         | Dhoni     | Ranchi     |           1 | 1100000.00 |
+| Yuvraj     | Singh     | Chandigarh |           1 | 1000000.00 |
+| Sourav     | Ganguly   | Kolkata    |           1 |  950000.00 |
+| Rahul      | Dravid    | Bangalore  |           2 |  950000.00 |
+| Anil       | Kumble    | Bangalore  |           2 |  950000.00 |
++------------+-----------+------------+-------------+------------+
+16 rows in set (0.00 sec)
+
+OR  USING OVER AND PARTITION BY CLAUSE EASILY.
+
+SELECT
+    FIRSTNAME,
+    LASTNAME,
+    LOCATION,
+    COUNT(LOCATION) OVER (PARTITION BY LOCATION) AS COUNT,
+    AVG(SALARY) OVER (PARTITION BY LOCATION) AS AVG
+FROM
+    employee;
+
++------------+-----------+------------+-------+--------------+
+| FIRSTNAME  | LASTNAME  | LOCATION   | COUNT | AVG          |
++------------+-----------+------------+-------+--------------+
+| Rahul      | Dravid    | Bangalore  |     2 |  950000.0000 |
+| Anil       | Kumble    | Bangalore  |     2 |  950000.0000 |
+| Hardik     | Pandya    | Baroda     |     1 |  950000.0000 |
+| Yuvraj     | Singh     | Chandigarh |     1 | 1000000.0000 |
+| Shikhar    | Dhawan    | Delhi      |     3 |  916666.6667 |
+| Rishabh    | Pant      | Delhi      |     3 |  916666.6667 |
+| Virat      | Kohli     | Delhi      |     3 |  916666.6667 |
+| Jasprit    | Bumrah    | Gujarat    |     1 |  800000.0000 |
+| KL         | Rahul     | Karnataka  |     1 |  800000.0000 |
+| Sourav     | Ganguly   | Kolkata    |     1 |  950000.0000 |
+| Rohit      | Sharma    | Mumbai     |     3 |  983333.3333 |
+| Sachin     | Tendulkar | Mumbai     |     3 |  983333.3333 |
+| Ajinkya    | Rahane    | Mumbai     |     3 |  983333.3333 |
+| MS         | Dhoni     | Ranchi     |     1 | 1100000.0000 |
+| Ravindra   | Jadeja    | Saurashtra |     2 |  900000.0000 |
+| Cheteshwar | Pujara    | Saurashtra |     2 |  900000.0000 |
++------------+-----------+------------+-------+--------------+
+16 rows in set (0.01 sec)
+
+================+
+   SESSION 14	|
+================+
+{ROW NUMBER}
+
+SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+    ROW_NUMBER() OVER (ORDER BY SALARY DESC) as ROWNUM FROM
+    employee;
+   
+
++------------+-----------+---------+--------+
+| FIRSTNAME  | LASTNAME  | SALARY  | ROWNUM |
++------------+-----------+---------+--------+
+| Sachin     | Tendulkar | 1200000 |      1 |
+| MS         | Dhoni     | 1100000 |      2 |
+| Yuvraj     | Singh     | 1000000 |      3 |
+| Rahul      | Dravid    | 1000000 |      4 |
+| Virat      | Kohli     | 1000000 |      5 |
+| Hardik     | Pandya    |  950000 |      6 |
+| Cheteshwar | Pujara    |  950000 |      7 |
+| Sourav     | Ganguly   |  950000 |      8 |
+| Anil       | Kumble    |  900000 |      9 |
+| Rohit      | Sharma    |  900000 |     10 |
+| Rishabh    | Pant      |  900000 |     11 |
+| Shikhar    | Dhawan    |  850000 |     12 |
+| Ajinkya    | Rahane    |  850000 |     13 |
+| Ravindra   | Jadeja    |  850000 |     14 |
+| KL         | Rahul     |  800000 |     15 |
+| Jasprit    | Bumrah    |  800000 |     16 |
++------------+-----------+---------+--------+
+16 rows in set (0.00 sec)
+
+Q. Find the 5th highest salary.
+
+SELECT * FROM (SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+    ROW_NUMBER() OVER (ORDER BY SALARY DESC) as ROWNUM FROM
+    employee) TEMPTABLE WHERE ROWNUM =5;
+
++-----------+----------+---------+--------+
+| FIRSTNAME | LASTNAME | SALARY  | ROWNUM |
++-----------+----------+---------+--------+
+| Virat     | Kohli    | 1000000 |      5 |
++-----------+----------+---------+--------+
+1 row in set (0.00 sec)
+
+Q. the Problem statement is to assign row number for partitions based on each location.
+
+SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+    LOCATION,
+    ROW_NUMBER() OVER (PARTITION BY LOCATION ORDER BY SALARY DESC) as ROWNUM FROM
+    employee;
+
++------------+-----------+---------+------------+--------+
+| FIRSTNAME  | LASTNAME  | SALARY  | LOCATION   | ROWNUM |
++------------+-----------+---------+------------+--------+
+| Rahul      | Dravid    | 1000000 | Bangalore  |      1 |
+| Anil       | Kumble    |  900000 | Bangalore  |      2 |
+| Hardik     | Pandya    |  950000 | Baroda     |      1 |
+| Yuvraj     | Singh     | 1000000 | Chandigarh |      1 |
+| Virat      | Kohli     | 1000000 | Delhi      |      1 |
+| Rishabh    | Pant      |  900000 | Delhi      |      2 |
+| Shikhar    | Dhawan    |  850000 | Delhi      |      3 |
+| Jasprit    | Bumrah    |  800000 | Gujarat    |      1 |
+| KL         | Rahul     |  800000 | Karnataka  |      1 |
+| Sourav     | Ganguly   |  950000 | Kolkata    |      1 |
+| Sachin     | Tendulkar | 1200000 | Mumbai     |      1 |
+| Rohit      | Sharma    |  900000 | Mumbai     |      2 |
+| Ajinkya    | Rahane    |  850000 | Mumbai     |      3 |
+| MS         | Dhoni     | 1100000 | Ranchi     |      1 |
+| Cheteshwar | Pujara    |  950000 | Saurashtra |      1 |
+| Ravindra   | Jadeja    |  850000 | Saurashtra |      2 |
++------------+-----------+---------+------------+--------+
+16 rows in set (0.00 sec)
+
+Q. I want to find the highest salary Gaters at each location.
+
+SELECT * FROM 
+
+(SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+    LOCATION,
+    ROW_NUMBER() OVER (PARTITION BY LOCATION ORDER BY SALARY DESC) as ROWNUM FROM
+    employee) TEMPTABLE WHERE rownum =1;
+
++------------+-----------+---------+------------+--------+
+| FIRSTNAME  | LASTNAME  | SALARY  | LOCATION   | ROWNUM |
++------------+-----------+---------+------------+--------+
+| Rahul      | Dravid    | 1000000 | Bangalore  |      1 |
+| Hardik     | Pandya    |  950000 | Baroda     |      1 |
+| Yuvraj     | Singh     | 1000000 | Chandigarh |      1 |
+| Virat      | Kohli     | 1000000 | Delhi      |      1 |
+| Jasprit    | Bumrah    |  800000 | Gujarat    |      1 |
+| KL         | Rahul     |  800000 | Karnataka  |      1 |
+| Sourav     | Ganguly   |  950000 | Kolkata    |      1 |
+| Sachin     | Tendulkar | 1200000 | Mumbai     |      1 |
+| MS         | Dhoni     | 1100000 | Ranchi     |      1 |
+| Cheteshwar | Pujara    |  950000 | Saurashtra |      1 |
++------------+-----------+---------+------------+--------+
+10 rows in set (0.00 sec)
+=========
+NOTE:- 
+=========
+when we use row number 
+we should be using the order by clause 
+we can also use the partition by — optional 
+the rownumber starts from 1 for every partition 
+
+================+
+   SESSION 15	|
+================+
+{RANK AND DENSE RANK}
+
+<<<ROW_NUMBER>>>
+
+SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+      ROW_NUMBER() OVER ( ORDER BY SALARY DESC) as ROWNUM FROM
+    employee ;
++------------+-----------+---------+--------+
+| FIRSTNAME  | LASTNAME  | SALARY  | ROWNUM |
++------------+-----------+---------+--------+
+| Sachin     | Tendulkar | 1200000 |      1 |
+| MS         | Dhoni     | 1100000 |      2 |
+| Yuvraj     | Singh     | 1000000 |      3 |
+| Rahul      | Dravid    | 1000000 |      4 |
+| Virat      | Kohli     | 1000000 |      5 |
+| Hardik     | Pandya    |  950000 |      6 |
+| Cheteshwar | Pujara    |  950000 |      7 |
+| Sourav     | Ganguly   |  950000 |      8 |
+| Anil       | Kumble    |  900000 |      9 |
+| Rohit      | Sharma    |  900000 |     10 |
+| Rishabh    | Pant      |  900000 |     11 |
+| Shikhar    | Dhawan    |  850000 |     12 |
+| Ajinkya    | Rahane    |  850000 |     13 |
+| Ravindra   | Jadeja    |  850000 |     14 |
+| KL         | Rahul     |  800000 |     15 |
+| Jasprit    | Bumrah    |  800000 |     16 |
++------------+-----------+---------+--------+
+16 rows in set (0.00 sec)
+    
+<<<RANK>>> 
+  
+    SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+      RANK() OVER (ORDER BY SALARY DESC) as ROWNUM FROM
+    employee ;
++------------+-----------+---------+--------+
+| FIRSTNAME  | LASTNAME  | SALARY  | ROWNUM |
++------------+-----------+---------+--------+
+| Sachin     | Tendulkar | 1200000 |      1 |
+| MS         | Dhoni     | 1100000 |      2 |
+| Yuvraj     | Singh     | 1000000 |      3 |
+| Rahul      | Dravid    | 1000000 |      3 |
+| Virat      | Kohli     | 1000000 |      3 |
+| Hardik     | Pandya    |  950000 |      6 |
+| Cheteshwar | Pujara    |  950000 |      6 |
+| Sourav     | Ganguly   |  950000 |      6 |
+| Anil       | Kumble    |  900000 |      9 |
+| Rohit      | Sharma    |  900000 |      9 |
+| Rishabh    | Pant      |  900000 |      9 |
+| Shikhar    | Dhawan    |  850000 |     12 |
+| Ajinkya    | Rahane    |  850000 |     12 |
+| Ravindra   | Jadeja    |  850000 |     12 |
+| KL         | Rahul     |  800000 |     15 |
+| Jasprit    | Bumrah    |  800000 |     15 |
++------------+-----------+---------+--------+
+16 rows in set (0.00 sec)
+
+<<<DENSE_RANK>>> 
+   
+    SELECT
+    FIRSTNAME,
+    LASTNAME,
+    SALARY,
+      DENSE_RANK() OVER ( ORDER BY SALARY DESC) as ROWNUM FROM
+    employee ;
+
++------------+-----------+---------+--------+
+| FIRSTNAME  | LASTNAME  | SALARY  | ROWNUM |
++------------+-----------+---------+--------+
+| Sachin     | Tendulkar | 1200000 |      1 |
+| MS         | Dhoni     | 1100000 |      2 |
+| Yuvraj     | Singh     | 1000000 |      3 |
+| Rahul      | Dravid    | 1000000 |      3 |
+| Virat      | Kohli     | 1000000 |      3 |
+| Hardik     | Pandya    |  950000 |      4 |
+| Cheteshwar | Pujara    |  950000 |      4 |
+| Sourav     | Ganguly   |  950000 |      4 |
+| Anil       | Kumble    |  900000 |      5 |
+| Rohit      | Sharma    |  900000 |      5 |
+| Rishabh    | Pant      |  900000 |      5 |
+| Shikhar    | Dhawan    |  850000 |      6 |
+| Ajinkya    | Rahane    |  850000 |      6 |
+| Ravindra   | Jadeja    |  850000 |      6 |
+| KL         | Rahul     |  800000 |      7 |
+| Jasprit    | Bumrah    |  800000 |      7 |
++------------+-----------+---------+--------+
+16 rows in set (0.00 sec)
+
+==============================================================================================+
+IF THERE ARE NO DUPLICATES THE ROW_NUMBER , RANK AND DENSE_RANK LEAD TO SIMILAR RESULS..      |
+ONLY The difference comes when there are duplicates.					      |
+Rank-  for duplicates same rank is assigned and the for next entry is skips the ranks.	      |
+dense rank - it does not skip any ranks between.					      |				
+whenever you do not have duplicates use row_number					      |
+==============================================================================================+
+
+================+
+   SESSION 16	|
+================+
+Order of Execution in SQL 
+Orders 
+— order id 
+— customer id 
+Customers 
+customer id is the common column in both the tables 
+seek and scan 
+seek is generally quite faster than scan 
+
+
+
+Primary key 
+===============
+order_id (clustered) 
+
+orders table 
+================
+Id = 5 (3 more columns) 
+
+clustered means (Records will be physically ordered in the actual table) 
+
+
+
+MS-SQL-SERVER-LAB
+
+SELECT
+    CITY,
+    COUNT(*) AS TOTAL
+FROM
+    sales.customers c
+JOIN
+    sales.orders o ON c.customer_id = o.customer_id
+WHERE
+    shipped_date IS NOT NULL
+GROUP BY
+    city
+HAVING
+    COUNT(*) > 10
+ORDER BY
+    TOTAL;
+
+
+Monroe	11
+Jamaica	11
+Anaheim	11
+Kingston	11
+Central Islip	11
+Monsey	11
+Bay Shore	11
+Upland	11
+South El Monte	11
+Apple Valley	11
+Orchard Park	11
+Smithtown	12
+Astoria	12
+Webster	12
+Howard Beach	12
+San Angelo	12
+Canyon Country	12
+Merrick	12
+Sunnyside	12
+Richmond Hill	12
+Ronkonkoma	12
+Longview	13
+Ossining	13
+Floral Park	13
+Canandaigua	14
+Ballston Spa	17
+Scarsdale	17
+Mount Vernon	20
+
+
+NOTE:  READ QUERY PAL FROM RIGHT TO LEFT OR FROM BOTTOM TO TOP .
+=========================================================================
+
+
+================+
+   SESSION 17	| CTE
+================+
+{COMMON TABLE EXPRESSION }
+
+this is to simplify the complex queries. 
+it improves the readability of a query 
+
+SOLUTION 1 SUB QUERY-
+
+
+SELECT AVG(total_order_per_customer) AS avg_orders_per_customer
+FROM (
+SELECT so.customer_id, COUNT(*) AS total_order_per_customer
+FROM sales.orders so
+JOIN sales.order_items soi ON so.order_id = soi.order_id
+GROUP BY so.customer_id) x;
+
+===============================
+avg_orders_per_customer : 3
+===============================
+
+
+
+SOLUTION 2  CTE/WITH
+
+WITH  total_orders (customer_id, total_order_per_customer) AS 
+(
+  SELECT so.customer_id, COUNT(*) AS total_order_per_customer
+  FROM sales.orders so
+  JOIN sales.order_items soi ON so.order_id = soi.order_id
+  GROUP BY so.customer_id
+)
+
+SELECT AVG(total_order_per_customer) AS avg_orders_per_customer
+FROM total_orders;
+
+
+
+===============================
+avg_orders_per_customer : 3
+===============================
+
+*******************************************************************************************************
+CUSTOMERS WHO ORDERED MORE THEN THE AVG ORDER::
+--=========================
+-- 3 STEPS PROCESS 
+--=========================
+
+--1. calculate total orders per customer
+WITH TOTAL_ORDERS (customer_id, total_order_per_customer) AS (
+SELECT so.customer_id, COUNT(*) AS total_order_per_customer
+FROM sales.orders so
+JOIN sales.order_items soi ON so.order_id = soi.order_id
+GROUP BY so.customer_id
+),
+
+--2. calculate average number of number orders for the customers 
+ AVRAGE_ORDERS (avg_orders_per_customer)
+AS 
+ 
+(
+SELECT AVG(total_order_per_customer) AS avg_orders_per_customer
+FROM TOTAL_ORDERS)
+
+--3. get to know the customers who are premium
+SELECT TOP 10 *
+FROM TOTAL_ORDERS
+JOIN AVG_ORDERS ON TOTAL_ORDERS.total_order_per_customer > AVG_ORDERS.avg_orders_per_customer
+ORDER BY TOTAL_ORDERS.total_order_per_customer DESC;
+
+3	13	3
+16	12	3
+6	11	3
+43	11	3
+1	11	3
+24	11	3
+10	11	3
+63	10	3
+58	10	3
+64	10	3
+*******************************************************************************************************
+================+
+  DONE		|
+================+
+
+

@@ -1,0 +1,5 @@
+Exercise: CTE
+Write SQL queries for the following,
+
+Select all Hollywood movies released after the year 2000 that made more than 500 million $ profit or more profit. Note that all Hollywood movies have millions as a unit hence you don't need to do the unit conversion. Also, you can write this query without CTE as well but you should try to write this using CTE only
+Solution: The solution is available when you click on the Download Files button BUT I know that you are a sincere student so you will first make a sincere effort to solve this exercise and then only look at the ready-made solution. I wish you all the best 😊👍

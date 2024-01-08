@@ -1,0 +1,6 @@
+Exercise: Window Functions: ROW_NUMBER, RANK, DENSE_RANK
+Retrieve the top 2 markets in every region by their gross sales amount in FY=2021. i.e. result should look something like this,
+
+
+
+ 

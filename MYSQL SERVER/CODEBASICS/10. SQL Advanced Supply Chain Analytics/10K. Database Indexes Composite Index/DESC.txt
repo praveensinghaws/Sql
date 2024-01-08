@@ -1,0 +1,6 @@
+Database Indexes: Composite Index
+The composite index is basically any database index that has more than one column in it. They can help improve the performance of SQL queries.
+
+
+
+Documentation link for how MySQL uses indexes: https://dev.mysql.com/doc/refman/8.0/en/mysql-indexes.html 

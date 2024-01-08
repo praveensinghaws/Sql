@@ -1,0 +1,9 @@
+Exercise - SQL Joins (INNER, LEFT, RIGHT, FULL)
+Write SQL queries for the following,
+
+1. Show all the movies with their language names
+2. Show all Telugu movie names (assuming you don't know the language
+id for Telugu)
+3. Show the language and number of movies released in that language
+
+Solution: The solution is available when you click on the Download Files button BUT I know that you are a sincere student so you will first make a sincere effort to solve this exercise and then only look at the ready-made solution. I wish you all the best 😊👍

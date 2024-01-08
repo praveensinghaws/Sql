@@ -1,0 +1,19 @@
+-- What is stored procedure in T-SQL
+/*
+----------
+BENEFITS |
+----------
+
+1. REUSE OF CODE 
+2. EASY TO MAINTAIN
+3. IMPROVE PERFORMANCE 
+4. STRONG SECURITY
+5. REDUCE SERVER/CLINT NETWORK TRAFFIC 
+
+-------
+TYPES |
+-------
+
+1. SYSTEM
+2. USER-DEFINED
+3. TEMPORARY

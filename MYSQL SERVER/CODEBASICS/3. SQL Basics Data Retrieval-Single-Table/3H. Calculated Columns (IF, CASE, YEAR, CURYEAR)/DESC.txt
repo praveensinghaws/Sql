@@ -1,0 +1,10 @@
+Calculated Columns (IF, CASE, YEAR, CURYEAR)
+In this lecture, we will cover,
+
+
+
+1. What are computed or derived columns?
+
+2. IF and CASE statement
+
+3. SQL inbuilt functions such as YEAR, CURDATE, etc.

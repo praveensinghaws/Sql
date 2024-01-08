@@ -1,0 +1,67 @@
+-- TABLE 1
+-- Create or replace the target table 'ORDER_EX_1'
+CREATE OR REPLACE TABLE DEMODB.PUBLIC.ORDER_EX_1 (
+    ORDER_ID VARCHAR(30),
+    AMOUNT INT
+    -- Add more columns as needed
+);
+
+-- Copy data from external stage to the target table, skipping rows with errors
+COPY INTO DEMODB.PUBLIC.ORDER_EX_1
+FROM (
+    -- Select relevant columns from the external stage
+    SELECT s.$1 AS ORDER_ID, TRY_CAST(s.$2 AS INT) AS AMOUNT
+    FROM @DEMODB.external_stages.aws_stage s
+)
+FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1)
+ON_ERROR = 'CONTINUE';
+
+SELECT * FROM DEMODB.PUBLIC.ORDER_EX_1 WHERE AMOUNT IS NOT NULL;
+
+-- TABLE 2
+-- Create or replace the target table 'ORDER_EX_2'
+CREATE OR REPLACE TABLE DEMODB.PUBLIC.ORDER_EX_2 (
+    ORDER_ID VARCHAR(30),
+    AMOUNT INT,
+    PROFIT INT,
+    PROFITABLE_FLAG VARCHAR(30)
+);
+
+-- Copy data from external stage to the target table, calculating PROFITABLE_FLAG
+COPY INTO DEMODB.PUBLIC.ORDER_EX_2
+FROM (
+    SELECT
+        s.$1,
+        s.$2,
+        s.$3,
+        CASE WHEN CAST(s.$3 AS INT) < 0 THEN 'NOT PROFITABLE' ELSE 'PROFITABLE' END AS PROFITABLE_FLAG
+    FROM @DEMODB.external_stages.aws_stage s
+)
+FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1)
+FILES = ('OrderDetails.csv');
+
+-- TABLE 3
+-- Create or replace the target table 'ORDER_EX_3'
+CREATE OR REPLACE TABLE DEMODB.PUBLIC.ORDER_EX_3 (
+    ORDER_ID VARCHAR(30),
+    AMOUNT INT,
+    PROFIT INT,
+    CATEGORY_SUBSTRING VARCHAR(5)
+);
+
+
+
+-- Copy data from external stage to the target table, extracting a substring from CATEGORY column
+COPY INTO DEMODB.PUBLIC.ORDER_EX
+FROM (
+    -- Selecting specific columns and extracting a substring from CATEGORY column
+    SELECT
+        s.$1 AS ORDER_ID,
+        s.$2 AS AMOUNT,
+        s.$3 AS PROFIT,
+        SUBSTRING(s.$5, 1, 5) AS CATEGORY_SUBSTRING
+    FROM @DEMODB.external_stages.aws_stage s
+)
+FILE_FORMAT = (TYPE = CSV FIELD_DELIMITER = ',' SKIP_HEADER = 1)
+FILES = ('OrderDetails.csv');
+
