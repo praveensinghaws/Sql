@@ -16,8 +16,7 @@ docker cp ~/Downloads/AdventureWorks2019.bak {containerID}:/var/opt/mssql/data/
 
 **Replace container ID and the curly braces with container ID from docker application. Also make sure File name matches the download.
 
-docker cp ~/Downloads/AdventureWorksDW2014.bak 4d8469ed2793:/var/opt/mssql/data/
 
-docker cp ~/Downloads/order.csv 4d8469ed2793:/
+docker cp ~/Downloads/AdventureWorksDW2019.bak 414d88274b07:/sql:/var/opt/mssql
 
 
