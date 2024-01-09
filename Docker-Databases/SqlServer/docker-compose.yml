@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+  sql:
+    image: mcr.microsoft.com/azure-sql-edge
+    restart: always
+    environment:
+      ACCEPT_EULA: "1"
+      MSSQL_SA_PASSWORD: "Admin260"
+      MSSQL_PID: "Developer"
+      MSSQL_USER: "SA"
+    ports:
+      - 1433:1433
+    volumes:
+      - ./sql:/var/opt/mssql
