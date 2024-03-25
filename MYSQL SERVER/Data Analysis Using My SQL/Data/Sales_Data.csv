@@ -1,0 +1,1001 @@
+Product,Region,Sales_Representative,Date,Quantity_Sold,Revenue
+Toaster,"Los Angeles","Alexandra ee",7/1/2023,80,403.14
+Blender,"Los Angeles","Alexandra ee",4/23/2023,94,170.53
+Tablet,"Los Angeles","Alexandra ee",11/10/2023,36,134.65
+Toaster,"Los Angeles","Alexandra ee",4/7/2023,85,23.82
+"Coffee Maker","Los Angeles","Alexandra ee",3/20/2023,2,159.95
+Tablet,"Los Angeles","Alexandra ee",4/19/2023,76,294.92
+"Washing Machine","Los Angeles","Alexandra ee",12/3/2023,49,485.8
+Blender,"Los Angeles","Alexandra ee",7/20/2023,13,198.3
+Television,"Los Angeles","Alexandra ee",5/10/2023,10,290.07
+Blender,"Los Angeles","Alexandra ee",7/9/2023,9,118.09
+Toaster,"Los Angeles","Alexandra ee",10/3/2023,81,99.92
+Smartphone,"Los Angeles","Alexandra ee",12/2/2023,24,361.15
+"Washing Machine","Los Angeles","Alexandra ee",3/4/2023,8,308
+Laptop,"Los Angeles","Alexandra ee",1/4/2023,87,199.31
+Television,"Los Angeles","Alexandra ee",1/16/2023,78,259.3
+"Washing Machine","Los Angeles","Alexandra ee",6/24/2023,56,33.22
+Toaster,"Los Angeles","Alexandra ee",12/25/2023,51,73.16
+Smartphone,"Los Angeles","Alexandra ee",1/26/2023,90,173.4
+"Washing Machine","Los Angeles","Alexandra ee",1/16/2023,21,62.6
+"Washing Machine","Los Angeles","Alexandra ee",6/6/2023,34,274.44
+Microwave,"Los Angeles","Alexandra ee",6/8/2023,31,247.37
+Microwave,"Los Angeles","Alexandra ee",1/23/2023,13,286.76
+Tablet,"Los Angeles","Alexandra ee",2/4/2023,46,286.34
+"Washing Machine","Los Angeles","Alexandra ee",12/3/2023,23,30.04
+Laptop,"Los Angeles","Alexandra ee",10/1/2023,35,49.42
+Refrigerator,"Los Angeles","Alexandra ee",11/13/2023,29,185.53
+Television,"Los Angeles","Alexandra ee",5/17/2023,8,52.66
+Smartphone,"Los Angeles","Alexandra ee",12/14/2023,47,149.28
+Tablet,"Los Angeles","Alexandra ee",9/14/2023,83,405.28
+Blender,"Los Angeles","Alexandra ee",4/16/2023,39,361.52
+Blender,"Los Angeles","Alexandra ee",2/7/2023,12,193.24
+Toaster,"Los Angeles","Alexandra ee",2/24/2023,24,345.23
+Laptop,"Los Angeles","Alexandra ee",1/5/2023,89,67.45
+Tablet,"Los Angeles","Alexandra ee",6/3/2023,82,337
+"Coffee Maker","Los Angeles","Alexandra ee",6/5/2023,78,138.86
+"Washing Machine",Boston,"Christina ii",8/26/2023,64,223.13
+Blender,Boston,"Christina ii",4/8/2023,78,225.73
+Tablet,Boston,"Christina ii",8/8/2023,65,10.32
+Smartphone,Boston,"Christina ii",5/27/2023,56,430.75
+Blender,Boston,"Christina ii",11/25/2023,41,307.33
+Blender,Boston,"Christina ii",9/6/2023,59,120.76
+Laptop,Boston,"Christina ii",9/10/2023,2,96.69
+Blender,Boston,"Christina ii",12/13/2023,43,193.75
+Refrigerator,Boston,"Christina ii",7/10/2023,74,444.1
+Television,Boston,"Christina ii",9/22/2023,45,75.32
+Television,Boston,"Christina ii",4/23/2023,57,427.69
+"Coffee Maker",Boston,"Christina ii",4/21/2023,17,203.7
+Blender,Boston,"Christina ii",11/22/2023,6,222.48
+Refrigerator,Boston,"Christina ii",4/20/2023,10,194.69
+"Coffee Maker",Boston,"Christina ii",2/14/2023,13,52.48
+Television,Boston,"Christina ii",12/8/2023,25,371.15
+"Coffee Maker",Boston,"Christina ii",2/19/2023,55,439.32
+Toaster,Boston,"Christina ii",1/21/2023,36,151.81
+Smartphone,Boston,"Christina ii",3/17/2023,99,168.76
+Blender,Boston,"Christina ii",11/18/2023,87,157.51
+Refrigerator,Boston,"Christina ii",4/5/2023,98,79.13
+Microwave,Boston,"Christina ii",3/7/2023,54,220.18
+Television,Boston,"Christina ii",12/2/2023,38,165.87
+Smartphone,Boston,"Christina ii",1/18/2023,95,378.79
+Microwave,Boston,"Christina ii",9/27/2023,61,473.45
+"Coffee Maker",Boston,"Christina ii",3/24/2023,61,163.17
+Smartphone,Boston,"Christina ii",12/7/2023,82,143.89
+Microwave,Boston,"Christina ii",9/26/2023,68,376.23
+Toaster,Boston,"Christina ii",9/9/2023,38,274.66
+Smartphone,Seattle,"Christina jj",7/3/2023,56,144.56
+Television,Seattle,"Christina jj",5/4/2023,100,472.66
+"Washing Machine",Seattle,"Christina jj",12/25/2023,73,293.3
+Television,Seattle,"Christina jj",6/4/2023,87,147
+Refrigerator,Seattle,"Christina jj",11/24/2023,55,205.08
+Refrigerator,Seattle,"Christina jj",11/3/2023,71,71
+Tablet,Seattle,"Christina jj",6/22/2023,15,83.05
+Laptop,Seattle,"Christina jj",7/25/2023,45,251.42
+Television,Seattle,"Christina jj",2/14/2023,38,312.73
+Television,Seattle,"Christina jj",5/27/2023,68,247.33
+Refrigerator,Seattle,"Christina jj",9/1/2023,53,198.96
+Blender,Seattle,"Christina jj",4/1/2023,97,378.78
+Microwave,Seattle,"Christina jj",4/15/2023,68,431.18
+"Washing Machine",Seattle,"Christina jj",8/22/2023,79,416.63
+Refrigerator,Seattle,"Christina jj",12/1/2023,15,185.76
+Television,Seattle,"Christina jj",7/12/2023,31,62.19
+Laptop,Seattle,"Christina jj",9/21/2023,35,201.06
+Laptop,Seattle,"Christina jj",10/25/2023,44,433.1
+Laptop,Seattle,"Christina jj",2/9/2023,89,38.72
+"Washing Machine",Seattle,"Christina jj",9/23/2023,81,62.71
+Blender,Seattle,"Christina jj",3/21/2023,75,263.65
+Laptop,Seattle,"Christina jj",7/9/2023,16,10.14
+Laptop,Seattle,"Christina jj",7/21/2023,33,452.47
+Television,Seattle,"Christina jj",8/6/2023,35,469.57
+"Washing Machine",Seattle,"Christina jj",7/1/2023,30,421.06
+"Coffee Maker",Seattle,"Christina jj",6/25/2023,20,250.67
+"Coffee Maker",Seattle,"Christina jj",12/1/2023,50,121.56
+Refrigerator,Seattle,"Christina jj",12/3/2023,25,128.98
+"Washing Machine",Seattle,"Christina jj",12/16/2023,25,424.53
+"Coffee Maker",Seattle,"Christina jj",10/19/2023,61,167.69
+"Coffee Maker",Seattle,"Christina jj",12/27/2023,48,466.3
+Tablet,Seattle,"Christina jj",7/14/2023,12,62.52
+Toaster,Seattle,"Christina jj",6/4/2023,54,325.49
+Smartphone,Seattle,"Crystal hh",12/5/2023,89,156.2
+Tablet,Seattle,"Crystal hh",2/4/2023,53,360.65
+Tablet,Seattle,"Crystal hh",11/27/2023,20,374.31
+Blender,Seattle,"Crystal hh",2/4/2023,15,287.6
+Microwave,Seattle,"Crystal hh",12/18/2023,39,64.91
+Refrigerator,Seattle,"Crystal hh",10/4/2023,35,228.97
+Refrigerator,Seattle,"Crystal hh",10/14/2023,67,411.08
+Toaster,Seattle,"Crystal hh",2/16/2023,15,161.23
+"Coffee Maker",Seattle,"Crystal hh",3/24/2023,99,248.48
+Toaster,Seattle,"Crystal hh",9/15/2023,19,164.17
+Refrigerator,Seattle,"Crystal hh",2/18/2023,69,448.99
+Toaster,Seattle,"Crystal hh",4/15/2023,54,329.42
+Laptop,Seattle,"Crystal hh",12/25/2023,87,34.4
+Blender,Seattle,"Crystal hh",10/13/2023,75,493.75
+"Coffee Maker",Seattle,"Crystal hh",1/22/2023,34,299.91
+Laptop,Seattle,"Crystal hh",2/27/2023,48,385.9
+Television,Seattle,"Crystal hh",5/11/2023,27,341.28
+Refrigerator,Seattle,"Crystal hh",1/10/2023,62,306.95
+Smartphone,Seattle,"Crystal hh",5/21/2023,30,293.62
+Toaster,Seattle,"Crystal hh",6/17/2023,2,476.39
+Television,Seattle,"Crystal hh",7/21/2023,63,214.8
+Laptop,Seattle,"Crystal hh",12/2/2023,15,192.73
+Tablet,Seattle,"Crystal hh",4/22/2023,9,11.26
+Blender,Seattle,"Crystal hh",3/8/2023,62,70.56
+"Washing Machine",Seattle,"Crystal hh",8/3/2023,73,425.98
+"Washing Machine",Seattle,"Crystal hh",8/5/2023,9,109.69
+Television,Seattle,"Crystal hh",12/6/2023,17,403.92
+"Washing Machine",Seattle,"Crystal hh",7/4/2023,44,258.75
+Television,Seattle,"Crystal hh",9/7/2023,19,290.44
+Laptop,Seattle,"Crystal hh",5/21/2023,94,48.21
+Blender,Seattle,"Crystal hh",5/9/2023,63,207.92
+"Coffee Maker",Seattle,"Crystal hh",5/27/2023,96,31.02
+Refrigerator,Seattle,"Crystal hh",7/10/2023,13,29.82
+Toaster,Seattle,"Crystal hh",6/15/2023,88,407.23
+Microwave,Seattle,"Crystal hh",2/11/2023,6,489.06
+Refrigerator,Seattle,"Crystal hh",6/23/2023,17,436.03
+Television,Seattle,"Crystal hh",6/1/2023,55,494.03
+Microwave,Seattle,"Crystal hh",4/12/2023,17,490.23
+Microwave,Seattle,"Crystal hh",1/23/2023,71,196.64
+Laptop,Seattle,"Crystal hh",3/21/2023,34,387.19
+Toaster,"San Francisco","Cynthia qi",2/2/2023,19,375.96
+Toaster,"San Francisco","Cynthia qi",4/8/2023,20,75.03
+Blender,"San Francisco","Cynthia qi",11/24/2023,51,378.96
+Toaster,"San Francisco","Cynthia qi",9/1/2023,51,328.82
+Refrigerator,"San Francisco","Cynthia qi",10/27/2023,11,241.91
+Toaster,"San Francisco","Cynthia qi",1/20/2023,59,185.18
+Laptop,"San Francisco","Cynthia qi",6/26/2023,88,16.47
+Microwave,"San Francisco","Cynthia qi",8/22/2023,44,57.09
+Tablet,"San Francisco","Cynthia qi",10/21/2023,62,481.56
+Smartphone,"San Francisco","Cynthia qi",5/18/2023,21,288.2
+"Washing Machine","San Francisco","Cynthia qi",12/10/2023,77,414.66
+Tablet,"San Francisco","Cynthia qi",5/26/2023,7,53.31
+"Washing Machine","San Francisco","Cynthia qi",4/17/2023,85,358.61
+Laptop,"San Francisco","Cynthia qi",8/3/2023,22,196.88
+Smartphone,"San Francisco","Cynthia qi",9/5/2023,72,202.25
+Laptop,"San Francisco","Cynthia qi",6/1/2023,69,305.66
+Refrigerator,"San Francisco","Cynthia qi",2/7/2023,21,344.84
+Microwave,"San Francisco","Cynthia qi",3/23/2023,97,497.14
+Television,"San Francisco","Cynthia qi",1/28/2023,53,484.47
+"Washing Machine","San Francisco","Cynthia qi",9/21/2023,60,156.6
+Toaster,"San Francisco","Cynthia qi",11/6/2023,58,304.2
+Blender,"San Francisco","Cynthia qi",3/8/2023,68,370.17
+Laptop,"San Francisco","Cynthia qi",10/20/2023,3,298.76
+Toaster,"San Francisco","Cynthia qi",11/17/2023,38,89.17
+Toaster,"San Francisco","Cynthia qi",7/6/2023,80,148.55
+Tablet,"San Francisco","Cynthia qi",11/1/2023,25,352.59
+"Coffee Maker","San Francisco","Cynthia qi",6/25/2023,52,492.55
+Microwave,"San Francisco","Cynthia qi",7/20/2023,61,319.67
+Laptop,"San Francisco","Cynthia qi",5/19/2023,34,82.44
+Smartphone,"San Francisco","Cynthia qi",4/22/2023,6,380.94
+"Coffee Maker","San Francisco","Cynthia qi",8/27/2023,100,57.74
+Television,"San Francisco","Cynthia qi",10/2/2023,58,114.73
+"Washing Machine","San Francisco","Cynthia qi",8/19/2023,83,196.67
+Refrigerator,"San Francisco","Cynthia qi",3/27/2023,7,470.52
+Smartphone,"San Francisco","Cynthia qi",10/12/2023,22,340.4
+Smartphone,"San Francisco","Cynthia qi",8/22/2023,88,26.37
+"Coffee Maker","San Francisco","Cynthia qi",2/9/2023,49,347.21
+"Coffee Maker","San Francisco","Cynthia qi",6/28/2023,39,31.44
+Microwave,"San Francisco","Cynthia qi",10/12/2023,85,67.58
+Refrigerator,"San Francisco","Cynthia qi",1/9/2023,23,124.81
+Microwave,"San Francisco","Cynthia qi",9/26/2023,40,173.96
+Microwave,"San Francisco","Cynthia qi",10/17/2023,92,412.32
+Television,"San Francisco","Cynthia qi",9/9/2023,53,416.36
+Tablet,"Los Angeles","Daniel qi",7/21/2023,15,227.69
+"Coffee Maker","Los Angeles","Daniel qi",12/20/2023,21,43.69
+"Coffee Maker","Los Angeles","Daniel qi",7/11/2023,43,30.46
+Blender,"Los Angeles","Daniel qi",6/14/2023,8,404.43
+"Coffee Maker","Los Angeles","Daniel qi",12/16/2023,11,22.69
+Microwave,"Los Angeles","Daniel qi",7/2/2023,50,154.64
+Refrigerator,"Los Angeles","Daniel qi",4/20/2023,72,18.76
+Microwave,"Los Angeles","Daniel qi",3/1/2023,59,133.37
+Tablet,"Los Angeles","Daniel qi",9/1/2023,21,140
+"Coffee Maker","Los Angeles","Daniel qi",6/3/2023,29,83.75
+Smartphone,"Los Angeles","Daniel qi",9/17/2023,23,26.9
+Blender,"Los Angeles","Daniel qi",5/25/2023,31,421.89
+Refrigerator,"Los Angeles","Daniel qi",9/8/2023,12,142.08
+Tablet,"Los Angeles","Daniel qi",4/12/2023,42,184.9
+Television,"Los Angeles","Daniel qi",4/3/2023,29,314.41
+"Washing Machine","Los Angeles","Daniel qi",12/24/2023,55,262.57
+Microwave,"Los Angeles","Daniel qi",8/19/2023,46,187.05
+Laptop,"Los Angeles","Daniel qi",12/7/2023,70,198.22
+Smartphone,"Los Angeles","Daniel qi",9/25/2023,71,179.83
+Smartphone,"Los Angeles","Daniel qi",2/11/2023,15,491.72
+Tablet,"Los Angeles","Daniel qi",10/3/2023,100,42.19
+Blender,"Los Angeles","Daniel qi",11/15/2023,99,386.69
+Microwave,"Los Angeles","Daniel qi",11/28/2023,50,457.26
+"Coffee Maker","Los Angeles","Daniel qi",9/25/2023,39,298.76
+Toaster,"Los Angeles","Daniel qi",11/21/2023,80,49.04
+Refrigerator,"Los Angeles","Daniel qi",1/2/2023,15,215.54
+Microwave,"Los Angeles","Daniel qi",10/23/2023,42,302.16
+Blender,"Los Angeles","Daniel qi",5/22/2023,74,230.37
+Television,"Los Angeles","Daniel qi",2/18/2023,45,116.12
+Television,"Los Angeles","Daniel qi",10/10/2023,43,85.79
+Television,"Los Angeles","Daniel qi",7/25/2023,94,230.11
+Blender,"San Francisco","Donald qn",3/17/2023,79,399.85
+Television,"San Francisco","Donald qn",8/5/2023,38,443.14
+Laptop,"San Francisco","Donald qn",7/16/2023,63,275
+Refrigerator,"San Francisco","Donald qn",9/9/2023,78,170.48
+Smartphone,"San Francisco","Donald qn",2/27/2023,69,482.08
+"Washing Machine","San Francisco","Donald qn",12/21/2023,78,120
+Microwave,"San Francisco","Donald qn",5/5/2023,90,132.45
+Tablet,"San Francisco","Donald qn",8/21/2023,12,296.22
+Refrigerator,"San Francisco","Donald qn",3/26/2023,99,188.93
+Toaster,"San Francisco","Donald qn",9/8/2023,61,300.77
+"Coffee Maker","San Francisco","Donald qn",11/22/2023,3,106.9
+"Washing Machine","San Francisco","Donald qn",7/26/2023,54,354.91
+"Washing Machine","San Francisco","Donald qn",8/7/2023,72,23.78
+Television,"San Francisco","Donald qn",3/1/2023,40,123.07
+Tablet,"San Francisco","Donald qn",4/17/2023,32,391.63
+Television,"San Francisco","Donald qn",2/20/2023,69,146.55
+Smartphone,"San Francisco","Donald qn",11/24/2023,44,309.89
+Smartphone,"San Francisco","Donald qn",11/22/2023,77,293.81
+Television,"San Francisco","Donald qn",8/12/2023,24,137.23
+"Coffee Maker","San Francisco","Donald qn",11/11/2023,53,370.81
+"Coffee Maker","San Francisco","Donald qn",1/1/2023,36,268.52
+Laptop,"San Francisco","Donald qn",8/5/2023,96,81.27
+Laptop,"San Francisco","Donald qn",8/15/2023,74,333.51
+Blender,"San Francisco","Donald qn",1/12/2023,46,394.46
+Smartphone,"San Francisco","Donald qn",5/3/2023,91,298.63
+"Washing Machine","San Francisco","Donald qn",10/11/2023,73,375.08
+Microwave,"San Francisco","Donald qn",3/2/2023,92,430.26
+Refrigerator,"San Francisco","Donald qn",4/25/2023,49,67.97
+"Washing Machine","San Francisco","Donald qn",10/15/2023,83,397.65
+"Washing Machine","San Francisco","Donald qn",1/4/2023,47,88.23
+Laptop,"San Francisco","Donald qn",1/3/2023,84,155.82
+"Washing Machine","San Francisco","Donald qn",7/23/2023,36,224.03
+Television,"San Francisco","Donald qn",5/8/2023,55,333.24
+Blender,"San Francisco","Donald qn",9/4/2023,100,438.1
+Refrigerator,"San Francisco","Donald qn",10/7/2023,6,275.37
+Smartphone,Boston," Grant qp",11/6/2023,26,321.95
+"Washing Machine",Boston," Grant qp",5/10/2023,63,123.4
+"Washing Machine",Boston," Grant qp",6/3/2023,24,313.69
+Laptop,Boston," Grant qp",12/7/2023,15,128.82
+"Coffee Maker",Boston," Grant qp",7/5/2023,98,111.2
+Laptop,Boston," Grant qp",5/10/2023,33,108.33
+Toaster,Boston," Grant qp",9/1/2023,85,496.48
+Tablet,Boston," Grant qp",5/23/2023,50,441.88
+Laptop,Boston," Grant qp",7/3/2023,7,116.02
+"Washing Machine",Boston," Grant qp",3/3/2023,55,271.56
+Laptop,Boston," Grant qp",4/6/2023,60,247.24
+Television,Boston," Grant qp",3/16/2023,94,50.44
+Television,Boston," Grant qp",7/26/2023,72,332.27
+Toaster,Boston," Grant qp",8/12/2023,91,232.01
+Refrigerator,Boston," Grant qp",2/4/2023,48,324.39
+Television,Boston," Grant qp",6/6/2023,59,485.73
+Blender,Boston," Grant qp",7/28/2023,47,388.09
+Blender,Boston," Grant qp",11/19/2023,68,301.51
+Refrigerator,Boston," Grant qp",7/16/2023,21,13.68
+Toaster,Boston," Grant qp",8/16/2023,97,106.16
+Laptop,Boston," Grant qp",5/12/2023,88,114.25
+Laptop,Boston," Grant qp",9/12/2023,22,255.72
+Tablet,Boston," Grant qp",12/10/2023,12,193.78
+Blender,Boston," Grant qp",4/11/2023,72,157.5
+"Washing Machine",Boston," Grant qp",11/3/2023,68,138.71
+Smartphone,Boston," Grant qp",1/17/2023,71,426.54
+Television,Boston," Grant qp",1/23/2023,68,373.93
+Microwave,Boston," Grant qp",5/28/2023,38,289.64
+Television,Boston," Grant qp",7/25/2023,98,394.81
+"Washing Machine",Boston," Grant qp",4/20/2023,75,441.7
+Toaster,Boston," Grant qp",2/25/2023,79,463.75
+Refrigerator,Boston," Grant qp",5/26/2023,72,266.46
+"Washing Machine",Boston," Grant qp",2/14/2023,24,149.28
+Blender,Boston," Grant qp",6/15/2023,34,128.3
+"Washing Machine",Dallas," Kyle qt",1/12/2023,72,258.83
+Laptop,Dallas," Kyle qt",9/21/2023,49,221.95
+Tablet,Dallas," Kyle qt",5/13/2023,18,82.59
+Refrigerator,Dallas," Kyle qt",11/5/2023,24,272.72
+Smartphone,Dallas," Kyle qt",1/28/2023,32,343.8
+"Washing Machine",Dallas," Kyle qt",12/10/2023,36,386.45
+"Coffee Maker",Dallas," Kyle qt",12/27/2023,63,459.31
+Tablet,Dallas," Kyle qt",8/25/2023,21,48.33
+Smartphone,Dallas," Kyle qt",3/11/2023,21,478.85
+Tablet,Dallas," Kyle qt",5/12/2023,14,211.27
+Laptop,Dallas," Kyle qt",12/28/2023,18,265.97
+Television,Dallas," Kyle qt",4/2/2023,78,226.21
+Microwave,Dallas," Kyle qt",9/2/2023,65,444.57
+Television,Dallas," Kyle qt",3/24/2023,71,257.45
+Smartphone,Dallas," Kyle qt",9/14/2023,97,164.16
+Television,Dallas," Kyle qt",2/17/2023,64,245.4
+Television,Dallas," Kyle qt",2/10/2023,86,469.08
+Television,Dallas," Kyle qt",4/9/2023,15,352.66
+Blender,Dallas," Kyle qt",9/20/2023,42,220.32
+Toaster,Dallas," Kyle qt",1/19/2023,53,272.32
+Microwave,Dallas," Kyle qt",7/6/2023,49,86.87
+Laptop,Dallas," Kyle qt",1/25/2023,30,69.96
+Tablet,Dallas," Kyle qt",9/3/2023,86,417.4
+Refrigerator,Dallas," Kyle qt",11/1/2023,7,94.88
+Blender,Dallas," Kyle qt",2/22/2023,59,471.83
+Tablet,Dallas," Kyle qt",7/24/2023,32,186.4
+Refrigerator,Dallas," Kyle qt",2/7/2023,4,413.64
+Microwave,Dallas," Kyle qt",8/11/2023,92,229.89
+Microwave,Dallas," Kyle qt",10/6/2023,30,469.55
+Blender,Dallas," Kyle qt",1/1/2023,69,318.7
+"Washing Machine",Dallas," Kyle qt",2/15/2023,14,150.63
+Smartphone,Dallas," Kyle qt",12/2/2023,26,79.67
+Smartphone,Dallas," Kyle qt",11/3/2023,12,132.58
+Blender,Dallas," Kyle qt",8/17/2023,12,93.23
+Microwave,Dallas," Kyle qt",11/13/2023,63,286.9
+Refrigerator,Dallas," Kyle qt",6/28/2023,83,109.57
+Blender,Boston,"Gloria qb",1/27/2023,19,262.49
+Television,Boston,"Gloria qb",10/10/2023,3,230.05
+"Coffee Maker",Boston,"Gloria qb",9/9/2023,39,39.47
+Tablet,Boston,"Gloria qb",10/10/2023,38,33.35
+Smartphone,Boston,"Gloria qb",8/15/2023,33,241.17
+"Washing Machine",Boston,"Gloria qb",12/10/2023,91,161.43
+Television,Boston,"Gloria qb",11/8/2023,74,443.67
+Smartphone,Boston,"Gloria qb",11/21/2023,10,299.38
+Toaster,Boston,"Gloria qb",12/4/2023,21,242.46
+"Washing Machine",Boston,"Gloria qb",1/1/2023,69,405.61
+"Coffee Maker",Boston,"Gloria qb",9/3/2023,57,336.78
+Television,Boston,"Gloria qb",10/23/2023,50,490.28
+Smartphone,Boston,"Gloria qb",11/20/2023,75,42.76
+"Coffee Maker",Boston,"Gloria qb",1/16/2023,59,356.89
+Microwave,Boston,"Gloria qb",3/25/2023,40,169.5
+Tablet,Boston,"Gloria qb",7/14/2023,60,262.34
+"Coffee Maker",Boston,"Gloria qb",10/22/2023,91,51.51
+Toaster,Boston,"Gloria qb",4/11/2023,3,141.46
+Toaster,Boston,"Gloria qb",6/3/2023,45,157.25
+Smartphone,Boston,"Gloria qb",5/9/2023,47,410.04
+Television,Boston,"Gloria qb",1/17/2023,63,361.74
+Blender,Boston,"Gloria qb",10/22/2023,45,397.52
+Laptop,Boston,"Gloria qb",9/21/2023,83,12.31
+Blender,Houston,"James qy",6/16/2023,6,265.62
+Toaster,Houston,"James qy",8/3/2023,69,135.3
+Smartphone,Houston,"James qy",9/17/2023,61,393.45
+Laptop,Houston,"James qy",6/8/2023,43,426.47
+Microwave,Houston,"James qy",11/19/2023,38,165.24
+Toaster,Houston,"James qy",10/6/2023,86,445.2
+Smartphone,Houston,"James qy",1/24/2023,63,276.7
+Television,Houston,"James qy",10/15/2023,15,99.11
+Laptop,Houston,"James qy",7/2/2023,57,91.22
+Toaster,Houston,"James qy",12/7/2023,63,184.89
+Microwave,Houston,"James qy",4/19/2023,100,73.61
+Microwave,Houston,"James qy",8/7/2023,22,319
+Laptop,Houston,"James qy",6/8/2023,38,451.54
+Refrigerator,Houston,"James qy",5/9/2023,73,116.67
+"Coffee Maker",Houston,"James qy",9/16/2023,25,345.36
+Refrigerator,Houston,"James qy",7/27/2023,44,110.53
+"Coffee Maker",Houston,"James qy",9/25/2023,13,68.24
+"Coffee Maker",Houston,"James qy",1/11/2023,59,260.41
+Laptop,Houston,"James qy",12/11/2023,99,83.22
+Smartphone,Houston,"James qy",4/11/2023,82,18.22
+Smartphone,Houston,"James qy",10/4/2023,91,346.02
+Microwave,Houston,"James qy",3/19/2023,29,319.5
+Tablet,Houston,"James qy",11/18/2023,41,404.91
+"Coffee Maker",Houston,"James qy",12/15/2023,24,253.7
+"Washing Machine",Houston,"James qy",10/7/2023,42,458
+Tablet,Houston,"James qy",11/22/2023,21,32.31
+Smartphone,Houston,"James qy",11/6/2023,12,163.27
+"Coffee Maker",Houston,"James qy",9/3/2023,12,28.15
+Refrigerator,Houston,"James qy",9/21/2023,29,315.9
+Refrigerator,Houston,"James qy",2/27/2023,41,191.14
+"Coffee Maker",Houston,"James qy",11/3/2023,84,157.51
+Toaster,Houston,"James qy",9/18/2023,5,23.34
+Blender,Houston,"James qy",10/18/2023,37,83.5
+Television,Houston,"James qy",4/17/2023,24,405.98
+Blender,Dallas,"Jessica An",4/3/2023,20,443.6
+Laptop,Dallas,"Jessica An",2/26/2023,11,356.49
+"Coffee Maker",Dallas,"Jessica An",3/12/2023,50,422.37
+Television,Dallas,"Jessica An",6/16/2023,16,397.32
+Microwave,Dallas,"Jessica An",12/4/2023,5,62.66
+Blender,Dallas,"Jessica An",2/15/2023,43,63.18
+Microwave,Dallas,"Jessica An",12/16/2023,8,498.58
+"Coffee Maker",Dallas,"Jessica An",7/7/2023,67,434.9
+Laptop,Dallas,"Jessica An",12/4/2023,61,184.19
+Television,Dallas,"Jessica An",10/26/2023,51,110.27
+"Coffee Maker",Dallas,"Jessica An",1/6/2023,7,132.9
+Television,Dallas,"Jessica An",6/9/2023,19,301.17
+Refrigerator,Dallas,"Jessica An",3/15/2023,34,216.05
+Smartphone,Dallas,"Jessica An",10/26/2023,91,89.28
+Blender,Dallas,"Jessica An",8/11/2023,50,88.78
+Smartphone,Dallas,"Jessica An",1/12/2023,28,329.08
+Tablet,Dallas,"Jessica An",2/20/2023,38,34.18
+"Coffee Maker",Dallas,"Jessica An",8/21/2023,94,153.27
+Television,Dallas,"Jessica An",7/15/2023,15,485.08
+Blender,Dallas,"Jessica An",7/14/2023,91,70.89
+"Washing Machine",Dallas,"Jessica An",2/15/2023,54,156.69
+Smartphone,Dallas,"Jessica An",6/9/2023,64,107.43
+"Coffee Maker",Dallas,"Jessica An",9/17/2023,17,58.6
+"Washing Machine",Dallas,"Jessica An",4/12/2023,72,420.38
+Toaster,Dallas,"Jessica An",10/21/2023,5,166.14
+Microwave,Dallas,"Jessica An",4/28/2023,37,450.67
+Laptop,Dallas,"Jessica An",1/11/2023,9,447.09
+"Washing Machine",Dallas,"Jessica An",4/7/2023,11,413.27
+"Coffee Maker",Dallas,"Jessica An",7/4/2023,71,438.04
+Toaster,Dallas,"Jessica An",9/25/2023,5,238.67
+Refrigerator,Dallas,"Jessica An",7/4/2023,68,128.99
+Microwave,Dallas,"Jessica An",4/3/2023,1,92.28
+Television,Dallas,"Jessica An",12/19/2023,23,199.14
+Blender,"New York","Katelyn Av",3/10/2023,28,399.64
+Blender,"New York","Katelyn Av",7/10/2023,77,284
+Television,"New York","Katelyn Av",11/22/2023,83,321.95
+Television,"New York","Katelyn Av",12/15/2023,63,131.75
+"Washing Machine","New York","Katelyn Av",12/1/2023,76,342.37
+"Washing Machine","New York","Katelyn Av",10/22/2023,31,283.16
+Laptop,"New York","Katelyn Av",12/16/2023,89,446.09
+Smartphone,"New York","Katelyn Av",4/17/2023,33,442.52
+Refrigerator,"New York","Katelyn Av",5/13/2023,8,384.58
+Television,"New York","Katelyn Av",7/24/2023,38,18.8
+Toaster,"New York","Katelyn Av",3/27/2023,23,215.59
+Toaster,"New York","Katelyn Av",4/14/2023,35,454.24
+Toaster,"New York","Katelyn Av",10/5/2023,76,80.21
+Refrigerator,"New York","Katelyn Av",4/28/2023,38,381.34
+Refrigerator,"New York","Katelyn Av",7/15/2023,42,347.95
+Television,"New York","Katelyn Av",11/27/2023,100,206.1
+Television,"New York","Katelyn Av",11/18/2023,9,20.26
+Toaster,"New York","Katelyn Av",12/20/2023,40,191.83
+"Washing Machine","New York","Katelyn Av",3/15/2023,96,233.59
+Toaster,"New York","Katelyn Av",7/20/2023,74,212.81
+Toaster,"New York","Katelyn Av",3/15/2023,1,264.58
+"Washing Machine","New York","Katelyn Av",11/9/2023,21,30.17
+Blender,"New York","Katelyn Av",4/2/2023,37,27.01
+Tablet,"New York","Katelyn Av",8/3/2023,57,164.51
+Television,"New York","Katelyn Av",7/4/2023,7,160.97
+Toaster,"New York","Katelyn Av",1/22/2023,54,362.01
+"Coffee Maker","New York","Katelyn Av",10/16/2023,82,459
+Laptop,"New York","Katelyn Av",6/13/2023,25,391.36
+Microwave,"New York","Katelyn Av",12/9/2023,41,170.68
+Microwave,"New York","Katelyn Av",12/23/2023,34,313.14
+Blender,"New York","Katelyn Av",1/25/2023,79,56.78
+Microwave,"New York","Katelyn Av",4/13/2023,41,153.5
+Blender,"New York","Katelyn Av",10/20/2023,30,89.36
+Smartphone,"New York","Katherine Aw",3/23/2023,21,98.29
+Refrigerator,"New York","Katherine Aw",4/24/2023,25,89.61
+Blender,"New York","Katherine Aw",6/13/2023,14,246.94
+Television,"New York","Katherine Aw",6/13/2023,67,391.66
+Microwave,"New York","Katherine Aw",6/12/2023,84,329.01
+Tablet,"New York","Katherine Aw",6/20/2023,11,73.35
+"Washing Machine","New York","Katherine Aw",3/16/2023,25,193.71
+"Coffee Maker","New York","Katherine Aw",8/1/2023,33,113.66
+Microwave,"New York","Katherine Aw",10/16/2023,35,355.36
+Smartphone,"New York","Katherine Aw",3/24/2023,38,412.31
+Smartphone,"New York","Katherine Aw",8/9/2023,2,80.54
+"Coffee Maker","New York","Katherine Aw",1/1/2023,20,419.25
+Blender,"New York","Katherine Aw",4/16/2023,29,49.76
+Blender,"New York","Katherine Aw",12/26/2023,37,57.68
+Toaster,"New York","Katherine Aw",12/18/2023,97,309.72
+Refrigerator,"New York","Katherine Aw",5/10/2023,78,281.8
+Toaster,"New York","Katherine Aw",1/14/2023,27,253.24
+Refrigerator,"New York","Katherine Aw",9/3/2023,60,104.46
+"Washing Machine","New York","Katherine Aw",3/10/2023,12,122.4
+Smartphone,"New York","Katherine Aw",12/14/2023,38,82.87
+"Coffee Maker","New York","Katherine Aw",7/19/2023,35,31.22
+Microwave,"New York","Katherine Aw",2/21/2023,10,429.99
+"Coffee Maker","New York","Katherine Aw",4/3/2023,22,230.53
+Television,"New York","Katherine Aw",9/13/2023,88,436.87
+Smartphone,"New York","Katherine Aw",8/27/2023,59,320.93
+Laptop,"New York","Katherine Aw",5/6/2023,17,434.89
+Refrigerator,"New York","Katherine Aw",9/9/2023,66,255.17
+Tablet,"New York","Katherine Aw",9/28/2023,70,247.34
+"Washing Machine","New York","Katherine Aw",12/23/2023,60,282.61
+"Coffee Maker","New York","Katherine Aw",10/7/2023,41,290.25
+Tablet,"New York","Katherine Aw",2/12/2023,96,327.03
+Microwave,"New York","Katherine Aw",6/1/2023,94,120.15
+Tablet,"New York","Katherine Aw",4/12/2023,3,390.22
+Smartphone,"New York","Katherine Aw",5/15/2023,96,49.04
+Smartphone,Chicago,"Krista qw",2/7/2023,52,130.7
+"Washing Machine",Chicago,"Krista qw",9/16/2023,75,345.89
+"Washing Machine",Chicago,"Krista qw",3/27/2023,88,132.14
+"Washing Machine",Chicago,"Krista qw",7/5/2023,4,218.29
+Laptop,Chicago,"Krista qw",5/14/2023,1,296.31
+Tablet,Chicago,"Krista qw",1/26/2023,45,456.25
+Smartphone,Chicago,"Krista qw",5/6/2023,46,128.61
+Television,Chicago,"Krista qw",4/23/2023,30,12.12
+Blender,Chicago,"Krista qw",12/5/2023,22,212.54
+Tablet,Chicago,"Krista qw",11/14/2023,100,105.36
+Smartphone,Chicago,"Krista qw",2/24/2023,61,232.33
+Smartphone,Chicago,"Krista qw",8/2/2023,80,120.38
+Refrigerator,Chicago,"Krista qw",9/27/2023,66,497.8
+Blender,Chicago,"Krista qw",10/21/2023,50,88.66
+"Coffee Maker",Chicago,"Krista qw",10/28/2023,57,382.58
+Television,Chicago,"Krista qw",10/13/2023,70,359.56
+Blender,Chicago,"Krista qw",4/28/2023,100,121.14
+Toaster,Chicago,"Krista qw",4/7/2023,19,125.36
+Microwave,Chicago,"Krista qw",7/25/2023,5,473.65
+Microwave,Chicago,"Krista qw",7/21/2023,29,470.38
+"Coffee Maker",Chicago,"Krista qw",7/1/2023,20,102.25
+Microwave,Chicago,"Krista qw",12/21/2023,57,340.1
+"Coffee Maker",Chicago,"Krista qw",8/3/2023,31,455.45
+Smartphone,Chicago,"Krista qw",11/2/2023,49,117.47
+Tablet,Chicago,"Krista qw",2/16/2023,66,309.57
+"Washing Machine",Chicago,"Krista qw",11/6/2023,12,168.05
+Television,Chicago,"Krista qw",12/4/2023,55,184.98
+Smartphone,Chicago,"Krista qw",11/7/2023,99,204.89
+"Washing Machine",Chicago,"Krista qw",12/15/2023,61,218.01
+Toaster,Miami,"Kyle qn",11/7/2023,86,262.24
+Toaster,Miami,"Kyle qn",2/13/2023,42,258.39
+Refrigerator,Miami,"Kyle qn",9/10/2023,3,439.81
+Smartphone,Miami,"Kyle qn",7/20/2023,50,411.92
+Refrigerator,Miami,"Kyle qn",9/19/2023,13,154.56
+Tablet,Miami,"Kyle qn",7/5/2023,57,470.44
+Toaster,Miami,"Kyle qn",11/11/2023,58,121.04
+Smartphone,Miami,"Kyle qn",4/15/2023,97,176.74
+Smartphone,Miami,"Kyle qn",7/4/2023,51,265.33
+Tablet,Miami,"Kyle qn",7/16/2023,94,108.75
+Laptop,Miami,"Kyle qn",9/27/2023,49,291.13
+Refrigerator,Miami,"Kyle qn",6/24/2023,42,18.39
+Microwave,Miami,"Kyle qn",2/25/2023,65,25.78
+Television,Miami,"Kyle qn",5/11/2023,81,112.46
+Tablet,Miami,"Kyle qn",10/16/2023,11,93.16
+Blender,Miami,"Kyle qn",3/4/2023,26,125
+Microwave,Miami,"Kyle qn",11/27/2023,95,230.96
+Television,Miami,"Kyle qn",6/17/2023,75,218.13
+Laptop,Miami,"Kyle qn",3/4/2023,44,214.56
+Toaster,Miami,"Kyle qn",7/15/2023,56,182.55
+Tablet,Miami,"Kyle qn",11/24/2023,63,170.78
+Refrigerator,Miami,"Kyle qn",1/14/2023,72,317.96
+Toaster,Miami,"Kyle qn",12/7/2023,21,240.01
+Smartphone,Miami,"Kyle qn",12/8/2023,88,478.88
+Refrigerator,Miami,"Kyle qn",9/15/2023,96,318.72
+Microwave,Miami,"Kyle qn",3/26/2023,71,23.27
+Television,Miami,"Kyle qn",6/15/2023,22,159.25
+Smartphone,Miami,"Kyle qn",9/7/2023,20,473.36
+"Washing Machine",Miami,"Kyle qn",9/5/2023,93,123.75
+"Coffee Maker",Miami,"Kyle qn",8/1/2023,70,210.39
+Television,Miami,"Kyle qn",10/11/2023,56,133.46
+Blender,Miami,"Kyle qn",2/7/2023,65,175.37
+Laptop,Chicago,"Larry qm",7/22/2023,74,206.4
+Television,Chicago,"Larry qm",2/11/2023,39,404.59
+Smartphone,Chicago,"Larry qm",6/13/2023,9,104.06
+Tablet,Chicago,"Larry qm",3/28/2023,72,344.54
+"Washing Machine",Chicago,"Larry qm",7/20/2023,71,329.81
+Microwave,Chicago,"Larry qm",10/17/2023,40,214.56
+Laptop,Chicago,"Larry qm",1/15/2023,72,117.96
+Microwave,Chicago,"Larry qm",12/2/2023,40,251.62
+Refrigerator,Chicago,"Larry qm",11/18/2023,48,409.68
+"Coffee Maker",Chicago,"Larry qm",11/5/2023,98,60.06
+Television,Chicago,"Larry qm",8/27/2023,8,108.25
+"Coffee Maker",Chicago,"Larry qm",7/27/2023,51,386.79
+Microwave,Chicago,"Larry qm",2/13/2023,14,62.7
+Refrigerator,Chicago,"Larry qm",8/18/2023,43,29.79
+Blender,Chicago,"Larry qm",6/12/2023,76,495.93
+"Coffee Maker",Chicago,"Larry qm",9/2/2023,62,105.67
+Laptop,Chicago,"Larry qm",7/11/2023,31,34.9
+Smartphone,Chicago,"Larry qm",8/26/2023,80,172.45
+Refrigerator,Chicago,"Larry qm",11/13/2023,90,101.9
+"Washing Machine",Chicago,"Larry qm",2/27/2023,18,248.99
+Tablet,Chicago,"Larry qm",9/26/2023,95,153.82
+Toaster,Chicago,"Larry qm",6/20/2023,75,384.02
+Smartphone,Chicago,"Larry qm",5/6/2023,49,126.79
+"Washing Machine",Chicago,"Larry qm",7/9/2023,28,484.24
+Laptop,Chicago,"Larry qm",6/21/2023,88,423.81
+Tablet,Chicago,"Larry qm",12/12/2023,19,75.32
+Blender,Chicago,"Larry qm",1/10/2023,49,457.79
+"Washing Machine",Chicago,"Larry qm",6/28/2023,65,103.36
+Television,Chicago,"Larry qm",8/17/2023,81,248.52
+"Washing Machine",Chicago,"Larry qm",11/8/2023,91,183.81
+Blender,Chicago,"Larry qm",1/13/2023,9,176.56
+"Coffee Maker",Chicago,"Larry qm",11/19/2023,86,86.21
+Microwave,Chicago,"Larry qm",9/27/2023,51,413.64
+Refrigerator,Miami,"Mark qe",1/2/2023,64,124.01
+Smartphone,Miami,"Mark qe",10/25/2023,17,269.31
+Laptop,Miami,"Mark qe",8/12/2023,94,118.38
+Television,Miami,"Mark qe",5/28/2023,54,23.09
+"Coffee Maker",Miami,"Mark qe",1/22/2023,24,205.45
+Laptop,Miami,"Mark qe",10/16/2023,44,57.56
+Smartphone,Miami,"Mark qe",9/12/2023,8,287.09
+Refrigerator,Miami,"Mark qe",3/15/2023,60,313.88
+Laptop,Miami,"Mark qe",12/24/2023,72,342.85
+Television,Miami,"Mark qe",5/6/2023,31,188.44
+Toaster,Miami,"Mark qe",12/18/2023,64,89.08
+Refrigerator,Miami,"Mark qe",3/8/2023,17,131.11
+Blender,Miami,"Mark qe",2/19/2023,35,54.72
+Television,Miami,"Mark qe",5/10/2023,72,10.5
+Tablet,Miami,"Mark qe",3/8/2023,20,70.76
+Toaster,Miami,"Mark qe",4/11/2023,28,371.94
+"Coffee Maker",Miami,"Mark qe",4/27/2023,82,240.25
+Television,Miami,"Mark qe",5/16/2023,80,30.63
+Toaster,Miami,"Mark qe",9/9/2023,2,374.26
+Blender,Miami,"Mark qe",7/20/2023,66,60.97
+Microwave,Miami,"Mark qe",12/14/2023,39,421.49
+Refrigerator,Miami,"Mark qe",10/17/2023,7,357.85
+"Coffee Maker",Miami,"Mark qe",3/19/2023,70,180.38
+Microwave,Miami,"Mark qe",6/25/2023,79,300.84
+Laptop,Miami,"Mark qe",6/11/2023,2,369.51
+Tablet,Miami,"Mark qe",10/23/2023,9,400.58
+"Coffee Maker",Miami,"Mark qe",2/28/2023,19,295.61
+Laptop,Miami,"Mark qe",9/28/2023,87,19.79
+Television,Miami,"Mark qe",11/23/2023,12,14.08
+Microwave,Miami,"Mark qe",7/26/2023,79,191.39
+Blender,Miami,"Mark qe",12/22/2023,7,389.99
+Tablet,Miami,"Mark qe",8/12/2023,64,144.49
+Television,Miami,"Mark qe",6/25/2023,76,26.6
+Smartphone,"San Francisco","Mark Ad",9/7/2023,22,248.7
+Blender,"San Francisco","Mark Ad",7/24/2023,77,80.24
+Toaster,"San Francisco","Mark Ad",7/9/2023,5,387.32
+Smartphone,"San Francisco","Mark Ad",9/25/2023,71,468.01
+Blender,"San Francisco","Mark Ad",8/2/2023,85,334.12
+Tablet,"San Francisco","Mark Ad",4/7/2023,98,315.95
+Smartphone,"San Francisco","Mark Ad",9/19/2023,91,462.14
+"Coffee Maker","San Francisco","Mark Ad",5/27/2023,63,167.21
+"Washing Machine","San Francisco","Mark Ad",9/16/2023,23,308.41
+Tablet,"San Francisco","Mark Ad",1/27/2023,43,238.93
+"Coffee Maker","San Francisco","Mark Ad",8/4/2023,27,220.81
+"Coffee Maker","San Francisco","Mark Ad",4/3/2023,95,70.65
+Smartphone,"San Francisco","Mark Ad",8/1/2023,21,166.29
+Smartphone,"San Francisco","Mark Ad",10/20/2023,80,364.35
+"Coffee Maker","San Francisco","Mark Ad",7/19/2023,39,402.51
+Blender,"San Francisco","Mark Ad",9/7/2023,74,164.34
+Refrigerator,"San Francisco","Mark Ad",2/3/2023,64,410.99
+Laptop,"San Francisco","Mark Ad",8/16/2023,29,227.99
+"Washing Machine","San Francisco","Mark Ad",2/2/2023,37,489.44
+Toaster,"San Francisco","Mark Ad",3/20/2023,38,449.89
+"Coffee Maker","San Francisco","Mark Ad",7/12/2023,48,272.48
+"Washing Machine","San Francisco","Mark Ad",12/24/2023,21,186.54
+Blender,"San Francisco","Mark Ad",6/9/2023,83,245.68
+Blender,"San Francisco","Mark Ad",12/20/2023,69,434.31
+Laptop,"San Francisco","Mark Ad",10/26/2023,61,76.22
+Toaster,"San Francisco","Mark Ad",5/7/2023,28,416.45
+Blender,"San Francisco","Mark Ad",5/2/2023,48,230.96
+Laptop,"San Francisco","Mark Ad",3/28/2023,90,170.06
+"Coffee Maker","San Francisco","Mark Ad",8/1/2023,8,213.56
+Microwave,"San Francisco","Mark Ad",1/3/2023,18,265.01
+"Washing Machine","San Francisco","Mark Ad",1/22/2023,17,384.32
+Blender,Miami,"Megan Ab",12/20/2023,93,47.58
+"Washing Machine",Miami,"Megan Ab",9/25/2023,91,67.32
+Tablet,Miami,"Megan Ab",5/16/2023,34,55.93
+"Coffee Maker",Miami,"Megan Ab",9/21/2023,44,55.06
+Smartphone,Miami,"Megan Ab",8/17/2023,92,385.47
+"Coffee Maker",Miami,"Megan Ab",9/24/2023,38,206.48
+Blender,Miami,"Megan Ab",7/6/2023,5,327.43
+"Coffee Maker",Miami,"Megan Ab",5/15/2023,17,103.41
+Blender,Miami,"Megan Ab",3/7/2023,56,150.54
+"Coffee Maker",Miami,"Megan Ab",7/5/2023,72,104.44
+Toaster,Miami,"Megan Ab",1/24/2023,39,75.16
+Blender,Miami,"Megan Ab",2/16/2023,5,227.96
+Smartphone,Miami,"Megan Ab",10/28/2023,84,374.66
+Microwave,Miami,"Megan Ab",2/1/2023,39,231.05
+Smartphone,Miami,"Megan Ab",1/4/2023,33,406.72
+Blender,Miami,"Megan Ab",3/13/2023,64,360.41
+Laptop,Miami,"Megan Ab",4/6/2023,65,28.23
+Tablet,Miami,"Megan Ab",5/22/2023,91,12.01
+Toaster,Miami,"Megan Ab",5/6/2023,55,75.27
+Tablet,Miami,"Megan Ab",7/6/2023,25,396.74
+Smartphone,Miami,"Megan Ab",4/23/2023,28,359.08
+"Coffee Maker",Miami,"Megan Ab",1/4/2023,35,465.16
+Television,Miami,"Megan Ab",9/12/2023,36,347.35
+"Coffee Maker",Miami,"Megan Ab",3/10/2023,71,454.49
+Smartphone,Miami,"Megan Ab",1/7/2023,15,318.62
+Toaster,Miami,"Megan Ab",11/18/2023,5,203.97
+Tablet,Miami,"Megan Ab",1/1/2023,9,103.67
+Microwave,Miami,"Megan Ab",1/17/2023,66,275.2
+"Washing Machine",Miami,"Megan Ab",7/2/2023,67,231.82
+Toaster,Miami,"Megan Ab",2/10/2023,86,366.23
+Toaster,Miami,"Megan Ab",11/15/2023,85,418.77
+"Washing Machine",Miami,"Megan Ab",10/1/2023,46,469.08
+Laptop,Miami,"Megan Ab",5/20/2023,93,297.48
+Tablet,Miami,"Megan Ab",1/25/2023,5,194.11
+Television,Atlanta,"Michael dd",9/19/2023,25,120.04
+Microwave,Atlanta,"Michael dd",9/2/2023,92,240.4
+Microwave,Atlanta,"Michael dd",11/19/2023,39,403.4
+Toaster,Atlanta,"Michael dd",4/15/2023,27,219.32
+Tablet,Atlanta,"Michael dd",6/17/2023,55,443.83
+"Coffee Maker",Atlanta,"Michael dd",5/16/2023,63,369.25
+Television,Atlanta,"Michael dd",12/2/2023,2,260.61
+Tablet,Atlanta,"Michael dd",10/14/2023,10,300.75
+Smartphone,Atlanta,"Michael dd",5/13/2023,28,353.68
+Toaster,Atlanta,"Michael dd",1/13/2023,29,412.51
+Toaster,Atlanta,"Michael dd",5/21/2023,16,455.01
+Tablet,Atlanta,"Michael dd",9/20/2023,31,426.7
+Blender,Atlanta,"Michael dd",1/5/2023,67,329.34
+Laptop,Atlanta,"Michael dd",7/27/2023,39,135.94
+Microwave,Atlanta,"Michael dd",7/21/2023,86,197.1
+Toaster,Atlanta,"Michael dd",2/15/2023,26,320.45
+Toaster,Atlanta,"Michael dd",3/15/2023,67,303.83
+"Washing Machine",Atlanta,"Michael dd",9/2/2023,81,276.15
+Smartphone,Atlanta,"Michael dd",10/8/2023,66,380.46
+"Coffee Maker",Atlanta,"Michael dd",8/19/2023,38,375.09
+Tablet,Atlanta,"Michael dd",9/1/2023,32,357.75
+Television,Atlanta,"Michael dd",9/6/2023,8,324.25
+Blender,Atlanta,"Michael dd",7/9/2023,10,492.58
+Refrigerator,Atlanta,"Michael dd",10/19/2023,34,164.97
+Blender,Houston,"Michelle qh",5/18/2023,80,375.37
+"Washing Machine",Houston,"Michelle qh",12/2/2023,84,11.64
+Refrigerator,Houston,"Michelle qh",3/28/2023,41,368.37
+Microwave,Houston,"Michelle qh",6/4/2023,37,184.4
+Laptop,Houston,"Michelle qh",4/8/2023,14,425.53
+Television,Houston,"Michelle qh",6/13/2023,4,263.25
+Refrigerator,Houston,"Michelle qh",9/12/2023,1,447.91
+Laptop,Houston,"Michelle qh",9/10/2023,55,412.08
+"Washing Machine",Houston,"Michelle qh",8/9/2023,54,150.17
+Tablet,Houston,"Michelle qh",11/17/2023,25,97.55
+"Coffee Maker",Houston,"Michelle qh",10/28/2023,94,227.46
+"Coffee Maker",Houston,"Michelle qh",6/18/2023,42,242.56
+Tablet,Houston,"Michelle qh",8/23/2023,27,342.44
+"Coffee Maker",Houston,"Michelle qh",6/9/2023,46,159.66
+Refrigerator,Houston,"Michelle qh",9/9/2023,30,422.62
+Microwave,Houston,"Michelle qh",6/22/2023,62,317.8
+Toaster,Houston,"Michelle qh",5/8/2023,6,51.22
+Microwave,Houston,"Michelle qh",7/18/2023,84,65.47
+Refrigerator,Houston,"Michelle qh",1/7/2023,36,190
+Smartphone,Houston,"Michelle qh",12/3/2023,63,128.32
+Blender,Houston,"Michelle qh",9/28/2023,62,270.37
+Television,Houston,"Michelle qh",1/23/2023,92,143.28
+Microwave,Houston,"Michelle qh",1/24/2023,42,68
+Laptop,Houston,"Michelle qh",5/2/2023,87,105.96
+Television,Houston,"Michelle qh",7/12/2023,16,78.71
+Television,Houston,"Michelle qh",6/14/2023,67,480.36
+Television,Houston,"Michelle qh",3/2/2023,51,124.82
+Television,Houston,"Michelle qh",4/3/2023,54,87.72
+Laptop,Houston,"Michelle qh",9/24/2023,63,261.68
+Tablet,Houston,"Michelle qh",6/10/2023,67,340.87
+"Coffee Maker",Houston,"Michelle qh",1/26/2023,28,193.63
+Laptop,Houston,"Michelle qh",11/4/2023,98,154.75
+Toaster,Houston,"Michelle qh",11/22/2023,8,291.35
+Television,Houston,"Michelle qh",6/16/2023,13,56.23
+"Washing Machine",Houston,"Michelle qh",5/19/2023,70,268.46
+Television,Houston,"Michelle qh",1/4/2023,95,474.6
+Laptop,Houston,"Michelle qh",3/26/2023,85,480.34
+Laptop,Houston,"Michelle qh",9/21/2023,8,126.5
+Refrigerator,Houston,"Michelle qh",8/4/2023,17,497.87
+Television,Houston,"Michelle qh",12/15/2023,99,311.72
+Television,Houston,"Michelle qh",3/28/2023,82,210.67
+"Coffee Maker",Houston,"Michelle qh",11/7/2023,74,465.26
+Tablet,Houston,"Michelle qh",1/17/2023,19,348.37
+"Coffee Maker",Houston,"Michelle qh",8/4/2023,50,23.49
+Refrigerator,Houston,"Michelle qh",8/10/2023,77,74.04
+"Washing Machine",Dallas,"Miss Jennifer qh",2/9/2023,55,311.97
+"Coffee Maker",Dallas,"Miss Jennifer qh",2/14/2023,49,215.28
+"Washing Machine",Dallas,"Miss Jennifer qh",1/13/2023,30,16.61
+Smartphone,Dallas,"Miss Jennifer qh",2/2/2023,80,277.83
+Toaster,Dallas,"Miss Jennifer qh",10/9/2023,52,421.15
+"Coffee Maker",Dallas,"Miss Jennifer qh",11/4/2023,84,412.01
+Tablet,Dallas,"Miss Jennifer qh",3/23/2023,8,251.77
+Tablet,Dallas,"Miss Jennifer qh",11/18/2023,56,74.58
+"Coffee Maker",Dallas,"Miss Jennifer qh",4/19/2023,66,498.79
+"Washing Machine",Dallas,"Miss Jennifer qh",12/1/2023,4,104.09
+"Washing Machine",Dallas,"Miss Jennifer qh",8/6/2023,63,396.87
+Smartphone,Dallas,"Miss Jennifer qh",8/24/2023,67,418.87
+Television,Dallas,"Miss Jennifer qh",3/15/2023,29,83.63
+Smartphone,Dallas,"Miss Jennifer qh",7/26/2023,22,10.46
+Smartphone,Dallas,"Miss Jennifer qh",9/1/2023,94,465.45
+Smartphone,Dallas,"Miss Jennifer qh",9/15/2023,53,303.06
+Television,Dallas,"Miss Jennifer qh",12/2/2023,86,198.72
+"Washing Machine",Dallas,"Miss Jennifer qh",10/14/2023,62,440.94
+Microwave,Dallas,"Miss Jennifer qh",8/22/2023,97,254.4
+Toaster,Dallas,"Miss Jennifer qh",3/19/2023,90,195.28
+Laptop,Dallas,"Miss Jennifer qh",10/4/2023,56,350.32
+Blender,Dallas,"Miss Jennifer qh",1/18/2023,11,449.22
+Microwave,Dallas,"Miss Jennifer qh",10/19/2023,94,131.94
+"Washing Machine",Dallas,"Miss Jennifer qh",7/28/2023,27,134.67
+Tablet,Dallas,"Miss Jennifer qh",2/14/2023,26,57.51
+Microwave,Dallas,"Miss Jennifer qh",2/27/2023,75,28.65
+Blender,Dallas,"Miss Jennifer qh",5/28/2023,66,96.59
+Smartphone,Dallas,"Miss Jennifer qh",7/7/2023,35,270.15
+Laptop,Dallas,"Miss Jennifer qh",10/10/2023,70,351.25
+Microwave,Dallas,"Miss Jennifer qh",8/14/2023,76,461.83
+Toaster,Dallas,"Miss Jennifer qh",1/17/2023,61,317.09
+Microwave,Dallas,"Miss Jennifer qh",2/4/2023,17,108.97
+Microwave,Chicago,"Monica Otss",6/28/2023,48,259.94
+Toaster,Chicago,"Monica Otss",9/7/2023,27,336.55
+Blender,Chicago,"Monica Otss",7/13/2023,72,353.32
+Toaster,Chicago,"Monica Otss",10/10/2023,32,346.36
+Smartphone,Chicago,"Monica Otss",7/3/2023,39,192.27
+Refrigerator,Chicago,"Monica Otss",2/13/2023,23,425.14
+Blender,Chicago,"Monica Otss",3/15/2023,53,486.62
+"Washing Machine",Chicago,"Monica Otss",7/20/2023,94,51.05
+Tablet,Chicago,"Monica Otss",10/24/2023,72,353.9
+Tablet,Chicago,"Monica Otss",4/27/2023,21,382.91
+Blender,Chicago,"Monica Otss",5/6/2023,38,332.47
+Toaster,Chicago,"Monica Otss",8/12/2023,21,146.32
+Toaster,Chicago,"Monica Otss",9/8/2023,100,463.02
+Tablet,Chicago,"Monica Otss",5/4/2023,95,493.01
+Smartphone,Chicago,"Monica Otss",8/22/2023,67,333.89
+Tablet,Chicago,"Monica Otss",5/5/2023,73,280.72
+Television,Chicago,"Monica Otss",3/16/2023,77,390.54
+Blender,Chicago,"Monica Otss",12/6/2023,100,239.68
+Television,Chicago,"Monica Otss",12/28/2023,30,436.41
+Tablet,Chicago,"Monica Otss",6/7/2023,16,361.32
+"Washing Machine",Chicago,"Monica Otss",5/22/2023,10,79.46
+Tablet,Chicago,"Monica Otss",8/9/2023,92,486.46
+Blender,Chicago,"Monica Otss",4/17/2023,63,78.94
+Tablet,Chicago,"Monica Otss",5/27/2023,85,51.24
+Microwave,Chicago,"Monica Otss",3/18/2023,31,107.36
+Laptop,Chicago,"Monica Otss",12/12/2023,12,211.26
+"Coffee Maker",Chicago,"Monica Otss",1/9/2023,38,136.68
+Microwave,Chicago,"Monica Otss",4/4/2023,92,88.71
+Television,Chicago,"Monica Otss",12/25/2023,86,69.78
+Refrigerator,Chicago,"Monica Otss",9/9/2023,33,71.07
+Smartphone,Atlanta,"Rob qs",5/6/2023,74,196.5
+Smartphone,Atlanta,"Rob qs",7/20/2023,38,115.56
+Smartphone,Atlanta,"Rob qs",3/25/2023,45,127.53
+Laptop,Atlanta,"Rob qs",9/22/2023,74,173.02
+Blender,Atlanta,"Rob qs",2/27/2023,76,211.29
+"Washing Machine",Atlanta,"Rob qs",6/8/2023,39,456.62
+"Washing Machine",Atlanta,"Rob qs",7/25/2023,18,79.71
+"Washing Machine",Atlanta,"Rob qs",1/20/2023,35,444.13
+Tablet,Atlanta,"Rob qs",7/6/2023,85,68.43
+Microwave,Atlanta,"Rob qs",1/12/2023,14,81.31
+Tablet,Atlanta,"Rob qs",7/27/2023,57,326.56
+Toaster,Atlanta,"Rob qs",3/17/2023,90,383.65
+Blender,Atlanta,"Rob qs",4/7/2023,22,183.08
+Microwave,Atlanta,"Rob qs",6/6/2023,96,190.11
+Laptop,Atlanta,"Rob qs",6/9/2023,92,75.04
+Smartphone,Atlanta,"Rob qs",5/11/2023,43,200.51
+Refrigerator,Atlanta,"Rob qs",7/26/2023,94,313.56
+Smartphone,Atlanta,"Rob qs",6/5/2023,23,323.57
+Television,Atlanta,"Rob qs",12/16/2023,45,170.3
+Laptop,Atlanta,"Rob qs",4/5/2023,82,433.83
+"Coffee Maker",Atlanta,"Rob qs",10/2/2023,60,483.91
+Refrigerator,Atlanta,"Rob qs",12/6/2023,15,247.88
+Toaster,Atlanta,"Rob qs",3/22/2023,2,444.58
+Toaster,Atlanta,"Rob qs",2/25/2023,55,213.91
+Tablet,Atlanta,"Rob qs",5/2/2023,10,309.02
+Toaster,Atlanta,"Rob qs",7/20/2023,24,167.77
+Laptop,Atlanta,"Rob qs",3/8/2023,68,228.97
+Refrigerator,Atlanta,"Rob qs",11/14/2023,35,450.39
+Tablet,Atlanta,"Rob qs",4/22/2023,24,197.97
+Tablet,Atlanta,"Rob qs",8/11/2023,32,494.35
+Refrigerator,Atlanta,"Rob qs",2/5/2023,73,295.62
+Refrigerator,Atlanta,"Rob qs",7/28/2023,22,349.26
+Laptop,Atlanta,"Rob qs",2/21/2023,25,267.49
+Microwave,Atlanta,"Rob qs",8/7/2023,57,482.43
+Blender,Atlanta,"Rob qs",11/18/2023,17,143.44
+Microwave,Atlanta,"Rob qs",10/22/2023,89,157.64
+Blender,Atlanta,"Rob qs",7/19/2023,46,458.93
+Laptop,Atlanta,"Rob qs",2/22/2023,97,479.1
+"Coffee Maker",Atlanta,"Rob qs",10/15/2023,56,378.45
+Refrigerator,Atlanta,"Rob qs",1/6/2023,71,214.16
+Smartphone,Atlanta,"Rob qs",10/19/2023,20,321.67
+Refrigerator,Atlanta,"Rob qs",3/4/2023,60,67.03
+Refrigerator,Atlanta,"Robin dd",8/23/2023,50,376.04
+Laptop,Atlanta,"Robin dd",1/6/2023,93,235.09
+"Washing Machine",Atlanta,"Robin dd",9/12/2023,100,446.59
+Refrigerator,Atlanta,"Robin dd",1/22/2023,10,214.34
+Smartphone,Atlanta,"Robin dd",6/27/2023,78,258.89
+Refrigerator,Atlanta,"Robin dd",2/6/2023,24,417.49
+"Washing Machine",Atlanta,"Robin dd",10/11/2023,55,471.03
+Blender,Atlanta,"Robin dd",4/10/2023,38,431.85
+Laptop,Atlanta,"Robin dd",2/24/2023,29,431.5
+Tablet,Atlanta,"Robin dd",5/16/2023,21,253.63
+Smartphone,Atlanta,"Robin dd",12/18/2023,61,482.05
+Blender,Atlanta,"Robin dd",12/2/2023,4,444.56
+"Washing Machine",Atlanta,"Robin dd",1/27/2023,68,15.58
+Tablet,Atlanta,"Robin dd",5/2/2023,89,493.29
+"Washing Machine",Atlanta,"Robin dd",1/1/2023,9,241.38
+"Washing Machine",Atlanta,"Robin dd",7/12/2023,54,66.01
+Tablet,Atlanta,"Robin dd",1/10/2023,13,28.1
+Refrigerator,Atlanta,"Robin dd",6/6/2023,89,445.98
+Blender,Atlanta,"Robin dd",6/8/2023,61,234.8
+Blender,Atlanta,"Robin dd",9/8/2023,1,11.82
+"Washing Machine",Atlanta,"Robin dd",6/5/2023,30,134.04
+Tablet,Atlanta,"Robin dd",7/24/2023,43,290.35
+Television,Atlanta,"Robin dd",10/16/2023,50,42.49
+"Coffee Maker",Atlanta,"Robin dd",4/12/2023,74,298.99
+Blender,Atlanta,"Robin dd",6/5/2023,25,459.04
+Microwave,Atlanta,"Robin dd",9/4/2023,90,253.77
+"Coffee Maker",Atlanta,"Robin dd",7/22/2023,32,127.6
+Television,Atlanta,"Robin dd",7/16/2023,16,497.31
+"Coffee Maker",Atlanta,"Robin dd",4/16/2023,58,159.56
+"Coffee Maker",Atlanta,"Robin dd",2/6/2023,78,466.52
+Tablet,Atlanta,"Robin dd",2/3/2023,31,196.85
+Blender,"New York","Andrew Bhh",3/5/2023,4,427.08
+Smartphone,"New York","Andrew Bhh",4/3/2023,65,98.53
+"Washing Machine","New York","Andrew Bhh",4/10/2023,64,239.09
+Toaster,"New York","Andrew Bhh",10/25/2023,82,78.81
+Refrigerator,"New York","Andrew Bhh",10/13/2023,58,114.25
+Blender,"New York","Andrew Bhh",12/2/2023,19,488.62
+Refrigerator,"New York","Andrew Bhh",7/11/2023,76,179.73
+Microwave,"New York","Andrew Bhh",8/7/2023,93,370.19
+Refrigerator,"New York","Andrew Bhh",2/14/2023,30,446
+Smartphone,"New York","Andrew Bhh",1/22/2023,75,25.31
+Television,"New York","Andrew Bhh",8/5/2023,9,172.79
+Toaster,"New York","Andrew Bhh",4/21/2023,97,415.08
+Toaster,"New York","Andrew Bhh",6/28/2023,92,327.28
+Blender,"New York","Andrew Bhh",11/21/2023,30,199.8
+Refrigerator,"New York","Andrew Bhh",4/26/2023,58,41.72
+Tablet,"New York","Andrew Bhh",1/23/2023,85,459.74
+Microwave,"New York","Andrew Bhh",10/22/2023,36,193.17
+"Washing Machine","New York","Andrew Bhh",12/16/2023,32,30.6
+Microwave,"New York","Andrew Bhh",5/2/2023,67,403.69
+Refrigerator,"New York","Andrew Bhh",9/8/2023,98,34.27
+Television,"New York","Andrew Bhh",9/15/2023,67,238.61
+Microwave,"New York","Andrew Bhh",3/17/2023,61,243.02
+"Coffee Maker","New York","Andrew Bhh",4/3/2023,50,319.45
+Microwave,"New York","Andrew Bhh",7/27/2023,91,221.36
+Refrigerator,"New York","Andrew Bhh",10/25/2023,78,246.94
+"Washing Machine","New York","Andrew Bhh",10/14/2023,35,61.01
+Refrigerator,"New York","Andrew Bhh",8/16/2023,43,253.23
+Smartphone,"New York","Andrew Bhh",10/6/2023,72,196.33
+Tablet,"New York","Andrew Bhh",9/19/2023,99,403.09
+"Washing Machine","New York","Andrew Bhh",2/3/2023,89,93.79
+Blender,"New York","Andrew Bhh",5/27/2023,25,80.07
+Toaster,"New York","Andrew Bhh",7/23/2023,95,53.24
+Smartphone,"New York","Andrew Bhh",6/28/2023,34,34.13
+Tablet,"New York","Andrew Bhh",5/16/2023,30,245.28
+"Washing Machine","Los Angeles","Steven Tim",10/21/2023,76,140.98
+Smartphone,"Los Angeles","Steven Tim",11/14/2023,4,207.34
+Tablet,"Los Angeles","Steven Tim",1/2/2023,73,311.05
+Smartphone,"Los Angeles","Steven Tim",6/23/2023,5,438.12
+Tablet,"Los Angeles","Steven Tim",1/13/2023,28,108.7
+Smartphone,"Los Angeles","Steven Tim",9/6/2023,100,176.39
+Refrigerator,"Los Angeles","Steven Tim",3/18/2023,43,366.55
+Laptop,"Los Angeles","Steven Tim",4/12/2023,19,82.96
+Tablet,"Los Angeles","Steven Tim",4/8/2023,30,425.93
+Smartphone,"Los Angeles","Steven Tim",8/8/2023,48,91.34
+Smartphone,"Los Angeles","Steven Tim",8/16/2023,2,75.63
+Laptop,"Los Angeles","Steven Tim",6/19/2023,15,292.38
+Tablet,"Los Angeles","Steven Tim",6/5/2023,5,105.35
+Laptop,"Los Angeles","Steven Tim",4/12/2023,74,70.03
+Smartphone,"Los Angeles","Steven Tim",10/11/2023,69,418.05
+"Coffee Maker","Los Angeles","Steven Tim",7/7/2023,3,107.34
+Microwave,"Los Angeles","Steven Tim",9/3/2023,66,96.09
+"Coffee Maker","Los Angeles","Steven Tim",8/6/2023,9,307.32
+Blender,"Los Angeles","Steven Tim",10/16/2023,44,488.12
+Microwave,"Los Angeles","Steven Tim",4/4/2023,39,384.69
+"Coffee Maker","Los Angeles","Steven Tim",2/5/2023,35,142.22
+Refrigerator,"Los Angeles","Steven Tim",2/1/2023,53,90.26
+"Coffee Maker","Los Angeles","Steven Tim",2/9/2023,54,130.95
+Refrigerator,"Los Angeles","Steven Tim",1/12/2023,76,68.7
+Toaster,"Los Angeles","Steven Tim",10/26/2023,84,331.77
+Blender,"Los Angeles","Steven Tim",7/11/2023,93,25.74
+Microwave,"Los Angeles","Steven Tim",9/4/2023,11,491.72
+"Coffee Maker","Los Angeles","Steven Tim",12/1/2023,53,375.8
+"Washing Machine","Los Angeles","Steven Tim",2/20/2023,68,368.68
+Tablet,"Los Angeles","Steven Tim",12/14/2023,84,193.39
+Microwave,"Los Angeles","Steven Tim",8/28/2023,51,23.78
+Television,"Los Angeles","Steven Tim",3/6/2023,88,422.57
+"Coffee Maker","Los Angeles","Steven Tim",9/5/2023,32,205.71
+Tablet,"Los Angeles","Steven Tim",3/17/2023,85,319.45
+Toaster,Houston,"Tmi qt",9/26/2023,95,166.93
+Smartphone,Houston,"Tmi qt",5/19/2023,50,138.5
+Tablet,Houston,"Tmi qt",5/15/2023,55,426.38
+"Washing Machine",Houston,"Tmi qt",7/18/2023,9,442.13
+Smartphone,Houston,"Tmi qt",8/11/2023,31,238.08
+Smartphone,Houston,"Tmi qt",9/21/2023,76,299.55
+Laptop,Houston,"Tmi qt",9/23/2023,53,398.33
+Television,Houston,"Tmi qt",6/7/2023,35,459.92
+"Coffee Maker",Houston,"Tmi qt",12/15/2023,19,58.17
+"Coffee Maker",Houston,"Tmi qt",7/18/2023,85,495.81
+Blender,Houston,"Tmi qt",9/3/2023,23,397.37
+Laptop,Houston,"Tmi qt",8/5/2023,67,359.17
+"Washing Machine",Houston,"Tmi qt",6/25/2023,50,33.71
+Laptop,Houston,"Tmi qt",12/21/2023,23,372.9
+"Washing Machine",Houston,"Tmi qt",7/5/2023,70,443.68
+Tablet,Houston,"Tmi qt",4/21/2023,99,413.87
+Television,Houston,"Tmi qt",8/9/2023,9,150.21
+Toaster,Houston,"Tmi qt",11/15/2023,73,410.22
+Refrigerator,Houston,"Tmi qt",11/28/2023,7,35.43
+Television,Houston,"Tmi qt",6/22/2023,16,110.54
+Toaster,Houston,"Tmi qt",5/14/2023,16,263.88
+Toaster,Houston,"Tmi qt",9/15/2023,18,153.17
+Toaster,Houston,"Tmi qt",12/12/2023,54,428.85
+Television,Houston,"Tmi qt",8/22/2023,96,171.14
+"Washing Machine",Houston,"Tmi qt",5/22/2023,65,472.1
+Refrigerator,Houston,"Tmi qt",6/9/2023,84,44.53
+Toaster,Houston,"Tmi qt",6/17/2023,11,354.37
+Toaster,Houston,"Tmi qt",7/28/2023,37,18.04
+Microwave,Houston,"Tmi qt",3/24/2023,65,182.72
+Laptop,Houston,"Tmi qt",10/15/2023,58,454.48
+Laptop,Houston,"Tmi qt",5/13/2023,44,300.21
+Laptop,Seattle,"Wendy qa",12/28/2023,16,224.26
+Smartphone,Seattle,"Wendy qa",12/10/2023,82,201.17
+Television,Seattle,"Wendy qa",12/19/2023,22,19.11
+Toaster,Seattle,"Wendy qa",1/24/2023,23,138.15
+Smartphone,Seattle,"Wendy qa",10/24/2023,29,403.9
+"Coffee Maker",Seattle,"Wendy qa",3/9/2023,74,64.27
+Microwave,Seattle,"Wendy qa",4/21/2023,42,25.08
+Toaster,Seattle,"Wendy qa",1/2/2023,13,290.05
+Refrigerator,Seattle,"Wendy qa",5/26/2023,19,61.06
+Microwave,Seattle,"Wendy qa",9/13/2023,8,287.95
+Tablet,Seattle,"Wendy qa",8/9/2023,16,348.55
+Smartphone,Seattle,"Wendy qa",8/26/2023,70,18.6
+"Coffee Maker",Seattle,"Wendy qa",7/18/2023,55,86.86
+Tablet,Seattle,"Wendy qa",12/27/2023,74,328.69
+Blender,Seattle,"Wendy qa",2/23/2023,90,97.45
+Television,Seattle,"Wendy qa",9/2/2023,54,444.37
+Laptop,Seattle,"Wendy qa",9/15/2023,70,358.28
+Blender,Seattle,"Wendy qa",8/1/2023,96,454.5
+Blender,Seattle,"Wendy qa",12/11/2023,76,68.41
+"Washing Machine",Seattle,"Wendy qa",3/15/2023,56,309.32
+"Washing Machine",Seattle,"Wendy qa",8/7/2023,54,179.55
+Tablet,Seattle,"Wendy qa",1/27/2023,88,426.66
+Microwave,Seattle,"Wendy qa",1/4/2023,16,207.78
+Television,Seattle,"Wendy qa",5/21/2023,36,159.91
+Television,Seattle,"Wendy qa",10/5/2023,15,17.96
+"Washing Machine",Seattle,"Wendy qa",7/8/2023,72,487.96
+Refrigerator,Seattle,"Wendy qa",7/28/2023,79,174.71
+Blender,Seattle,"Wendy qa",9/18/2023,7,140.12
+"Coffee Maker",Seattle,"Wendy qa",6/9/2023,99,455.2
+"Washing Machine",Seattle,"Wendy qa",10/5/2023,46,205.33
+Tablet,Seattle,"Wendy qa",2/23/2023,5,247.89
+"Washing Machine",Seattle,"Wendy qa",1/3/2023,46,68.16

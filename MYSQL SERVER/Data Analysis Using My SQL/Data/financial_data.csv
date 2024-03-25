@@ -1,0 +1,2001 @@
+investor_name,investment_year,investment_type,investment_amount
+Bob,2022,Bonds,8005
+Eva,2019,Stocks,5378.7
+Oliver,2015,Stocks,38489.48
+Sophia,2010,Stocks,15102.13
+David,2014,Bonds,19585.84
+Sara,2014,Stocks,1570.35
+Alice,2011,Mutual Funds,1603.67
+Oliver,2015,Mutual Funds,11239.78
+Michael,2022,Stocks,38123.3
+David,2017,Bonds,28949
+Eva,2021,Mutual Funds,49234.43
+Oliver,2017,Bonds,39652.59
+Emma,2017,Real Estate,2342.56
+Michael,2014,Bonds,46180.72
+Oliver,2019,Real Estate,25994.12
+Eva,2012,Stocks,34277.41
+Sophia,2020,Bonds,22403.29
+John,2017,Stocks,24589.57
+Sara,2022,Stocks,48530.52
+Emma,2019,Stocks,35740.3
+Eva,2015,Real Estate,11655.2
+Sara,2015,Stocks,30484.24
+Eva,2011,Bonds,4551.56
+Alice,2020,Real Estate,29820.91
+Sophia,2020,Mutual Funds,7067.73
+Emma,2019,Real Estate,25761.56
+Alice,2015,Mutual Funds,44722.59
+Sara,2019,Stocks,9201.1
+Sara,2020,Mutual Funds,11265.46
+Alice,2013,Real Estate,21510.01
+Bob,2020,Bonds,13542.97
+Michael,2016,Real Estate,30431.94
+Emma,2017,Stocks,4575.61
+Emma,2014,Bonds,21930.73
+John,2011,Bonds,4707.25
+Sophia,2010,Mutual Funds,10264.99
+Bob,2019,Mutual Funds,22362.7
+Alice,2011,Stocks,29632.89
+Emma,2017,Stocks,35893.59
+Michael,2013,Bonds,9648.49
+Bob,2012,Real Estate,33684.98
+Michael,2017,Real Estate,35562.2
+Sara,2018,Mutual Funds,37882.21
+Bob,2019,Stocks,8152.13
+Alice,2018,Real Estate,36052.86
+Eva,2017,Real Estate,21989.5
+Michael,2017,Real Estate,30539.19
+Michael,2020,Real Estate,11218.08
+Sophia,2019,Real Estate,39844.18
+Sara,2021,Mutual Funds,19935.93
+Sophia,2016,Mutual Funds,12612.18
+Michael,2022,Mutual Funds,30965.41
+Bob,2011,Bonds,40796.58
+Michael,2012,Real Estate,20042.95
+Sara,2012,Real Estate,6471.01
+John,2020,Mutual Funds,38808.29
+David,2015,Stocks,25018.01
+Michael,2022,Real Estate,25316.52
+Bob,2020,Stocks,16266.49
+John,2019,Real Estate,17581.99
+Alice,2021,Stocks,21404.55
+Sophia,2013,Stocks,27919.02
+Sara,2019,Bonds,5158.07
+John,2015,Stocks,43167.78
+Sophia,2012,Stocks,7993.18
+Bob,2015,Real Estate,13880.99
+Sara,2016,Real Estate,46127.29
+John,2014,Bonds,48991.79
+Sara,2019,Real Estate,2167.12
+David,2011,Mutual Funds,10232.63
+Bob,2015,Bonds,37613.14
+Emma,2015,Mutual Funds,35174.13
+Emma,2016,Stocks,14413.5
+Emma,2013,Mutual Funds,33461.18
+Alice,2018,Real Estate,16600.35
+Sara,2012,Real Estate,39037.08
+Bob,2010,Stocks,41549.02
+Alice,2021,Real Estate,5461.86
+Sophia,2011,Stocks,19931.9
+Emma,2016,Bonds,48314.22
+Emma,2019,Mutual Funds,1370.05
+Sophia,2017,Stocks,37127.3
+John,2021,Bonds,42956.93
+Sara,2015,Mutual Funds,20974.54
+Emma,2010,Stocks,45333.97
+Eva,2010,Bonds,3697.68
+Eva,2015,Mutual Funds,24678.82
+John,2014,Mutual Funds,19001.34
+Sophia,2012,Mutual Funds,24099.42
+Sophia,2018,Stocks,2941.26
+Oliver,2018,Bonds,30855.2
+Emma,2018,Mutual Funds,32074.51
+Michael,2016,Mutual Funds,40190.66
+Bob,2011,Real Estate,39775.85
+Emma,2012,Mutual Funds,1276.43
+Eva,2017,Mutual Funds,37189.02
+John,2012,Stocks,47174.25
+Alice,2014,Stocks,1742.89
+Sophia,2021,Real Estate,41891.88
+Michael,2016,Stocks,11511.12
+Emma,2018,Bonds,3412.24
+Eva,2022,Bonds,17020.88
+Bob,2018,Bonds,45300.21
+John,2017,Real Estate,25773.55
+Eva,2019,Stocks,9570.32
+Eva,2016,Bonds,12915.27
+Emma,2012,Real Estate,4865.91
+Emma,2020,Real Estate,34031.64
+Oliver,2014,Bonds,48535.48
+Eva,2020,Mutual Funds,29314.9
+Sara,2010,Bonds,34685.24
+Michael,2013,Bonds,21755.66
+Oliver,2018,Bonds,44267.2
+Bob,2022,Stocks,30398.94
+Eva,2010,Mutual Funds,45560.78
+Bob,2016,Real Estate,22449.03
+Oliver,2016,Stocks,30753.31
+Sophia,2019,Stocks,49315.5
+Michael,2018,Bonds,49486.22
+Sophia,2011,Stocks,9966.92
+John,2018,Stocks,2121.39
+John,2020,Bonds,1773
+Eva,2019,Mutual Funds,7024.89
+Sara,2015,Bonds,2557.12
+Sara,2019,Bonds,7929
+Sara,2010,Bonds,37353.47
+Alice,2010,Bonds,49445.83
+Eva,2017,Mutual Funds,22435.24
+Michael,2020,Mutual Funds,34278.75
+David,2019,Stocks,26921.73
+Sara,2018,Mutual Funds,1882.46
+Sophia,2015,Real Estate,6016.64
+Oliver,2022,Stocks,9765.99
+Michael,2011,Real Estate,27279.96
+Bob,2015,Stocks,23415.34
+Sophia,2013,Mutual Funds,13531.93
+Michael,2014,Real Estate,13601.34
+Sophia,2016,Bonds,20905.65
+John,2013,Real Estate,19736
+David,2022,Real Estate,25057.06
+Oliver,2015,Mutual Funds,42862.5
+Sara,2017,Mutual Funds,47391.46
+Alice,2014,Mutual Funds,24073.59
+Eva,2014,Mutual Funds,41584.66
+Bob,2016,Stocks,30013.08
+Michael,2015,Stocks,4683.51
+Alice,2020,Mutual Funds,25561.23
+Alice,2022,Mutual Funds,4736.52
+John,2019,Mutual Funds,41350.64
+Sophia,2020,Real Estate,40923.88
+Bob,2013,Bonds,35269.04
+David,2012,Mutual Funds,8557.2
+Eva,2019,Mutual Funds,30478.43
+Eva,2011,Bonds,4830.88
+Sara,2017,Bonds,27008.68
+Eva,2021,Stocks,17920.43
+Emma,2014,Mutual Funds,40068.71
+Eva,2014,Mutual Funds,19456.84
+David,2016,Stocks,41380.16
+Oliver,2018,Real Estate,49266.33
+Sara,2021,Real Estate,48293.39
+Oliver,2017,Stocks,18914.39
+Oliver,2022,Real Estate,25173.99
+Oliver,2016,Bonds,33435.44
+Sophia,2012,Mutual Funds,42708.36
+David,2022,Real Estate,43247.21
+Sara,2017,Stocks,47590.46
+Emma,2015,Stocks,34952.26
+Bob,2017,Bonds,13923.03
+Bob,2022,Mutual Funds,20194.71
+Sophia,2011,Real Estate,29382.83
+Michael,2013,Real Estate,28427.92
+Michael,2012,Bonds,46647.85
+John,2013,Mutual Funds,33314.1
+Emma,2011,Bonds,15560.33
+Emma,2015,Mutual Funds,43628.22
+Alice,2013,Stocks,45988.87
+Sophia,2020,Real Estate,31474.1
+Eva,2014,Bonds,29849.79
+Bob,2017,Stocks,44274
+Michael,2011,Mutual Funds,18590.79
+Sophia,2013,Bonds,21305.07
+John,2014,Stocks,27285.79
+Sara,2017,Real Estate,22190.22
+John,2011,Stocks,19361.25
+Eva,2019,Real Estate,11015.03
+Emma,2010,Real Estate,38033.15
+David,2021,Stocks,15847.9
+John,2015,Mutual Funds,33645.28
+Alice,2010,Bonds,19324.37
+Alice,2019,Bonds,32894.78
+Eva,2020,Mutual Funds,4052.08
+Eva,2020,Mutual Funds,20073.28
+John,2012,Real Estate,34436.64
+Oliver,2019,Mutual Funds,7428.01
+John,2010,Stocks,46328.02
+David,2020,Real Estate,7855.61
+Emma,2011,Stocks,31233.74
+Michael,2021,Stocks,33886.46
+Oliver,2019,Mutual Funds,19343.88
+John,2018,Mutual Funds,42310.99
+Oliver,2011,Real Estate,16928.83
+Sara,2022,Stocks,1706.7
+Eva,2021,Bonds,27880.97
+Alice,2011,Real Estate,10248.78
+Oliver,2018,Real Estate,9444.97
+John,2016,Mutual Funds,28144.4
+Michael,2017,Bonds,41588.91
+Michael,2017,Bonds,24559.41
+Eva,2020,Stocks,2137.39
+John,2019,Mutual Funds,46121.96
+Emma,2010,Stocks,43085.02
+Sara,2011,Bonds,46059.65
+Sophia,2021,Real Estate,30539.25
+David,2019,Mutual Funds,26426.21
+Bob,2012,Mutual Funds,35076.3
+Bob,2020,Bonds,14898.62
+Emma,2016,Real Estate,32686.06
+Alice,2019,Stocks,41437.37
+Bob,2020,Stocks,7109.92
+Bob,2016,Mutual Funds,20611.27
+Emma,2012,Stocks,38506.42
+Oliver,2010,Mutual Funds,14452.05
+Alice,2015,Bonds,3071.03
+Emma,2013,Bonds,48706.26
+Alice,2017,Stocks,30782.31
+Bob,2020,Stocks,44861.5
+Oliver,2020,Stocks,42469.19
+David,2021,Mutual Funds,21061.83
+Oliver,2018,Stocks,19304.83
+Michael,2016,Stocks,40689.93
+Emma,2014,Mutual Funds,20865.38
+John,2020,Stocks,4915.63
+Bob,2011,Real Estate,17039.83
+Michael,2018,Real Estate,3935.16
+Bob,2010,Real Estate,1524.97
+Sophia,2021,Real Estate,13483.43
+Emma,2011,Mutual Funds,32699.64
+David,2016,Mutual Funds,30061.14
+Eva,2019,Real Estate,37242.87
+Bob,2020,Bonds,49540.29
+Bob,2019,Mutual Funds,10449.65
+Bob,2010,Mutual Funds,19513.24
+Sophia,2016,Real Estate,44640.05
+Eva,2017,Real Estate,16240.8
+Sophia,2019,Bonds,30915.39
+Eva,2014,Real Estate,49964.41
+David,2022,Stocks,37149.12
+Emma,2019,Mutual Funds,1866.86
+Sophia,2022,Bonds,28718.8
+Sophia,2013,Real Estate,14965.33
+Sara,2016,Real Estate,5830.2
+Sara,2010,Stocks,4731.5
+Sara,2010,Bonds,24009.24
+Michael,2011,Real Estate,21467.56
+Oliver,2016,Mutual Funds,1622.29
+Alice,2016,Real Estate,30507.14
+David,2016,Real Estate,17743.77
+Sophia,2011,Stocks,4011.09
+Oliver,2011,Real Estate,4008.87
+David,2020,Bonds,36534.37
+Eva,2021,Stocks,42942.62
+Sophia,2017,Stocks,30372.67
+Alice,2010,Real Estate,32802.62
+Eva,2012,Bonds,7716.06
+Sophia,2013,Mutual Funds,30373.83
+Alice,2017,Mutual Funds,28431.56
+Alice,2011,Mutual Funds,37829.51
+Michael,2015,Real Estate,19696.5
+Oliver,2011,Mutual Funds,39858.92
+Sophia,2019,Stocks,12196.84
+Emma,2019,Mutual Funds,43352.21
+Alice,2015,Stocks,43807.15
+Bob,2018,Mutual Funds,27416.62
+David,2010,Real Estate,46613.35
+John,2015,Mutual Funds,13712.3
+Michael,2016,Mutual Funds,39016.94
+Sara,2022,Real Estate,13445.17
+John,2020,Bonds,24541.53
+Oliver,2020,Real Estate,20964.74
+Eva,2022,Real Estate,4633.03
+Eva,2010,Real Estate,1194.95
+John,2015,Stocks,3065.99
+Alice,2014,Bonds,30601.76
+Alice,2011,Mutual Funds,18074.49
+David,2016,Mutual Funds,19133.33
+Michael,2021,Bonds,22450.12
+Eva,2018,Mutual Funds,7883.82
+Michael,2011,Real Estate,26187.96
+John,2018,Real Estate,4939.19
+John,2012,Stocks,23389.03
+Emma,2020,Real Estate,40909.05
+Sophia,2018,Mutual Funds,34481.15
+Emma,2020,Mutual Funds,45515.99
+David,2011,Real Estate,6655.26
+Oliver,2022,Stocks,35149.25
+Sophia,2015,Real Estate,7056.53
+Alice,2013,Bonds,32783.82
+Michael,2016,Real Estate,48254.47
+Sophia,2018,Bonds,30424.91
+David,2016,Real Estate,20396.32
+Eva,2016,Stocks,31506.16
+Michael,2011,Mutual Funds,12313.25
+David,2013,Real Estate,48612.29
+Emma,2017,Bonds,45652.11
+Bob,2010,Real Estate,10851.94
+Emma,2015,Mutual Funds,40473.96
+Emma,2019,Real Estate,19795.91
+Michael,2020,Real Estate,8766.53
+Eva,2020,Bonds,28367.7
+David,2020,Stocks,34580.35
+Emma,2014,Bonds,3889.52
+Eva,2022,Stocks,7645.19
+Alice,2014,Bonds,17759.09
+Oliver,2022,Bonds,27083.41
+David,2011,Bonds,19859.5
+Bob,2014,Mutual Funds,37934.74
+Alice,2018,Bonds,4220.92
+David,2014,Real Estate,44635.89
+David,2021,Real Estate,24137.79
+Emma,2013,Stocks,24997.19
+Sophia,2010,Mutual Funds,3762.89
+Eva,2014,Bonds,41490.36
+Oliver,2018,Real Estate,18003.89
+Oliver,2010,Mutual Funds,48736.28
+Oliver,2022,Bonds,42570.34
+Oliver,2015,Real Estate,17900.57
+Michael,2018,Bonds,28006.43
+David,2016,Bonds,4881.52
+David,2014,Stocks,16128.78
+Sara,2021,Stocks,34413.53
+Bob,2013,Stocks,10064.35
+Michael,2014,Mutual Funds,38153.59
+Oliver,2014,Real Estate,34524.41
+Bob,2019,Bonds,10773.04
+Eva,2015,Real Estate,29564.79
+Emma,2019,Real Estate,14416.83
+Bob,2016,Stocks,3107.34
+Sara,2014,Real Estate,40814.2
+Oliver,2022,Mutual Funds,13709.22
+Sara,2014,Mutual Funds,14002.57
+Emma,2015,Stocks,26635.24
+Oliver,2021,Stocks,13465.8
+Sara,2020,Real Estate,15320.8
+Emma,2013,Real Estate,37688.03
+Alice,2016,Mutual Funds,49515.74
+Michael,2022,Bonds,23531.69
+Bob,2016,Real Estate,12644.77
+Alice,2018,Bonds,1340.09
+John,2013,Bonds,16894.42
+Emma,2015,Mutual Funds,13192.64
+Sara,2015,Real Estate,24641.04
+Eva,2014,Mutual Funds,36399.85
+Eva,2010,Bonds,21657.35
+Emma,2014,Stocks,20174.34
+Michael,2013,Mutual Funds,45230.99
+Eva,2020,Real Estate,27873.65
+Sophia,2019,Stocks,36548.55
+Bob,2011,Bonds,40329.72
+Eva,2010,Mutual Funds,6011.37
+Sophia,2010,Mutual Funds,1973.57
+Sara,2012,Stocks,40247.73
+Michael,2018,Stocks,19287.88
+Sara,2014,Bonds,6735.52
+John,2014,Real Estate,30956.55
+Sara,2013,Stocks,46934.56
+Emma,2018,Bonds,7795.35
+John,2014,Stocks,19406.33
+Sara,2021,Bonds,8294.76
+Bob,2016,Real Estate,17408.39
+Eva,2022,Bonds,17721.16
+Emma,2010,Real Estate,40558.81
+John,2013,Real Estate,11285.13
+David,2022,Bonds,38753.96
+Michael,2020,Mutual Funds,42821.8
+Bob,2016,Stocks,25521
+Eva,2021,Mutual Funds,12203.27
+John,2012,Mutual Funds,1680.81
+Bob,2018,Mutual Funds,33581.06
+Michael,2016,Stocks,3017.02
+John,2022,Real Estate,8500.03
+John,2013,Stocks,7637.22
+Emma,2021,Mutual Funds,27155.06
+Emma,2022,Stocks,38171.59
+Eva,2019,Stocks,12777.48
+David,2022,Stocks,44855.81
+Eva,2010,Mutual Funds,13139.99
+Bob,2015,Real Estate,47564.76
+Michael,2011,Mutual Funds,36129.73
+Emma,2020,Bonds,25021.81
+Oliver,2018,Mutual Funds,1835.18
+Alice,2018,Mutual Funds,45762.34
+Emma,2016,Stocks,45738.75
+Eva,2016,Stocks,2726.83
+Emma,2014,Real Estate,43514.08
+Emma,2011,Stocks,11038.5
+Emma,2017,Real Estate,8849.55
+John,2017,Stocks,42850.25
+David,2022,Bonds,30315.59
+Alice,2011,Real Estate,8469.4
+John,2016,Bonds,25771.78
+David,2015,Real Estate,14082.03
+Sara,2022,Bonds,36877.97
+Alice,2019,Stocks,19315.67
+Michael,2017,Real Estate,23274.68
+Oliver,2013,Mutual Funds,38225.19
+Eva,2017,Bonds,40606.63
+Oliver,2021,Stocks,16853.87
+Oliver,2014,Real Estate,7146.36
+Emma,2012,Mutual Funds,32296.86
+John,2015,Stocks,4155.37
+Oliver,2016,Bonds,47684.95
+Oliver,2012,Real Estate,42404.94
+Sophia,2014,Mutual Funds,46309.31
+Bob,2014,Mutual Funds,2731.36
+Emma,2019,Stocks,19916.3
+Michael,2010,Bonds,25002.81
+Bob,2015,Real Estate,9497.42
+Eva,2014,Mutual Funds,31194.12
+John,2020,Mutual Funds,21674.32
+Bob,2016,Stocks,21405.89
+Bob,2017,Mutual Funds,43704.56
+Bob,2014,Mutual Funds,29135.01
+Oliver,2011,Mutual Funds,32055.77
+John,2012,Real Estate,44909.44
+Bob,2020,Bonds,13589.72
+Sophia,2022,Mutual Funds,5565.29
+Sara,2015,Mutual Funds,40407.11
+Michael,2015,Stocks,43267.56
+Eva,2014,Real Estate,34540.53
+Michael,2020,Bonds,16484.34
+Sara,2021,Stocks,17808.68
+Bob,2015,Stocks,44184.01
+Sara,2013,Real Estate,38768.14
+Eva,2010,Real Estate,33969.43
+Alice,2013,Mutual Funds,3194.23
+David,2016,Real Estate,40551.77
+Alice,2022,Real Estate,10296.58
+Sophia,2022,Real Estate,3777.15
+Emma,2016,Bonds,26373.1
+Sophia,2019,Mutual Funds,7723.62
+Emma,2017,Stocks,46649.2
+John,2012,Bonds,43327.78
+David,2014,Bonds,8835.05
+Emma,2011,Real Estate,35170.39
+David,2018,Real Estate,43192.95
+Eva,2018,Stocks,46237.99
+Bob,2014,Mutual Funds,44081.78
+David,2011,Real Estate,1016.47
+David,2020,Stocks,9571.07
+David,2010,Mutual Funds,34498.53
+Oliver,2019,Bonds,8472.08
+Sara,2018,Bonds,41703.62
+David,2017,Real Estate,15596.76
+Michael,2018,Bonds,2362.87
+Bob,2016,Real Estate,6259.6
+Bob,2010,Real Estate,20426.96
+Emma,2011,Bonds,22092.83
+Bob,2016,Stocks,49957.76
+Alice,2019,Real Estate,30338.15
+Bob,2010,Mutual Funds,28292.31
+Alice,2022,Stocks,25220.52
+Sara,2010,Bonds,18436.62
+Michael,2011,Mutual Funds,13889.52
+Sophia,2020,Real Estate,19583.53
+Sara,2022,Real Estate,44243.72
+David,2020,Mutual Funds,40501.58
+Eva,2012,Mutual Funds,41945.99
+Alice,2014,Stocks,32666.05
+Eva,2020,Stocks,2616.47
+David,2020,Real Estate,8264.92
+Sara,2012,Bonds,27305.18
+David,2022,Stocks,31706.45
+Eva,2015,Mutual Funds,2732.89
+Oliver,2015,Stocks,45611.79
+Michael,2013,Bonds,35012.68
+Sara,2021,Bonds,27517.66
+Michael,2022,Mutual Funds,23548.63
+David,2012,Bonds,44462.07
+Michael,2014,Bonds,7276.16
+John,2016,Stocks,11336.16
+John,2014,Mutual Funds,24367.13
+Michael,2020,Mutual Funds,40916.89
+John,2019,Mutual Funds,13042.14
+Eva,2015,Bonds,25621.62
+Alice,2016,Stocks,8894.85
+Michael,2022,Real Estate,27201.3
+Bob,2011,Real Estate,14958.27
+Sophia,2019,Real Estate,45975.99
+Alice,2021,Real Estate,11250.37
+John,2020,Stocks,19140.74
+Michael,2017,Stocks,33361.91
+David,2012,Bonds,48406.92
+Bob,2012,Real Estate,14739.5
+Bob,2016,Real Estate,16828
+Bob,2019,Mutual Funds,39831.04
+John,2019,Stocks,33374.68
+Sophia,2017,Stocks,6437.76
+Sara,2022,Stocks,29346.49
+Emma,2022,Stocks,32190.76
+Sophia,2020,Real Estate,29784.97
+Alice,2021,Stocks,46377.8
+Michael,2018,Mutual Funds,14500.35
+Alice,2020,Real Estate,20460.66
+Emma,2016,Real Estate,1005.93
+Emma,2019,Mutual Funds,6804.23
+Bob,2012,Real Estate,15067.04
+Alice,2017,Real Estate,43780.35
+David,2011,Real Estate,25662.79
+Sara,2010,Real Estate,2856.47
+Emma,2013,Stocks,48348.92
+Emma,2018,Mutual Funds,30220.26
+Oliver,2010,Bonds,22720.59
+Oliver,2016,Bonds,48513.34
+John,2020,Stocks,38955.69
+Bob,2013,Bonds,21998.15
+Emma,2014,Stocks,42243.45
+Sara,2019,Stocks,39501.54
+Bob,2017,Mutual Funds,38541.85
+Oliver,2016,Real Estate,21831.42
+Michael,2010,Bonds,15449.67
+Alice,2022,Stocks,2915.39
+Bob,2011,Stocks,27626.64
+Oliver,2022,Bonds,31025.74
+Eva,2013,Stocks,35768.46
+David,2014,Bonds,10796.52
+Michael,2019,Real Estate,31538.72
+Alice,2022,Stocks,20382.49
+Eva,2012,Mutual Funds,43043.74
+Eva,2011,Stocks,6000.23
+Emma,2018,Real Estate,1573.4
+Eva,2022,Real Estate,35431.88
+David,2015,Real Estate,23019.64
+Emma,2017,Stocks,12773.66
+David,2013,Bonds,46055.07
+Alice,2016,Stocks,13562.43
+Sophia,2010,Stocks,38147.23
+Bob,2020,Mutual Funds,17601.22
+Alice,2019,Stocks,36769.12
+David,2013,Stocks,8346.3
+Emma,2018,Stocks,38309.82
+John,2014,Real Estate,13437.89
+Alice,2012,Real Estate,30407.49
+John,2011,Bonds,13467.27
+John,2011,Bonds,27294.17
+Sara,2017,Real Estate,25009.23
+Michael,2014,Stocks,38375.61
+Sara,2022,Real Estate,21464.78
+Eva,2019,Bonds,7279.18
+Michael,2017,Mutual Funds,24088.51
+Bob,2016,Bonds,22514.62
+Eva,2011,Bonds,11237.3
+Michael,2021,Mutual Funds,4868.93
+Sophia,2018,Bonds,46125.37
+Emma,2016,Real Estate,10048.25
+David,2019,Bonds,27891.42
+Bob,2022,Real Estate,34176.23
+Eva,2019,Mutual Funds,15414.44
+Eva,2010,Stocks,8517.74
+Sophia,2012,Mutual Funds,18339.17
+Sara,2016,Mutual Funds,41791.81
+Sophia,2018,Real Estate,19849.05
+David,2022,Real Estate,8719.7
+Eva,2017,Real Estate,3881.01
+John,2011,Real Estate,19422.28
+Oliver,2022,Bonds,40217.96
+Alice,2017,Bonds,17130.59
+Emma,2019,Bonds,42966.49
+Sophia,2019,Stocks,16632.71
+Eva,2017,Real Estate,37939.75
+Eva,2015,Bonds,38468.46
+John,2017,Real Estate,26287.9
+Alice,2015,Real Estate,6015.06
+Michael,2021,Mutual Funds,22705.51
+Sophia,2011,Mutual Funds,8706.53
+Oliver,2015,Stocks,26781.13
+Eva,2020,Bonds,36427.16
+Alice,2018,Real Estate,11620.09
+John,2016,Mutual Funds,1178.35
+Alice,2013,Stocks,30512.59
+Oliver,2012,Bonds,23648.56
+Emma,2014,Real Estate,37128.71
+Bob,2021,Bonds,5363.13
+Alice,2017,Mutual Funds,8795.9
+Emma,2017,Stocks,32258.29
+Emma,2012,Stocks,20758.22
+Michael,2019,Stocks,14696.22
+Bob,2011,Real Estate,28516.86
+Alice,2017,Mutual Funds,45487.8
+Michael,2020,Stocks,11837.29
+Eva,2019,Stocks,16514.4
+Oliver,2016,Stocks,44379.71
+John,2020,Mutual Funds,16558.74
+John,2020,Mutual Funds,44991.24
+Oliver,2022,Stocks,4185.77
+Emma,2021,Real Estate,4449.33
+John,2013,Stocks,13436.71
+Sophia,2019,Real Estate,48289.11
+Emma,2019,Stocks,15677.95
+Sophia,2010,Stocks,44294.2
+David,2012,Bonds,32037.71
+John,2021,Real Estate,1060.68
+Eva,2019,Real Estate,24530.02
+Eva,2022,Stocks,5432.38
+David,2012,Bonds,23146.13
+Sara,2017,Bonds,37342.22
+Sophia,2020,Real Estate,8211.69
+Eva,2017,Mutual Funds,35263.31
+Sophia,2010,Stocks,35688.32
+Sophia,2022,Bonds,3818.03
+Emma,2014,Mutual Funds,3320.79
+Alice,2014,Bonds,48738.16
+Michael,2016,Real Estate,2739.71
+Alice,2015,Mutual Funds,23391.71
+Bob,2011,Mutual Funds,26299.06
+Michael,2015,Stocks,32202.88
+David,2016,Bonds,20722.58
+David,2018,Real Estate,10060.72
+David,2011,Bonds,27517.68
+John,2022,Stocks,47592.06
+Emma,2019,Stocks,42972.43
+Oliver,2020,Bonds,30793.24
+David,2013,Real Estate,1317.12
+Bob,2020,Mutual Funds,37966.6
+Bob,2016,Bonds,33895.4
+Emma,2014,Mutual Funds,44733.03
+David,2022,Real Estate,19005.61
+Bob,2012,Stocks,48354.48
+John,2018,Stocks,30588.73
+Eva,2022,Mutual Funds,41895.03
+Emma,2015,Real Estate,1047.79
+Bob,2021,Real Estate,10542.84
+David,2017,Bonds,40702.43
+Emma,2010,Mutual Funds,22239.2
+John,2020,Stocks,30332.77
+Sara,2018,Real Estate,3042.31
+Sara,2020,Stocks,37218.01
+Sophia,2016,Stocks,28571.83
+Michael,2018,Real Estate,35873.14
+John,2012,Bonds,22177.49
+Oliver,2012,Real Estate,25699.62
+Bob,2016,Bonds,10611.52
+Bob,2013,Mutual Funds,48960.79
+John,2010,Stocks,43947.16
+John,2012,Mutual Funds,42572.04
+David,2020,Mutual Funds,36834.03
+Michael,2013,Bonds,8303.44
+Sophia,2013,Stocks,40331.65
+Alice,2019,Bonds,38428.22
+Alice,2022,Stocks,40522.57
+Sara,2015,Real Estate,25350.87
+Oliver,2018,Bonds,33947.96
+Sara,2010,Stocks,19325.01
+Sara,2012,Real Estate,47889.34
+Michael,2019,Real Estate,3571.22
+Oliver,2018,Bonds,12259.64
+Sara,2014,Mutual Funds,41850.43
+Emma,2022,Stocks,8266.89
+Sophia,2010,Mutual Funds,37087.11
+Eva,2018,Bonds,37724.82
+Eva,2018,Bonds,39645.75
+Michael,2016,Mutual Funds,14051.23
+Sophia,2015,Real Estate,3183.76
+Eva,2020,Real Estate,37881.1
+Bob,2013,Bonds,38114.71
+Sophia,2014,Mutual Funds,40281.65
+John,2011,Mutual Funds,16227.04
+Alice,2017,Real Estate,23378.84
+Oliver,2022,Real Estate,36335.06
+Sara,2021,Mutual Funds,42226.49
+Eva,2012,Real Estate,13477.78
+Michael,2013,Bonds,24756.9
+Eva,2017,Real Estate,32537.45
+Emma,2019,Stocks,32100.91
+Sophia,2018,Bonds,31433.09
+John,2014,Mutual Funds,37321.55
+David,2016,Bonds,30497.94
+Oliver,2012,Bonds,44935.88
+Eva,2012,Real Estate,11878.06
+Sophia,2021,Bonds,36755.32
+Bob,2016,Mutual Funds,31168.74
+Eva,2020,Real Estate,39235.01
+Bob,2013,Real Estate,24461.97
+Bob,2010,Stocks,35781.09
+David,2017,Bonds,41551.97
+Emma,2015,Real Estate,39761.31
+Eva,2022,Bonds,16206.24
+Eva,2015,Bonds,38840.23
+Michael,2010,Real Estate,10793.21
+Michael,2020,Mutual Funds,16074.6
+Emma,2015,Real Estate,32986.76
+Sophia,2020,Real Estate,12869.28
+David,2010,Mutual Funds,5585.06
+Eva,2019,Bonds,40376.07
+Bob,2014,Real Estate,19043.82
+John,2014,Real Estate,15051.85
+Sophia,2011,Stocks,16216.25
+Sara,2010,Mutual Funds,28056.4
+Sophia,2018,Bonds,44197.94
+Eva,2019,Real Estate,17526.19
+Alice,2010,Stocks,25987.15
+Emma,2017,Stocks,36380.98
+Sophia,2012,Real Estate,25937.75
+Sara,2018,Bonds,41094.45
+John,2021,Stocks,18980.8
+Emma,2013,Stocks,13485.48
+John,2021,Bonds,4627.33
+Bob,2020,Real Estate,19489.78
+David,2013,Real Estate,3894.2
+Emma,2022,Stocks,6238.49
+Michael,2012,Bonds,2475.12
+Alice,2016,Real Estate,26992.44
+Michael,2012,Real Estate,18920.6
+David,2021,Stocks,49542.19
+Bob,2012,Mutual Funds,30662.32
+Alice,2010,Real Estate,1969.79
+David,2011,Stocks,23760.59
+Alice,2017,Mutual Funds,15807.71
+Eva,2010,Stocks,28787.96
+Sophia,2015,Bonds,36537.29
+Sara,2019,Bonds,26686.93
+Emma,2018,Stocks,2742.47
+Emma,2012,Mutual Funds,31073.55
+Oliver,2018,Mutual Funds,47727.79
+Sophia,2014,Bonds,45173.53
+Sophia,2022,Stocks,7016.71
+Michael,2014,Bonds,27095.51
+Emma,2011,Real Estate,30918.77
+Alice,2012,Bonds,40387.52
+Alice,2016,Stocks,31526.26
+Bob,2014,Bonds,32732.62
+Alice,2017,Bonds,20545.43
+Eva,2017,Stocks,1047.37
+Eva,2019,Mutual Funds,32545.01
+Bob,2019,Mutual Funds,36255.64
+Eva,2020,Mutual Funds,30159.51
+Michael,2019,Real Estate,26161.32
+Bob,2018,Real Estate,26132.85
+Michael,2021,Mutual Funds,19578.47
+Sophia,2018,Mutual Funds,30115.09
+Alice,2017,Real Estate,12742.11
+Oliver,2013,Mutual Funds,44047.41
+Oliver,2014,Mutual Funds,8412.09
+Alice,2022,Real Estate,29815.26
+Eva,2013,Mutual Funds,14684.71
+Alice,2019,Real Estate,13138.85
+Sophia,2011,Real Estate,33671.58
+Sara,2010,Mutual Funds,38998.3
+Sara,2021,Real Estate,44421.61
+Michael,2018,Stocks,20835.51
+Oliver,2018,Real Estate,30218.36
+Emma,2012,Real Estate,44021.64
+Bob,2012,Bonds,7379.97
+Alice,2013,Mutual Funds,42593.03
+Bob,2022,Mutual Funds,1229.43
+Alice,2018,Real Estate,3023.36
+Sophia,2010,Stocks,40382.16
+Eva,2017,Mutual Funds,14710.08
+Bob,2012,Bonds,40389.66
+David,2016,Bonds,9256.52
+Oliver,2019,Real Estate,23618.3
+Michael,2015,Real Estate,46196.85
+Michael,2020,Bonds,23752.35
+Sara,2018,Real Estate,24001.77
+Eva,2022,Bonds,1069.94
+Oliver,2022,Real Estate,8212.2
+Sophia,2019,Stocks,2567.88
+Sara,2016,Bonds,23372.61
+Sophia,2012,Mutual Funds,47299.23
+Sophia,2011,Stocks,28909.64
+David,2018,Real Estate,22145.76
+Alice,2017,Real Estate,5724.73
+Sara,2015,Real Estate,26634.5
+John,2019,Mutual Funds,12230.27
+Alice,2013,Mutual Funds,8518.03
+Sophia,2017,Real Estate,12501.93
+John,2013,Real Estate,45126.53
+Eva,2014,Real Estate,13649.36
+Eva,2022,Real Estate,10297.62
+Oliver,2010,Bonds,35215.06
+Sara,2020,Stocks,48785.39
+Sophia,2012,Mutual Funds,24823.79
+Sophia,2016,Real Estate,4668.37
+David,2020,Stocks,15649.07
+Michael,2012,Bonds,7387.29
+Emma,2018,Stocks,42635.05
+Michael,2011,Bonds,48690.67
+Emma,2021,Bonds,36590.5
+Emma,2018,Stocks,11619.08
+Michael,2021,Bonds,39361.76
+Emma,2017,Mutual Funds,48152.14
+Alice,2017,Bonds,29956.17
+Sophia,2011,Stocks,49568.69
+Alice,2014,Real Estate,27281.74
+Alice,2022,Stocks,31740.79
+Oliver,2016,Real Estate,32641.2
+David,2014,Bonds,26691.36
+Sara,2019,Real Estate,33057.48
+Sara,2011,Bonds,10522.72
+Sara,2010,Real Estate,12835.32
+Michael,2012,Bonds,11178.99
+Oliver,2022,Bonds,45549.12
+Sara,2013,Mutual Funds,22855.91
+Alice,2013,Mutual Funds,40550.12
+Emma,2013,Real Estate,15184.48
+Emma,2022,Mutual Funds,25099.42
+Sophia,2010,Real Estate,4511.41
+David,2018,Mutual Funds,7324.31
+Oliver,2021,Stocks,44377.76
+Alice,2014,Mutual Funds,32602.39
+Bob,2010,Stocks,36665.42
+Michael,2022,Bonds,20451.96
+Sophia,2019,Real Estate,16519.11
+Sophia,2018,Mutual Funds,13102.44
+Oliver,2017,Mutual Funds,37651.88
+Emma,2011,Stocks,30266.56
+Oliver,2019,Mutual Funds,24587.02
+Sara,2017,Real Estate,8011.11
+Eva,2012,Mutual Funds,7975.67
+John,2011,Stocks,22946.8
+Eva,2021,Real Estate,18901.21
+Sophia,2013,Mutual Funds,10491.19
+Emma,2021,Stocks,17045.56
+David,2016,Bonds,4943.37
+Michael,2010,Real Estate,35263.52
+Bob,2017,Real Estate,46220.28
+John,2017,Mutual Funds,45882.75
+Oliver,2011,Real Estate,15010
+Michael,2015,Stocks,30093.74
+Eva,2014,Real Estate,10787.41
+Oliver,2021,Stocks,23904.74
+John,2019,Mutual Funds,29504.3
+Michael,2015,Stocks,33096.37
+Bob,2017,Bonds,23545.56
+Sara,2018,Bonds,24041.99
+Bob,2010,Stocks,35518.78
+Alice,2010,Mutual Funds,28169.3
+David,2018,Mutual Funds,45960.55
+Bob,2018,Mutual Funds,27529.15
+Emma,2013,Stocks,16018.26
+Alice,2019,Mutual Funds,15021.21
+David,2021,Bonds,2302.52
+Bob,2015,Stocks,32168.44
+Sara,2017,Real Estate,23243.81
+John,2016,Mutual Funds,40061.56
+David,2012,Mutual Funds,17355.02
+John,2018,Stocks,28360.56
+Sara,2022,Stocks,8631.21
+David,2016,Stocks,25517.46
+Sara,2019,Bonds,48721.9
+Bob,2019,Mutual Funds,43658.46
+Eva,2019,Mutual Funds,20300.96
+Michael,2021,Real Estate,26269.44
+Emma,2021,Mutual Funds,43981.22
+Alice,2019,Mutual Funds,42920.11
+Sophia,2022,Mutual Funds,19991.32
+Emma,2013,Stocks,3122.08
+Alice,2012,Real Estate,49712.97
+Emma,2011,Bonds,22057.54
+Emma,2015,Stocks,47374
+John,2022,Real Estate,47583.49
+Bob,2022,Stocks,44091.57
+Emma,2018,Bonds,8106.87
+Alice,2020,Mutual Funds,44137.4
+Sophia,2022,Mutual Funds,1964.95
+Sara,2016,Stocks,15558.98
+Eva,2019,Real Estate,12281.86
+Michael,2017,Stocks,33206.27
+David,2013,Stocks,28784.93
+David,2014,Real Estate,33292.18
+David,2021,Mutual Funds,10898.6
+David,2022,Real Estate,23808.1
+John,2020,Mutual Funds,12338.83
+Alice,2016,Bonds,20281.58
+Sara,2012,Stocks,38237.27
+Oliver,2010,Mutual Funds,19753.47
+Alice,2016,Real Estate,11335.87
+Alice,2021,Mutual Funds,28172.5
+Sara,2011,Mutual Funds,2671.52
+Alice,2019,Mutual Funds,17128.1
+Sara,2015,Mutual Funds,15923.06
+Sophia,2020,Stocks,24658.07
+Michael,2017,Real Estate,33758.87
+David,2022,Stocks,34553
+Bob,2017,Stocks,11383.54
+Emma,2021,Real Estate,34648.01
+David,2019,Real Estate,40470.6
+Sophia,2019,Real Estate,30870
+Sara,2012,Real Estate,39253.95
+Oliver,2019,Mutual Funds,1657.83
+Alice,2012,Stocks,2471.49
+Eva,2019,Stocks,36238.23
+Alice,2020,Stocks,27585.49
+Michael,2014,Real Estate,47673.86
+John,2020,Bonds,11239.36
+Michael,2020,Real Estate,30107.06
+Bob,2012,Bonds,44948.93
+Oliver,2013,Stocks,45464.62
+Eva,2018,Stocks,46313.69
+Emma,2015,Mutual Funds,14134.58
+Sophia,2021,Bonds,35626.89
+Eva,2017,Bonds,26361.77
+Sara,2010,Mutual Funds,15308.13
+Bob,2016,Real Estate,47164.59
+David,2010,Real Estate,1367.49
+Sophia,2011,Bonds,49200.85
+Bob,2016,Mutual Funds,17622.88
+Eva,2018,Bonds,43566.44
+Bob,2018,Real Estate,40633.94
+Sophia,2012,Real Estate,35672.46
+Eva,2013,Real Estate,28556.16
+Sophia,2013,Stocks,5730.33
+Sara,2021,Stocks,1418.38
+Emma,2017,Bonds,42324.23
+Eva,2014,Mutual Funds,39584.84
+Oliver,2018,Bonds,26423.72
+Sophia,2019,Stocks,7964.27
+Oliver,2022,Bonds,43239.97
+Sophia,2017,Bonds,3800.53
+Sophia,2018,Bonds,4278.01
+Michael,2015,Mutual Funds,41412.12
+Sophia,2010,Real Estate,20949.88
+Sara,2020,Real Estate,47550.83
+Eva,2013,Stocks,22938.56
+David,2013,Bonds,41504.73
+Sara,2016,Stocks,3833.36
+Emma,2015,Mutual Funds,44057.84
+Eva,2021,Bonds,33737.08
+Bob,2017,Bonds,37937.23
+Oliver,2022,Bonds,35259.64
+Michael,2017,Mutual Funds,20572.37
+Sophia,2020,Mutual Funds,8059.49
+John,2014,Mutual Funds,36533.13
+Bob,2013,Real Estate,8184.24
+Sara,2011,Mutual Funds,34777.98
+Oliver,2012,Mutual Funds,35723.77
+Alice,2017,Stocks,45681.52
+Michael,2021,Stocks,28812.5
+Sara,2018,Mutual Funds,5996.85
+Eva,2012,Mutual Funds,26514.33
+Bob,2013,Real Estate,26497.14
+Emma,2017,Real Estate,29832.97
+Michael,2010,Mutual Funds,48631.84
+David,2013,Mutual Funds,49704.39
+Alice,2021,Bonds,12940.19
+John,2010,Bonds,40420.86
+John,2021,Real Estate,28905.91
+Michael,2022,Real Estate,10622.76
+Sophia,2011,Bonds,42186.02
+Sara,2014,Real Estate,7354.34
+Sara,2021,Mutual Funds,25065.14
+Emma,2015,Bonds,27804.43
+Sophia,2010,Bonds,40858.15
+Bob,2018,Mutual Funds,25112.29
+David,2015,Real Estate,11020.84
+Michael,2011,Stocks,11290.89
+Sophia,2016,Mutual Funds,39182.7
+Eva,2018,Mutual Funds,11039.24
+Eva,2019,Stocks,44527.43
+Michael,2019,Real Estate,39096.3
+David,2015,Bonds,40588.36
+Emma,2022,Bonds,12640.6
+Bob,2019,Mutual Funds,3952.53
+Eva,2021,Real Estate,8795
+Bob,2011,Real Estate,6756.58
+David,2020,Mutual Funds,3608.57
+John,2020,Real Estate,35933.12
+David,2012,Bonds,17639.42
+David,2014,Bonds,24809.67
+Oliver,2015,Stocks,20370.88
+Alice,2017,Mutual Funds,49526.3
+Sara,2020,Stocks,35424.69
+Oliver,2013,Mutual Funds,23697.17
+Alice,2015,Bonds,14130.8
+Eva,2017,Mutual Funds,1786.2
+Michael,2015,Stocks,48793.1
+John,2013,Real Estate,17144.62
+Oliver,2015,Bonds,12249.54
+Michael,2022,Stocks,22369.24
+Emma,2013,Real Estate,33509.47
+Oliver,2015,Mutual Funds,5080.74
+Oliver,2013,Mutual Funds,14563.45
+Michael,2020,Real Estate,5132.8
+Sophia,2016,Stocks,12428.67
+Sophia,2012,Mutual Funds,20776.53
+Sara,2021,Mutual Funds,33816.46
+Emma,2015,Bonds,38344.8
+John,2022,Mutual Funds,2584.72
+Michael,2020,Mutual Funds,16607.46
+Sara,2011,Bonds,15329.48
+Sophia,2022,Bonds,17775.88
+Oliver,2012,Bonds,29565.13
+Sara,2019,Stocks,14372.59
+John,2021,Stocks,23644.15
+Emma,2013,Bonds,21532.38
+Michael,2013,Real Estate,37630.53
+Michael,2012,Real Estate,30624.91
+Bob,2016,Mutual Funds,24240.61
+Eva,2017,Stocks,46650.58
+David,2011,Stocks,49744.43
+Bob,2016,Bonds,16017.36
+Sara,2015,Real Estate,2457.11
+Sophia,2011,Stocks,28845.32
+Emma,2014,Real Estate,31764.43
+John,2022,Bonds,46386.8
+Bob,2021,Mutual Funds,46518.8
+John,2014,Bonds,34303.75
+Oliver,2010,Stocks,49564.82
+Eva,2020,Bonds,32260.09
+John,2020,Mutual Funds,31748.61
+David,2017,Mutual Funds,5469.2
+Sara,2012,Real Estate,29131.9
+Emma,2021,Bonds,33354.29
+Eva,2015,Stocks,12593.19
+Sophia,2019,Bonds,42751.65
+Bob,2014,Real Estate,22169.82
+John,2021,Stocks,31852.47
+Bob,2010,Bonds,11797.54
+Sara,2021,Real Estate,17312.17
+Sara,2018,Stocks,15724.05
+Michael,2013,Bonds,46639.71
+Sara,2021,Bonds,34087.58
+John,2010,Bonds,49941.45
+Alice,2021,Stocks,48842.52
+Oliver,2018,Mutual Funds,29484.64
+David,2011,Mutual Funds,8392.74
+Sophia,2022,Mutual Funds,15076.16
+Oliver,2015,Stocks,12581.75
+Emma,2016,Real Estate,28826.9
+Michael,2019,Stocks,44105.07
+Emma,2018,Real Estate,19975.74
+Oliver,2017,Bonds,1199.03
+John,2021,Real Estate,18149.01
+Eva,2010,Stocks,44540
+Sara,2022,Bonds,8152.51
+John,2018,Real Estate,38223.18
+Bob,2012,Real Estate,34637.28
+Eva,2022,Real Estate,46566.27
+Alice,2011,Real Estate,16344.36
+Bob,2010,Bonds,42440.38
+David,2019,Real Estate,35628.15
+Alice,2011,Stocks,14040.41
+Oliver,2012,Stocks,6781.83
+Alice,2010,Bonds,39200.84
+Sophia,2017,Bonds,25191.17
+David,2017,Stocks,14687.38
+Emma,2015,Stocks,2711.4
+Eva,2013,Stocks,9596.62
+John,2011,Real Estate,1101.79
+David,2020,Real Estate,16432.51
+Oliver,2022,Real Estate,36340.14
+Alice,2013,Real Estate,4820.18
+Sara,2022,Real Estate,38012.2
+Alice,2011,Mutual Funds,3440.78
+Sara,2021,Bonds,44548.02
+Sophia,2011,Bonds,42354.74
+Sara,2012,Stocks,38743.43
+Alice,2021,Mutual Funds,2291.17
+Eva,2013,Mutual Funds,48320.25
+Eva,2011,Real Estate,3379.96
+Oliver,2019,Bonds,22039.74
+Emma,2017,Stocks,21589.29
+Michael,2016,Stocks,35757.46
+Eva,2019,Mutual Funds,21310.17
+Bob,2020,Bonds,43013.75
+Sophia,2011,Stocks,2788.54
+Emma,2022,Stocks,15769.42
+Sophia,2022,Real Estate,44787.5
+Eva,2021,Real Estate,34375.22
+Sara,2012,Real Estate,33391.98
+Emma,2011,Mutual Funds,3560.3
+Eva,2019,Mutual Funds,31807.59
+John,2016,Real Estate,13817.48
+Sara,2010,Real Estate,31133.9
+Eva,2011,Real Estate,2863.08
+Sara,2017,Mutual Funds,43344.18
+David,2022,Stocks,8447.52
+Eva,2014,Bonds,17021.42
+David,2010,Real Estate,45623
+Sara,2011,Bonds,20119.65
+David,2018,Real Estate,37806.85
+Oliver,2019,Real Estate,16131.43
+John,2010,Real Estate,14804.37
+Eva,2012,Mutual Funds,39424.39
+Sara,2011,Stocks,30681.47
+Emma,2015,Real Estate,45168.62
+Eva,2019,Real Estate,15886.41
+Alice,2010,Real Estate,12189.46
+Oliver,2019,Stocks,48955.2
+Alice,2012,Mutual Funds,29513.75
+Eva,2020,Bonds,17276.53
+Michael,2017,Stocks,23858.38
+David,2018,Bonds,30492.12
+Sophia,2016,Stocks,11252.55
+Michael,2014,Bonds,19351.93
+Emma,2019,Stocks,13781.4
+Alice,2020,Bonds,4360.18
+Bob,2021,Mutual Funds,11561.5
+David,2015,Mutual Funds,1194.79
+David,2011,Stocks,38904.45
+Emma,2010,Real Estate,7419.59
+Emma,2020,Bonds,12122.81
+Bob,2018,Real Estate,2630.44
+Sara,2020,Bonds,36745.49
+John,2011,Real Estate,49192.26
+Bob,2021,Real Estate,5802.6
+Sara,2014,Bonds,10931.82
+Sophia,2021,Real Estate,22315.22
+Bob,2021,Mutual Funds,44969.22
+Sophia,2017,Mutual Funds,23260.33
+David,2012,Mutual Funds,16121.7
+Oliver,2015,Mutual Funds,25741.74
+Alice,2016,Mutual Funds,7825.21
+Eva,2017,Real Estate,31591.8
+David,2018,Bonds,30928.78
+John,2012,Real Estate,26376.99
+David,2016,Real Estate,10774.93
+Eva,2011,Stocks,41453.88
+David,2014,Bonds,22740.39
+Emma,2010,Bonds,25969.35
+Alice,2017,Bonds,19919.72
+Emma,2012,Real Estate,12507.13
+John,2021,Bonds,13399.2
+Michael,2013,Mutual Funds,1244.3
+Alice,2016,Real Estate,42357.33
+Bob,2016,Stocks,23390.49
+John,2017,Mutual Funds,5399.07
+Eva,2014,Stocks,46632.7
+Alice,2018,Stocks,31313.4
+David,2011,Real Estate,23713.43
+Alice,2018,Mutual Funds,3641.85
+Alice,2017,Bonds,40161.86
+Emma,2016,Mutual Funds,11826.11
+Eva,2016,Stocks,5658.4
+Bob,2019,Stocks,45916.74
+Oliver,2013,Bonds,16862
+Emma,2016,Stocks,30952.17
+John,2011,Real Estate,17548.95
+David,2010,Bonds,3103.87
+Eva,2021,Stocks,10946.53
+John,2020,Mutual Funds,27962.89
+John,2021,Stocks,14927.9
+Bob,2011,Bonds,36618.6
+Bob,2013,Mutual Funds,28161.78
+Sophia,2016,Mutual Funds,41765.74
+Sophia,2013,Mutual Funds,31860.11
+David,2018,Bonds,14377.36
+Eva,2022,Stocks,6898.35
+Sophia,2020,Mutual Funds,23424.83
+Eva,2021,Stocks,20357.6
+David,2011,Real Estate,27552.88
+Eva,2022,Mutual Funds,35608.4
+David,2020,Bonds,28495.21
+Sara,2012,Real Estate,5087.71
+John,2011,Mutual Funds,41874.18
+Oliver,2017,Bonds,28784.24
+Sara,2015,Bonds,9865.86
+John,2010,Real Estate,8354.81
+Oliver,2022,Stocks,47442.82
+Bob,2016,Mutual Funds,5719.2
+Sophia,2021,Stocks,48442.9
+Alice,2019,Bonds,43216.6
+Emma,2019,Bonds,29062.82
+Alice,2021,Mutual Funds,29952.67
+John,2021,Mutual Funds,32065.04
+Michael,2011,Stocks,46876.1
+Bob,2014,Real Estate,34077.19
+Emma,2012,Real Estate,29078.54
+David,2020,Real Estate,35979.93
+Alice,2015,Stocks,47165.94
+Emma,2019,Mutual Funds,16325.18
+Emma,2013,Real Estate,26814.05
+Bob,2016,Mutual Funds,27485.72
+Emma,2010,Bonds,11371.24
+David,2012,Real Estate,3270.49
+John,2010,Real Estate,16414.45
+Oliver,2021,Mutual Funds,25438.02
+Oliver,2014,Mutual Funds,48494.07
+John,2022,Real Estate,31977.39
+Sophia,2017,Bonds,45356.31
+Oliver,2021,Stocks,49319.72
+Sophia,2013,Mutual Funds,13574.24
+John,2016,Bonds,6895.63
+Bob,2017,Mutual Funds,22837.05
+Emma,2017,Bonds,19034.12
+Bob,2019,Mutual Funds,14984.77
+Eva,2012,Bonds,27059.7
+Eva,2014,Bonds,48013.67
+Michael,2019,Mutual Funds,3247.58
+Eva,2018,Real Estate,18928.92
+John,2015,Real Estate,15881.14
+Alice,2012,Stocks,14223.98
+Sophia,2017,Bonds,19504.55
+John,2015,Mutual Funds,23912.04
+Oliver,2020,Stocks,43081.4
+Sophia,2018,Mutual Funds,7635.35
+John,2014,Real Estate,33293.02
+David,2018,Bonds,16631.9
+Sophia,2013,Stocks,20739.85
+Sara,2015,Stocks,25430.19
+Eva,2020,Real Estate,35391.26
+Alice,2015,Mutual Funds,25545.23
+Alice,2020,Stocks,21827.87
+Alice,2010,Mutual Funds,13496.63
+Emma,2015,Bonds,13611.39
+Eva,2019,Stocks,43105.09
+John,2020,Stocks,41829.01
+Eva,2017,Real Estate,2933.33
+Oliver,2011,Bonds,7597.37
+Alice,2016,Stocks,19940.93
+Oliver,2017,Real Estate,26445.27
+David,2017,Real Estate,44913.05
+David,2010,Bonds,13892.68
+John,2010,Real Estate,1155.32
+David,2015,Mutual Funds,15787.89
+Alice,2010,Stocks,37349.87
+Emma,2019,Mutual Funds,7917.81
+Alice,2015,Mutual Funds,39632.5
+Oliver,2020,Mutual Funds,2787.06
+Sophia,2010,Mutual Funds,24447.01
+Sophia,2016,Bonds,23047.49
+David,2010,Real Estate,49672.08
+Michael,2015,Mutual Funds,37095.52
+Alice,2015,Mutual Funds,37968.85
+Alice,2021,Bonds,37140.9
+John,2012,Stocks,15358.29
+David,2015,Mutual Funds,18126.35
+Eva,2020,Mutual Funds,13286
+Oliver,2013,Real Estate,28001.1
+Emma,2015,Bonds,14853.42
+Emma,2012,Mutual Funds,11250.13
+Eva,2015,Bonds,2192.76
+David,2016,Stocks,4031.14
+Michael,2019,Bonds,41491.09
+Eva,2017,Bonds,22777.35
+Oliver,2010,Bonds,4891.81
+Emma,2015,Real Estate,1787.38
+Bob,2022,Mutual Funds,9593.44
+Oliver,2017,Stocks,37752.26
+Alice,2016,Stocks,23977.71
+Sophia,2010,Stocks,47253.36
+Sophia,2012,Mutual Funds,31226.73
+Bob,2021,Stocks,40449.23
+Emma,2022,Real Estate,25158.23
+Bob,2021,Real Estate,19102.5
+Alice,2014,Mutual Funds,49449.2
+Michael,2016,Bonds,16937.56
+Sara,2010,Real Estate,42510.79
+David,2021,Bonds,49529.14
+Emma,2017,Real Estate,22233.07
+David,2017,Real Estate,35963.02
+Sophia,2012,Bonds,5564.5
+Eva,2017,Stocks,34326.95
+Alice,2020,Mutual Funds,42156.29
+Michael,2014,Mutual Funds,13148.61
+Oliver,2013,Bonds,27110.83
+Sara,2013,Mutual Funds,6298.32
+Oliver,2017,Mutual Funds,48609.03
+Michael,2014,Real Estate,5394.17
+Oliver,2018,Bonds,11199.16
+Emma,2016,Real Estate,46826.38
+Michael,2017,Stocks,48987.36
+Alice,2011,Real Estate,35896.96
+Bob,2016,Bonds,45983.33
+Sophia,2020,Bonds,43730.54
+Sara,2010,Bonds,34976.91
+Michael,2012,Real Estate,32662.95
+John,2016,Mutual Funds,35332.76
+John,2017,Stocks,44432.05
+David,2017,Real Estate,24715.66
+Bob,2016,Real Estate,42837.79
+Eva,2017,Bonds,26139.94
+Sophia,2020,Mutual Funds,44572.89
+Sara,2020,Stocks,15317.34
+John,2011,Bonds,27498.56
+Emma,2012,Mutual Funds,32791.66
+Emma,2011,Mutual Funds,46782.55
+Sophia,2017,Bonds,7125.21
+David,2019,Mutual Funds,40575.6
+Sara,2021,Real Estate,7874.69
+John,2015,Stocks,17472.44
+David,2017,Stocks,32901.25
+Emma,2021,Bonds,43222.37
+Sophia,2012,Real Estate,3925.73
+Michael,2020,Stocks,40925.33
+Eva,2018,Mutual Funds,6546.29
+Emma,2016,Stocks,9060.37
+David,2015,Bonds,10358.53
+Emma,2013,Real Estate,48160.19
+Bob,2014,Real Estate,29128.03
+Emma,2021,Mutual Funds,9172.49
+Oliver,2016,Bonds,22354.52
+Oliver,2011,Real Estate,40321.39
+John,2015,Real Estate,25822.52
+Oliver,2012,Mutual Funds,46158.96
+David,2022,Stocks,29203.68
+Sara,2012,Real Estate,12673.25
+Sara,2015,Mutual Funds,29823.71
+David,2021,Stocks,22391.68
+Michael,2010,Bonds,13488.25
+Alice,2020,Bonds,36997.69
+Alice,2018,Stocks,27194.18
+Eva,2018,Stocks,18765.34
+Alice,2020,Bonds,8294.16
+Alice,2012,Stocks,11524.42
+John,2015,Mutual Funds,1765.2
+Alice,2022,Bonds,32834.4
+Alice,2017,Mutual Funds,47193.46
+John,2022,Real Estate,32807.87
+John,2017,Real Estate,43119.7
+Alice,2013,Stocks,35897.97
+Sophia,2013,Bonds,24633.09
+David,2021,Bonds,13602.85
+Alice,2017,Bonds,21042.25
+Michael,2017,Mutual Funds,47232.67
+Alice,2011,Stocks,28292.71
+Eva,2020,Real Estate,47441.39
+Sophia,2012,Bonds,24512.89
+David,2012,Bonds,28602.37
+David,2011,Bonds,40872.38
+Eva,2014,Real Estate,29732.9
+Bob,2021,Bonds,5082.45
+Oliver,2017,Real Estate,5258.13
+Bob,2013,Real Estate,4607.23
+Oliver,2018,Mutual Funds,39218.54
+Sara,2017,Mutual Funds,15526.51
+Sara,2019,Real Estate,16002.76
+John,2017,Mutual Funds,11558.53
+Bob,2021,Real Estate,19271.17
+Sophia,2015,Real Estate,44301.62
+Sara,2018,Real Estate,29093.91
+Eva,2012,Bonds,6645.28
+Sara,2021,Stocks,30642.77
+Sophia,2011,Bonds,37500.16
+Emma,2019,Bonds,27614.82
+Emma,2013,Stocks,49640.5
+Bob,2014,Real Estate,45876.92
+Sara,2022,Real Estate,41726.08
+Eva,2015,Stocks,22932.95
+John,2012,Real Estate,2954.05
+Emma,2010,Real Estate,39833.1
+Michael,2016,Mutual Funds,40221.14
+David,2017,Mutual Funds,5831.18
+John,2013,Mutual Funds,11486.63
+Alice,2017,Bonds,30925.03
+Sara,2018,Stocks,6111.79
+Sophia,2014,Mutual Funds,26614.49
+Bob,2020,Mutual Funds,48327.91
+Eva,2020,Real Estate,27083.41
+Sara,2010,Real Estate,7992.61
+Alice,2018,Mutual Funds,36902.1
+John,2013,Real Estate,23812.14
+Eva,2016,Mutual Funds,42125.74
+John,2018,Real Estate,4961.87
+Emma,2016,Bonds,15593.62
+Alice,2014,Stocks,42050.93
+John,2017,Bonds,31443.48
+Eva,2019,Bonds,4002.44
+Sara,2011,Stocks,13539.34
+Sara,2018,Stocks,19493.41
+David,2017,Bonds,33685.13
+John,2013,Mutual Funds,33219.48
+Sophia,2010,Stocks,47532.99
+Alice,2010,Stocks,42634.67
+Alice,2015,Bonds,25616.65
+David,2012,Stocks,40726.38
+Oliver,2016,Stocks,1532.49
+Alice,2022,Bonds,12921.57
+Oliver,2021,Stocks,41109.54
+Bob,2021,Bonds,44947.77
+Michael,2020,Mutual Funds,46170.12
+Emma,2010,Bonds,21832.97
+Michael,2022,Real Estate,6176.86
+David,2016,Bonds,18630.88
+John,2015,Mutual Funds,10377.9
+Sara,2020,Real Estate,35771.53
+Oliver,2020,Mutual Funds,36880.98
+Sophia,2018,Real Estate,18318
+Bob,2014,Real Estate,48203.03
+Oliver,2012,Mutual Funds,5877.01
+Bob,2011,Real Estate,30960.75
+Emma,2022,Stocks,5904.83
+Michael,2012,Mutual Funds,20130.01
+John,2022,Mutual Funds,3387.89
+Michael,2010,Real Estate,18605.99
+Eva,2014,Real Estate,3117.24
+Oliver,2021,Stocks,4772.01
+Sara,2014,Mutual Funds,34507.39
+Alice,2013,Bonds,43402.2
+Eva,2019,Mutual Funds,8622.43
+Oliver,2012,Real Estate,18610.9
+Bob,2014,Mutual Funds,3097.47
+John,2017,Mutual Funds,48152.62
+Sophia,2015,Bonds,3491.12
+Alice,2013,Mutual Funds,27050.75
+John,2012,Real Estate,39117.36
+Oliver,2014,Stocks,22579.53
+Eva,2016,Mutual Funds,20992.29
+Alice,2012,Bonds,27260.98
+Sara,2019,Stocks,15263.25
+Michael,2015,Mutual Funds,4354.93
+Emma,2019,Mutual Funds,8514.78
+Oliver,2018,Bonds,13026.56
+Bob,2015,Real Estate,9132.39
+Bob,2019,Bonds,9152.74
+Bob,2013,Stocks,11882.24
+Oliver,2013,Mutual Funds,23860.71
+Michael,2021,Real Estate,26504.3
+Sophia,2018,Mutual Funds,22158.5
+John,2019,Stocks,41737.75
+Alice,2014,Mutual Funds,37830.13
+Emma,2022,Bonds,32193.18
+Emma,2019,Bonds,1254.26
+Sophia,2012,Bonds,41966.05
+Bob,2020,Real Estate,30453.68
+John,2012,Stocks,3558.19
+John,2022,Stocks,35898.87
+Michael,2019,Stocks,15171.77
+Sophia,2021,Bonds,8340.77
+Emma,2014,Bonds,6858.24
+Oliver,2021,Mutual Funds,19595.74
+David,2015,Stocks,12079.9
+John,2010,Real Estate,16095.57
+Eva,2021,Bonds,48198.94
+Eva,2016,Real Estate,36077.15
+David,2013,Stocks,9795.73
+Sara,2022,Bonds,16165.08
+David,2014,Real Estate,7348.08
+David,2015,Mutual Funds,1868.18
+Oliver,2015,Real Estate,47484.35
+John,2019,Stocks,12741.44
+Michael,2022,Real Estate,42622.98
+Sara,2015,Stocks,25088.84
+Alice,2018,Mutual Funds,48500.3
+Oliver,2019,Real Estate,26982.26
+Emma,2010,Mutual Funds,26263.93
+John,2018,Stocks,41617.35
+David,2012,Mutual Funds,45190.53
+Alice,2010,Bonds,44529.83
+Sara,2020,Real Estate,21053.92
+Oliver,2020,Bonds,1805.31
+David,2011,Mutual Funds,21456.82
+Bob,2015,Real Estate,42612.43
+Emma,2018,Bonds,29434.41
+Eva,2017,Real Estate,11468.8
+Michael,2019,Mutual Funds,23324.07
+Sophia,2020,Real Estate,48508.79
+Sophia,2019,Bonds,12042.46
+John,2018,Real Estate,23444.92
+Bob,2020,Real Estate,33372.3
+Sophia,2018,Mutual Funds,20474.77
+Sophia,2015,Real Estate,45488.17
+Emma,2011,Stocks,31035.4
+Sophia,2016,Mutual Funds,36951
+Bob,2019,Stocks,11274
+Sophia,2018,Stocks,7397.46
+Oliver,2016,Bonds,10004.43
+Emma,2017,Stocks,27424.79
+David,2021,Real Estate,38234.52
+Sara,2020,Stocks,4818.39
+Sara,2012,Real Estate,15686.77
+Bob,2022,Stocks,21885.59
+David,2011,Mutual Funds,11960.97
+Sophia,2013,Bonds,20413.2
+Michael,2022,Mutual Funds,40586.88
+John,2022,Stocks,7591.25
+Bob,2015,Bonds,19333.46
+Emma,2013,Mutual Funds,37856.05
+David,2021,Stocks,16693.88
+John,2020,Real Estate,3186.7
+Sara,2014,Stocks,15902.57
+Eva,2016,Stocks,21640.86
+Michael,2018,Mutual Funds,41985.52
+David,2016,Real Estate,27001.83
+Bob,2010,Stocks,36653.41
+Oliver,2011,Mutual Funds,22144.35
+John,2015,Stocks,34995.08
+Emma,2022,Mutual Funds,49846.32
+Alice,2018,Bonds,11922.54
+John,2011,Stocks,15187.83
+Alice,2022,Bonds,4700.07
+Eva,2012,Stocks,28057.32
+Michael,2020,Real Estate,34276.28
+Sophia,2021,Mutual Funds,29764.42
+John,2016,Real Estate,21071.32
+David,2013,Stocks,24045.67
+Emma,2014,Stocks,24539.29
+Oliver,2017,Bonds,47403.16
+Oliver,2021,Mutual Funds,5190.83
+David,2022,Stocks,28024.91
+Alice,2017,Real Estate,43861.7
+Bob,2022,Bonds,2948.91
+Eva,2013,Stocks,49453.64
+Alice,2014,Stocks,29051.33
+Eva,2014,Mutual Funds,37000.32
+Oliver,2013,Real Estate,20260.84
+Michael,2013,Real Estate,29595.85
+Bob,2018,Mutual Funds,10545.05
+Michael,2017,Stocks,27107.91
+Eva,2018,Stocks,30291.43
+Oliver,2012,Bonds,24979.59
+Alice,2017,Mutual Funds,26199.56
+Michael,2020,Bonds,38443.32
+Bob,2019,Bonds,39741.18
+David,2019,Real Estate,30352.14
+Michael,2018,Real Estate,46397.8
+Sara,2010,Bonds,37984.98
+Alice,2015,Stocks,5939.28
+Emma,2012,Stocks,2109.6
+David,2022,Stocks,15340.45
+Sophia,2021,Stocks,12307.68
+Sophia,2019,Real Estate,16023.03
+Sara,2016,Stocks,20465.29
+Emma,2019,Real Estate,14796.08
+Emma,2021,Real Estate,15908.07
+Michael,2018,Mutual Funds,3688.28
+Alice,2020,Real Estate,30141.71
+Bob,2017,Bonds,6255.07
+Eva,2010,Stocks,12576.53
+David,2014,Bonds,23712.43
+David,2017,Stocks,40309.49
+John,2020,Stocks,12985.53
+Alice,2012,Mutual Funds,40719.79
+Eva,2018,Real Estate,24678.77
+Sara,2018,Mutual Funds,38279.35
+Emma,2016,Real Estate,18083.07
+Eva,2010,Real Estate,7087.38
+John,2011,Mutual Funds,12472.93
+Oliver,2014,Bonds,48200.54
+John,2022,Mutual Funds,30695.8
+Sara,2022,Mutual Funds,47811.11
+Sophia,2016,Bonds,13598.01
+Michael,2019,Bonds,49459.09
+John,2010,Real Estate,7240.37
+David,2019,Stocks,25098.93
+John,2018,Real Estate,11820.39
+Eva,2016,Mutual Funds,9448.53
+John,2021,Stocks,14121.58
+John,2012,Bonds,1681.06
+Sara,2014,Stocks,14141.02
+Sophia,2016,Real Estate,26752.81
+David,2015,Mutual Funds,25113.22
+Alice,2012,Stocks,3817.98
+John,2012,Real Estate,49512.68
+Sara,2017,Bonds,23384.19
+Oliver,2022,Real Estate,41393.05
+Emma,2017,Mutual Funds,33133.91
+Eva,2010,Bonds,11558.47
+Bob,2021,Bonds,29875.84
+Michael,2010,Mutual Funds,10677.91
+David,2010,Stocks,4977.49
+Michael,2013,Bonds,7092.12
+Alice,2021,Stocks,13006.06
+Bob,2010,Mutual Funds,11224.7
+Emma,2016,Real Estate,44175.42
+Eva,2014,Stocks,25145.38
+Eva,2011,Bonds,39493.09
+Sara,2015,Mutual Funds,12431.53
+Oliver,2011,Stocks,41578.73
+Oliver,2018,Stocks,13897.18
+John,2019,Bonds,24603.09
+John,2021,Stocks,5624.39
+Bob,2010,Real Estate,36437.85
+Sara,2019,Real Estate,46702.24
+Sara,2017,Bonds,13259.53
+John,2020,Stocks,27706.34
+Michael,2013,Bonds,20104.43
+Alice,2010,Bonds,20936.94
+David,2014,Bonds,18116.07
+Oliver,2010,Real Estate,32239.37
+Oliver,2015,Stocks,47987.87
+Sara,2021,Real Estate,24219.2
+Emma,2020,Bonds,41111.43
+Eva,2020,Stocks,5676.28
+Bob,2015,Mutual Funds,34799.3
+Sara,2019,Real Estate,8658.28
+Eva,2022,Bonds,2315.09
+David,2016,Stocks,1178.53
+Sophia,2021,Real Estate,43323.56
+Bob,2015,Real Estate,6873.5
+Sophia,2012,Mutual Funds,32202.35
+Alice,2010,Bonds,6677.06
+John,2020,Real Estate,47866.07
+Eva,2016,Real Estate,26858.65
+Michael,2018,Real Estate,42462.67
+Sara,2022,Stocks,11811.7
+Bob,2011,Bonds,14745.48
+Alice,2014,Mutual Funds,9745.87
+Emma,2017,Bonds,4379.11
+Sophia,2015,Stocks,38572.37
+Emma,2018,Bonds,15229.45
+Eva,2021,Real Estate,41770.29
+Eva,2019,Real Estate,19698.36
+Sophia,2020,Real Estate,28569.71
+David,2020,Mutual Funds,35530.27
+David,2021,Real Estate,42556.94
+David,2012,Bonds,25732.7
+Sophia,2021,Stocks,49385.55
+Michael,2017,Stocks,10366.73
+Bob,2020,Bonds,24433.43
+Bob,2018,Stocks,47420.5
+Sophia,2017,Mutual Funds,15840.14
+Eva,2015,Stocks,37287.23
+Sara,2012,Mutual Funds,49281.06
+Oliver,2020,Stocks,43081.5
+Emma,2019,Bonds,28869.75
+Oliver,2017,Bonds,49071.78
+David,2014,Real Estate,4262.74
+John,2021,Bonds,34771.41
+Bob,2016,Mutual Funds,38685.1
+Eva,2017,Bonds,14831.69
+Michael,2022,Real Estate,31067.88
+Michael,2019,Stocks,34144.28
+Oliver,2014,Bonds,35663.24
+John,2013,Bonds,12554.49
+Eva,2020,Real Estate,20390.42
+Bob,2017,Real Estate,18937.59
+Sophia,2011,Stocks,37985.35
+Sophia,2018,Stocks,39882.17
+Eva,2011,Stocks,21924.3
+Alice,2018,Real Estate,33883.43
+Sara,2012,Stocks,30257.94
+Emma,2017,Mutual Funds,46418.31
+Sophia,2011,Stocks,48600.56
+Sophia,2020,Real Estate,11939.88
+Michael,2010,Mutual Funds,43314.47
+Michael,2013,Mutual Funds,24898.89
+Sara,2012,Mutual Funds,10652.57
+Emma,2014,Bonds,25594.54
+Sophia,2022,Bonds,30411.76
+David,2022,Stocks,20621.36
+Sophia,2011,Real Estate,11240.95
+Oliver,2019,Mutual Funds,20473.63
+Michael,2015,Stocks,6716.45
+Sara,2012,Real Estate,9615.68
+Oliver,2020,Real Estate,32011.26
+Emma,2011,Mutual Funds,44040.55
+John,2015,Stocks,7192.71
+John,2016,Bonds,11453.92
+Sara,2020,Stocks,1243.63
+Emma,2013,Mutual Funds,17762.99
+Emma,2017,Real Estate,9247.84
+Bob,2015,Real Estate,25229.89
+Alice,2019,Bonds,18386.68
+Eva,2017,Stocks,12593.94
+Oliver,2014,Stocks,3741.33
+Sara,2018,Mutual Funds,6344.46
+Emma,2017,Real Estate,29512.9
+Sara,2019,Bonds,6885.36
+Sophia,2020,Real Estate,10973.46
+Sara,2010,Mutual Funds,10473.02
+Eva,2012,Stocks,48210.96
+Bob,2017,Stocks,36240.15
+Eva,2020,Mutual Funds,7129.61
+Alice,2013,Mutual Funds,42818.71
+John,2015,Bonds,3995.6
+Michael,2011,Bonds,4111.78
+Alice,2016,Mutual Funds,13628.17
+Sara,2020,Mutual Funds,5056.26
+John,2011,Mutual Funds,42297.51
+Sara,2018,Mutual Funds,7572.65
+Alice,2018,Bonds,44192.36
+Sara,2012,Real Estate,17851.64
+Eva,2014,Bonds,12649.4
+Sara,2016,Real Estate,17592.93
+Sophia,2022,Stocks,30110.92
+Alice,2014,Stocks,26051.1
+Sara,2021,Stocks,42114.59
+Sophia,2019,Stocks,44649.9
+Bob,2020,Bonds,41625.54
+Oliver,2017,Bonds,6078.22
+Alice,2013,Bonds,4616.57
+John,2017,Bonds,24359.94
+Eva,2014,Real Estate,15000.59
+David,2015,Real Estate,11622.84
+Emma,2016,Real Estate,16990.04
+Sophia,2022,Stocks,32386.13
+Alice,2012,Bonds,14889.89
+Eva,2017,Bonds,35615.87
+Bob,2011,Real Estate,37661.24
+Sophia,2015,Real Estate,27821.05
+Bob,2018,Bonds,28830.57
+Eva,2020,Stocks,6958.51
+Sophia,2016,Mutual Funds,46887.84
+Sara,2016,Bonds,5885.11
+John,2022,Stocks,44353.87
+Alice,2017,Real Estate,18168.47
+John,2017,Bonds,29775.25
+John,2015,Bonds,6286.08
+Sophia,2022,Real Estate,13048.2
+David,2011,Bonds,22884.64
+Michael,2013,Real Estate,14590.59
+Eva,2011,Stocks,20715.76
+Sophia,2016,Stocks,25771.74
+David,2018,Stocks,5039.12
+Michael,2018,Real Estate,34200.39
+Alice,2022,Stocks,22548.45
+David,2012,Stocks,46630.56
+John,2019,Mutual Funds,37084.18
+Oliver,2014,Bonds,42345.17
+Eva,2020,Mutual Funds,21174.38
+David,2016,Stocks,42430.25
+Bob,2020,Real Estate,14715.89
+Michael,2011,Stocks,32850.46
+David,2015,Mutual Funds,16669.64
+Michael,2022,Mutual Funds,7920.47
+David,2014,Stocks,45415.09
+Sophia,2012,Mutual Funds,6060.16
+Emma,2014,Stocks,3082.89
+Emma,2020,Mutual Funds,22794.23
+John,2017,Stocks,1713.66
+Emma,2018,Mutual Funds,22636.14
+Oliver,2015,Stocks,10187.92
+Oliver,2015,Mutual Funds,12565.91
+David,2016,Stocks,25529.17
+Oliver,2019,Stocks,3581.62
+David,2013,Stocks,39683.85
+Eva,2019,Real Estate,5239.25
+David,2018,Bonds,20565.09
+David,2019,Stocks,16840.83
+Alice,2020,Bonds,26892.82
+Emma,2022,Stocks,46311.43
+Alice,2014,Bonds,34456.48
+Bob,2018,Real Estate,23808.09
+Sara,2022,Mutual Funds,30849
+Bob,2017,Mutual Funds,27343.87
+David,2015,Stocks,20165.4
+Alice,2010,Stocks,40720.49
+Alice,2011,Bonds,25815.47
+Alice,2022,Stocks,11067.5
+Alice,2013,Real Estate,21475.53
+Oliver,2021,Stocks,10968.62
+Alice,2013,Bonds,30843.33
+Emma,2014,Stocks,45795.05
+Eva,2019,Stocks,26166.33
+David,2016,Stocks,47062.85
+Sara,2016,Bonds,32151.42
+Emma,2021,Mutual Funds,40358.24
+Sara,2015,Bonds,7816.32
+Oliver,2020,Mutual Funds,31966.04
+Sara,2013,Stocks,6156.29
+David,2021,Real Estate,33561.38
+Alice,2017,Stocks,2458.13
+Emma,2012,Real Estate,29510.57
+Alice,2010,Stocks,2410.77
+Emma,2010,Mutual Funds,4554.77
+Sara,2013,Real Estate,6017.38
+John,2019,Bonds,33696.85
+Oliver,2020,Stocks,7152.99
+David,2013,Bonds,43086.14
+John,2020,Stocks,1175.95
+David,2017,Bonds,21052.81
+Bob,2016,Stocks,43497.19
+Michael,2016,Real Estate,22267.14
+Oliver,2017,Mutual Funds,41109.54
+David,2010,Bonds,9067.72
+David,2021,Stocks,41142.88
+John,2015,Real Estate,36777.96
+David,2020,Mutual Funds,39281.95
+Alice,2016,Mutual Funds,39889.91
+John,2018,Mutual Funds,29278.74
+John,2017,Real Estate,35665.67
+Alice,2019,Bonds,36312.19
+Sophia,2014,Mutual Funds,41528.47
+Emma,2011,Real Estate,11114.62
+Alice,2017,Real Estate,15615.44
+Oliver,2021,Stocks,29422.18
+Sara,2019,Stocks,30353.13
+Bob,2014,Real Estate,39103.64
+Michael,2013,Stocks,36041.44
+Oliver,2016,Mutual Funds,27090.91
+Sophia,2020,Real Estate,38863.36
+Alice,2015,Real Estate,9329.41
+Emma,2020,Real Estate,40822.68
+Emma,2013,Bonds,29261.16
+Sophia,2013,Stocks,40509.8
+Oliver,2021,Real Estate,32238.37
+Sophia,2017,Bonds,28351.91
+Michael,2012,Mutual Funds,1218.16
+Sophia,2020,Mutual Funds,12934.48
+Eva,2016,Real Estate,29771.77
+David,2020,Real Estate,3340.93
+Oliver,2018,Bonds,40244.59
+David,2022,Mutual Funds,37041.79
+Eva,2011,Real Estate,8798.08
+Oliver,2016,Mutual Funds,39946.84
+Eva,2016,Stocks,49558.42
+Sara,2022,Bonds,24081.16
+Emma,2010,Real Estate,34383.52
+Emma,2020,Real Estate,1929.87
+Alice,2022,Real Estate,27044.5
+Michael,2020,Stocks,30031.91
+Sara,2011,Mutual Funds,27044.18
+Sophia,2017,Real Estate,46292.02
+Bob,2017,Bonds,29863.29
+Eva,2022,Bonds,43105.03
+Sara,2014,Stocks,24249.82
+Alice,2016,Bonds,4753.21
+Bob,2014,Stocks,7179.76
+Bob,2011,Stocks,14980.91
+Michael,2010,Bonds,45741.07
+Eva,2012,Bonds,45777.57
+Bob,2011,Mutual Funds,6106.91
+Oliver,2021,Stocks,44426.75
+Oliver,2010,Bonds,48127.55
+David,2012,Bonds,9000.18
+Michael,2021,Bonds,14553.29
+Bob,2012,Real Estate,34110.68
+Eva,2021,Bonds,44317.62
+Oliver,2017,Stocks,38910.66
+Michael,2010,Mutual Funds,16892.99
+Eva,2012,Mutual Funds,26561.93
+Eva,2013,Real Estate,38673.37
+Sara,2014,Mutual Funds,14330.9
+Oliver,2020,Bonds,16675.82
+Oliver,2016,Real Estate,8882.66
+David,2020,Bonds,46310.41
+Emma,2015,Real Estate,32093.78
+Sophia,2014,Bonds,22113.85
+David,2021,Real Estate,22914.87
+David,2013,Stocks,23208.78
+Sara,2021,Real Estate,40022.93
+Michael,2020,Mutual Funds,20747.29
+Oliver,2014,Bonds,46451.57
+Sophia,2017,Bonds,26253
+Bob,2012,Real Estate,32999.59
+Sophia,2010,Stocks,44625.91
+Oliver,2012,Stocks,7435.08
+Bob,2019,Real Estate,18844.34
+Emma,2011,Mutual Funds,13519.46
+Emma,2011,Real Estate,39574.12
+John,2017,Real Estate,22634.56
+Alice,2021,Mutual Funds,15696.72
+Bob,2010,Real Estate,28521.16
+John,2015,Mutual Funds,26033.92
+Emma,2018,Bonds,41592.19
+Emma,2010,Real Estate,31430.33
+Michael,2016,Real Estate,39728.08
+Sophia,2013,Bonds,18694.68
+Bob,2010,Bonds,24276.92
+Eva,2020,Stocks,8515.61
+Sara,2021,Bonds,20978.6
+Sara,2017,Stocks,13683.2
+David,2010,Real Estate,40827.44
+Alice,2018,Mutual Funds,19505.51
+David,2016,Mutual Funds,13599.93
+Oliver,2010,Stocks,29343.37
+Eva,2010,Mutual Funds,32362.77
+Alice,2010,Real Estate,6968.54
+Bob,2012,Mutual Funds,26681.35
+Sophia,2012,Mutual Funds,14193.79
+Oliver,2018,Stocks,16467.84
+Sophia,2021,Mutual Funds,4895.69
+Sophia,2010,Mutual Funds,24841.49
+Emma,2013,Mutual Funds,11700.48
+John,2017,Real Estate,5508.88
+Bob,2010,Stocks,16545.85
+David,2010,Mutual Funds,31373.74
+David,2014,Mutual Funds,19424.24
+Alice,2012,Mutual Funds,42087.96
+Michael,2014,Bonds,43294.85
+Bob,2012,Stocks,21081.71
+Bob,2015,Mutual Funds,32285.22
+Oliver,2014,Stocks,10230.66
+David,2016,Real Estate,46089.19
+Bob,2017,Bonds,20669.59
+Sara,2017,Stocks,29949.73
+John,2013,Bonds,37907.96
+Michael,2013,Stocks,5140.77
+John,2021,Mutual Funds,43573.41
+Oliver,2020,Real Estate,43491.01
+Eva,2011,Real Estate,46281.55
+Michael,2022,Stocks,24562.45
+Emma,2019,Mutual Funds,14245.89
+Eva,2014,Bonds,27124.36
+Eva,2020,Bonds,26079.25
+David,2021,Real Estate,4420.8
+David,2021,Stocks,40633.88
+Sara,2012,Stocks,19746.81
+Sophia,2016,Mutual Funds,26827.64
+David,2016,Mutual Funds,48936.58
+Sophia,2022,Stocks,3840.94
+John,2015,Mutual Funds,13339.7
+Alice,2014,Real Estate,24209.16
+Bob,2017,Real Estate,21072.43
+David,2016,Real Estate,27132.72
+Oliver,2011,Real Estate,15801.58
+Michael,2012,Bonds,16423.46
+Eva,2018,Real Estate,10759.72
+Sophia,2012,Mutual Funds,10412.84
+Sophia,2017,Mutual Funds,24097.33
+John,2017,Stocks,2614.23
+Emma,2021,Bonds,48520.22
+Michael,2017,Bonds,40219.29
+Sara,2011,Bonds,36935.53
+Sara,2011,Stocks,19407.29
+Sophia,2011,Stocks,11936.05
+Sophia,2022,Mutual Funds,39515.91
+Eva,2021,Stocks,13524.3
+Sophia,2014,Bonds,9125.55
+David,2019,Real Estate,20577.15
+David,2018,Bonds,45403.04
+Alice,2012,Real Estate,49052.11
+Sophia,2020,Real Estate,42251.8
+John,2020,Mutual Funds,25515.26
+Oliver,2020,Stocks,8234.85
+Eva,2010,Stocks,13410.22
+Eva,2018,Stocks,46083.27
+Sophia,2011,Real Estate,35616.11
+John,2015,Stocks,24091.58
+Sara,2022,Real Estate,23021.81
+Eva,2022,Bonds,12729.48
+John,2013,Real Estate,21191.76
+Oliver,2018,Mutual Funds,30691.53
+Oliver,2021,Mutual Funds,5973.15
+Oliver,2015,Bonds,13944.39
+Sophia,2010,Mutual Funds,45442.93
+John,2015,Real Estate,5758.43
+Sara,2012,Mutual Funds,41084.45
+Michael,2020,Stocks,5720.39
+Oliver,2019,Bonds,36851.69
+Alice,2010,Mutual Funds,33749.96
+Alice,2015,Mutual Funds,21976.05
+Oliver,2014,Mutual Funds,18096.99
+Oliver,2018,Mutual Funds,14980.63
+Sophia,2017,Real Estate,13427.24
+Alice,2019,Bonds,49869.06
+John,2017,Stocks,43655.51
+Eva,2017,Mutual Funds,46482.26
+Sophia,2019,Bonds,40297.97
+Alice,2010,Real Estate,24697.72
+Emma,2014,Real Estate,12506.36
+Emma,2022,Bonds,44262.07
+David,2012,Bonds,1964.34
+Bob,2020,Real Estate,31604.6
+Michael,2020,Stocks,7768.33
+Alice,2019,Bonds,43260.7
+Sara,2014,Mutual Funds,20684.37
+Alice,2017,Bonds,18143.95
+Oliver,2021,Mutual Funds,25811.86
+David,2021,Mutual Funds,13784.83
+Bob,2014,Real Estate,12583.83
+Emma,2016,Real Estate,33050.68
+Sophia,2020,Stocks,7798.71
+Sophia,2016,Real Estate,28184.03
+Bob,2016,Bonds,14413.83
+Sophia,2021,Bonds,20686.31
+Michael,2011,Bonds,30282.07
+Eva,2019,Bonds,25821.88
+Oliver,2017,Stocks,27183.48
+John,2016,Mutual Funds,27733.29
+David,2017,Stocks,37647.25
+Emma,2011,Real Estate,40045.72
+Emma,2016,Bonds,44685.11
+Oliver,2010,Mutual Funds,3776.56
+Eva,2019,Mutual Funds,12402.34
+Sara,2014,Bonds,22712.47
+John,2015,Stocks,24814.87
+Alice,2012,Stocks,26426.16
+Michael,2011,Mutual Funds,38279.9
+Alice,2013,Bonds,32777.28
+Bob,2016,Mutual Funds,40366.62
+Sophia,2013,Mutual Funds,1431.67
+David,2017,Real Estate,43457.53
+Oliver,2019,Real Estate,4486.51
+Sophia,2012,Bonds,42880.39
+Bob,2017,Mutual Funds,5544.13
+Oliver,2022,Mutual Funds,34438.1
+Oliver,2015,Real Estate,36789.21
+Sophia,2012,Stocks,19746.86
+Alice,2019,Real Estate,11607.34
+David,2018,Mutual Funds,20988.65
+Sophia,2017,Real Estate,49728.27
+Bob,2015,Stocks,4787.53
+Michael,2011,Mutual Funds,39786.32
+Michael,2013,Bonds,49862.35
+Sophia,2019,Real Estate,44490.98
+Sophia,2018,Mutual Funds,13002.11
+David,2022,Bonds,14252.08
+Sophia,2013,Real Estate,40879.42
+Eva,2017,Stocks,24902.75
+Bob,2012,Mutual Funds,8512.04
+Alice,2012,Mutual Funds,30301.69
+David,2019,Real Estate,40849.75
+Oliver,2015,Mutual Funds,2110.16
+John,2022,Stocks,8080.1
+Emma,2016,Stocks,17505.66
+David,2015,Bonds,8948.86
+Eva,2022,Real Estate,28335.07
+Bob,2018,Stocks,31320.25
+Oliver,2019,Stocks,34461.04
+Alice,2020,Mutual Funds,5728.77
+Bob,2015,Bonds,29568.14
+Sara,2016,Stocks,7796.49
+Alice,2010,Real Estate,25264.14
+Emma,2015,Real Estate,1989.77
+Sara,2011,Stocks,27946.19
+Sara,2021,Real Estate,39121.41
+Sara,2017,Stocks,28428.25
+David,2022,Real Estate,28225.38
