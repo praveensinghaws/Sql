@@ -43,9 +43,3 @@ HAVING COUNT(1)>1
 ORDER BY X ASC;
 
 
---Solution 2 :
-
-SELECT * from FunctionDetails;  
-
-
-

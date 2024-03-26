@@ -49,7 +49,8 @@ VALUES (879854, 23123)
 --Scenario
 --Amanda asked her employees to give the consolidated report for the projects they have worked on. Write a query to print the empId, name, and the total number of projects worked on by each employee. Sort your results by the total number of projects in descending order. If more than one employee worked on the same number of projects, then sort the result by empId. If more than one employee worked on the same number of projects and the count is less than the maximum number of projects worked on, then exclude those employees from the result.
 
---Solution
+--Solution 1:
+
 WITH projectsCountCTE AS
 (
 SELECT A.empId,A.empName,COUNT(DISTINCT projectId) noOfProjects FROM employees A
@@ -65,4 +66,4 @@ FROM projectsCountCTE
 SELECT empId,empName,noOfProjects
 FROM projectsFrequencyCTE
 WHERE projectsFrequency < 2 OR (noOfProjects = (SELECT MAX(noOfProjects) FROM projectsFrequencyCTE))
-ORDER BY noOfProjects DESC, empId
+ORDER BY noOfProjects DESC, empId;

@@ -31,4 +31,11 @@ VALUES
 SELECT candidateid FROM candidates 
 WHERE technicalSkill in ('Python','PowerBI','SQL') 
 GROUP BY candidateid HAVING COUNT(technicalSkill) = 3
-ORDER BY  candidateId
+ORDER BY  candidateId;
+
+-- Query For my self [Group_Concat] --
+SELECT candidateId, STRING_AGG(technicalSkill, ', ') AS technicalSkill_list
+FROM candidates
+WHERE technicalSkill IN ('Python', 'PowerBI', 'SQL')
+GROUP BY candidateId
+HAVING COUNT(technicalSkill) = 3;

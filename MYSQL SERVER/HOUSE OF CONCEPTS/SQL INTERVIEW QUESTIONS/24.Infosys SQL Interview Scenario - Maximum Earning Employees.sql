@@ -39,7 +39,7 @@ VALUES
 --Scenario
 --Here are two tables with employee's details and earnings to be their monthly salary X months worked. Maximum total earnings is the maximum total earnings for any employee. Write a query to find the maximum total earnings for all employees as well as the total number of employees who have maximum total earnings.
 
---Solution
+--Solution 1 :
 WITH cte_earning AS
 (
 SELECT empId,months*salary earning,
@@ -48,4 +48,22 @@ from empsalary
 )
 SELECT earning maxEarning,COUNT(empId) nbrEmp FROM cte_earning
 WHERE earning_rank = 1
-GROUP BY earning
+GROUP BY earning;
+
+--Solution 2 :
+
+SELECT earning AS maxEarning, COUNT(empId) AS nbrEmp
+FROM (
+    SELECT empId, months * salary AS earning,
+           RANK() OVER (ORDER BY months * salary DESC) AS earning_rank
+    FROM empsalary
+) AS subquery
+WHERE earning_rank = 1
+GROUP BY earning;
+
+-- To check the schema of the table in SQL Server Management Studio :
+EXEC sp_columns employeesalary;
+
+
+
+

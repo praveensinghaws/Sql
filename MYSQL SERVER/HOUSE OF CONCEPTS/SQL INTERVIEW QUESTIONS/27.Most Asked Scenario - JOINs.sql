@@ -38,16 +38,16 @@ VALUES
 --Solution
 SELECT * FROM tableA A
 INNER JOIN tableB B
-ON A.idValue = B.idValue
+ON A.idValue = B.idValue;
 
 SELECT * FROM tableA A
 LEFT JOIN tableB B
-ON A.idValue = B.idValue
+ON A.idValue = B.idValue;
 
 SELECT * FROM tableA A
 RIGHT JOIN tableB B
-ON A.idValue = B.idValue
+ON A.idValue = B.idValue;
 
 SELECT * FROM tableA A
 FULL JOIN tableB B
-ON A.idValue = B.idValue
+ON A.idValue = B.idValue;

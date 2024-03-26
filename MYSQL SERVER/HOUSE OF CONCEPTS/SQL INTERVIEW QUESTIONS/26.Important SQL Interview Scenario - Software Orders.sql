@@ -44,11 +44,40 @@ VALUES
 --You are given twp tables containing information on Software orders and users. 
 --Write a query to list the top three cities that have the most completed orders and their number of orders in descending order.
 
---Solution
-SELECT TOP 3 city,COUNT(*) noOfOrders 
-FROM users A
-JOIN orders B
-ON A.userId = B.userId
-WHERE B.status='completed'
-GROUP BY A.city
-ORDER BY noOfOrders DESC
+--Solution 1 :
+SELECT TOP 3 u.city, COUNT(*) AS No_Of_Order
+FROM orders o
+JOIN users u ON o.userId = u.userId
+WHERE o.[status] = 'completed'
+GROUP BY u.city
+ORDER BY No_Of_Order DESC;
+
+
+--Solution 2 :
+WITH CompletedOrders AS (
+    SELECT u.city, COUNT(*) AS No_Of_Order,
+           ROW_NUMBER() OVER (ORDER BY COUNT(*) DESC) AS OrderRank
+    FROM orders o
+    JOIN users u ON o.userId = u.userId
+    WHERE o.[status] = 'completed'
+    GROUP BY u.city
+)
+SELECT city, No_Of_Order
+FROM CompletedOrders
+WHERE OrderRank <= 3;
+
+--Solution 3 :
+
+SELECT TOP 3 u.city, COUNT(*) AS No_Of_Order           
+FROM orders o
+JOIN users u ON o.userId = u.userId
+WHERE o.[status] = 'completed'
+GROUP BY u.city
+ORDER BY COUNT(*) DESC;
+
+
+
+
+
+
+

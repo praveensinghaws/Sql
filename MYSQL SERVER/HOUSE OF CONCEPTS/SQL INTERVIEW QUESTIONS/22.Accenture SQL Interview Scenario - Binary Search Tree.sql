@@ -24,11 +24,26 @@ VALUES
 --Leaf: If node is leaf node.
 --Inner: If node is neither root nor leaf node.
 
---Solution
+--Solution 1:
+
 SELECT Node,
-CASE WHEN Parent IS NULL THEN 'Root' 
-	WHEN Node IN (SELECT DISTINCT Parent FROM BinarySearchTree) THEN 'Inner'
-	ELSE 'Leaf'
-END [Type]
+	CASE 
+		WHEN Parent IS NULL THEN 'ROOT'
+		WHEN Node IN (SELECT distinct Parent FROM BinarySearchTree) THEN 'Inner'
+		ELSE 'Leaf'
+		END [TYPE]
+
 FROM BinarySearchTree
-ORDER BY Node ASC
+ORDER BY Node ASC;
+
+--Solution 2:
+
+SELECT b.Node,
+       CASE 
+           WHEN b.Parent IS NULL THEN 'Root'
+           WHEN EXISTS (SELECT 1 FROM BinarySearchTree WHERE Parent = b.Node) THEN 'Inner'
+           ELSE 'Leaf'
+       END AS [Type]
+FROM BinarySearchTree b
+ORDER BY b.Node ASC;
+
