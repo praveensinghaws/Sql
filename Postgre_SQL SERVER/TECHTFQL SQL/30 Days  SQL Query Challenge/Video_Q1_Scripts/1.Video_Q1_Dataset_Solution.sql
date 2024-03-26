@@ -32,7 +32,7 @@ INSERT INTO brands VALUES ('oneplus', 'nothing', 2020, 5, 9, 6, 3);
 
 --- VIDEO_Q1 ---
 
--- Solution 
+----************************************************* SOLUTION *****************************************
 
 WITH cte as 
         (SELECT *,
