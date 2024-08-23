@@ -1,22 +1,7 @@
-Login to Snowflake: snowsql -a yv99325.ap-south-1.aws -u praveensinghaws
+https://app.snowflake.com/vpzfugs/hy43581/#/homepage
 
-Password: Danalyst@2023
+Login to Snowflake: snowsql -a mn95561.ap-south-1.aws -u praveensinghaws
+
+Password: Danalyst@!2024
 
 Config File: "nano ~/.snowsql/config"
-
-Show Databases and Use Database:
-SHOW DATABASES;
-USE DATABASE DEMODB;
-
-Show Schema and Use Schema:
-SHOW SCHEMA;
-USE SCHEMA public;
-
-Show Warehouse and Use Warehouse:
-SHOW WAREHOUSE;
-USE WAREHOUSE PKSWH;
-
-ROLE : ACCOUNTADMIN
-
-------------------------------------------------------
-6. Bulk Loading from a Local File System Using COPY
