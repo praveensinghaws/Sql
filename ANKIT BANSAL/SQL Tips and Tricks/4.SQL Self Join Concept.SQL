@@ -1,9 +1,4 @@
--- Switch to the DEMODB database
-USE DEMODB;
-
--- Select all information about tables in the current database
-SELECT *
-FROM INFORMATION_SCHEMA.TABLES;
+-- 4.SQL Self Join Concept
 
 DROP TABLE IF EXISTS EMP_NEW;
 CREATE TABLE EMP_NEW (
@@ -37,3 +32,16 @@ JOIN
     EMP_NEW M ON E.MANAGER_ID = M.EMP_ID
 WHERE 
     E.SALARY > M.SALARY;
+
+
+SELECT 
+emp.EMP_ID as EmployeeID,
+emp.EMP_Name as EmployeeName,
+emp.salary as EmployeeSalary,
+mgr.EMP_ID as ManagerID,
+mgr.EMP_Name as ManagerName,
+mgr.salary as ManagerSalary
+from EMP_NEW emp 
+join EMP_NEW mgr 
+on emp.MANAGER_ID = mgr.EMP_ID
+WHERE emp.salary > mgr.salary;
