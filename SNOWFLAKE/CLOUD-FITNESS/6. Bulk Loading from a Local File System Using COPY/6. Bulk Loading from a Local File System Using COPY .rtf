@@ -1,32 +1,36 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2758
+{\rtf1\ansi\ansicpg1252\cocoartf2761
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 ArialMT;\f2\fswiss\fcharset0 Arial-BoldMT;
 }
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red253\green128\blue8;\red237\green237\blue237;
-\red0\green0\blue0;\red255\green255\blue10;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c57637\c0;\cssrgb\c94510\c94510\c94510;
-\csgray\c0\c0;\cssrgb\c99942\c98555\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18160\viewkind0
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red253\green128\blue8;\red0\green0\blue0;
+\red255\green255\blue10;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c57637\c0;\csgray\c0\c0;
+\cssrgb\c99942\c98555\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh19680\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
-\f0\b\fs48 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 6. Bulk Loading from a Local File System Using COPY
-\f1\b0 \cb5 \
+\f0\b\fs70 \cf2 \cb3 \expnd0\expndtw0\kerning0
+6. Bulk Loading from a Local File System Using COPY
+\f1\b0 \cb4 \
 \pard\pardeftab720\partightenfactor0
 
-\fs28 \cf2 \
+\fs50 \cf2 \
 \
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -1
+\f2\b \cf2 \cb5 -- STEP -1
 \f1\b0 \
-\cb5 -- Create a database named 'DEMODB'\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Create a database named 'DEMODB'\
 CREATE DATABASE DEMODB;\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -2
+\f2\b \cf2 \cb5 -- STEP -2
 \f1\b0 \
-\cb5 -- Create or replace a Snowflake warehouse named 'PKSWH' with specific configurations:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Create or replace a Snowflake warehouse named 'PKSWH' with specific configurations:\
 CREATE OR REPLACE WAREHOUSE PKSWH\
 WITH\
    WAREHOUSE_SIZE = 'X-SMALL',        -- Set warehouse size to X-SMALL\
@@ -34,12 +38,14 @@ WITH\
    AUTO_RESUME = TRUE,                 -- Enable auto-resume\
    INITIALLY_SUSPENDED = TRUE;         -- Create the warehouse in initially suspended state\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -3
+\f2\b \cf2 \cb5 -- STEP -3
 \f1\b0 \
-\cb5 -- Create a table named 'mycsvtable' in Snowflake with specified columns:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Create a table named 'mycsvtable' in Snowflake with specified columns:\
 CREATE TABLE mycsvtable (\
-    ID INT,\
+    ID INTEGER,\
     lastname STRING,\
     firstname STRING,\
     company STRING,\
@@ -51,18 +57,22 @@ CREATE TABLE mycsvtable (\
     postalcode STRING\
 );\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -4
+\f2\b \cf2 \cb5 -- STEP -4
 \f1\b0 \
-\cb5 -- Create or replace a Snowflake table named 'myjsontable' with a single column 'json_data_variant':\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Create or replace a Snowflake table named 'myjsontable' with a single column 'json_data_variant':\
 CREATE OR REPLACE TABLE myjsontable (\
     json_data VARIANT\
 );\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -5
+\f2\b \cf2 \cb5 -- STEP -5
 \f1\b0 \
-\cb5 -- Create or replace a Snowflake file format named 'mycsvformat' with type 'CSV':\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Create or replace a Snowflake file format named 'mycsvformat' with type 'CSV':\
 CREATE OR REPLACE FILE FORMAT mycsvformat\
 TYPE = 'CSV'\
 FIELD_DELIMITER = '|'\
@@ -74,10 +84,12 @@ TYPE = 'JSON'\
 STRIP_OUTER_ARRAY = TRUE;\
 \
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -6
+\f2\b \cf2 \cb5 -- STEP -6
 \f1\b0 \
-\cb5 -- Create or replace a Snowflake stage named 'my_csv_stage' with file format 'mycsvformat':\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Create or replace a Snowflake stage named 'my_csv_stage' with file format 'mycsvformat':\
 CREATE OR REPLACE STAGE my_csv_stage\
 FILE_FORMAT = 'mycsvformat';\
 \
@@ -85,22 +97,26 @@ FILE_FORMAT = 'mycsvformat';\
 CREATE OR REPLACE STAGE my_json_stage\
 FILE_FORMAT = 'myjsonformat';\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -7\
+\f2\b \cf2 \cb5 -- STEP -7\
+\pard\pardeftab720\partightenfactor0
 
-\f1\b0 \cb5 \
+\f1\b0 \cf2 \cb4 \
 -- PUT command to upload CSV files from a different local directory to the Snowflake CSV stage with compression\
-PUT file:///Users/praveen/Downloads/load/contacts*.csv @MY_CSV_STAGE AUTO_COMPRESS=TRUE;\
+PUT file:///Users/praveensingh/Downloads/load/contacts*.csv @MY_CSV_STAGE AUTO_COMPRESS=TRUE;\
 \
 \
 -- PUT command to upload a JSON file from a different local directory to the Snowflake JSON stage with compression\
-PUT file:///Users/praveen/Downloads/load/contacts.json @MY_JSON_STAGE AUTO_COMPRESS=TRUE;\
+PUT file:///Users/praveensingh/Downloads/load/sales.json @MY_JSON_STAGE AUTO_COMPRESS=TRUE;\
 \
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -8
+\f2\b \cf2 \cb5 -- STEP -8
 \f1\b0 \
-\cb5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 \
 -- List files in the MY_CSV_STAGE stage\
 LIST @MY_CSV_STAGE;\
 \
@@ -108,10 +124,12 @@ LIST @MY_CSV_STAGE;\
 LIST @MY_JSON_STAGE;\
 \
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -9
+\f2\b \cf2 \cb5 -- STEP -9
 \f1\b0 \
-\cb5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 \
 -- Copy CSV data from the staged files to the MYCSVTABLE\
 COPY INTO MYCSVTABLE\
 FROM @MY_CSV_STAGE/contacts1.csv.gz\
@@ -128,14 +146,18 @@ ON_ERROR = 'SKIP_FILE';\
 \
 -- Copy JSON data from the staged files to the MYJSONTABLE\
 COPY INTO MYJSONTABLE\
-FROM @MY_JSON_STAGE/contacts.json.gz\
+FROM @MY_JSON_STAGE/sales.json.gz\
 FILE_FORMAT = (FORMAT_NAME = 'MYJSONFORMAT')\
 ON_ERROR = 'SKIP_FILE';\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
-\
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- OPTIONAL 
-\f1\b0 \cb5 \
+\f2\b \cf2 \cb5 -- OPTIONAL 
+\f1\b0 \cb4 \
 \
 -- Create a temporary table to store the CSV data with potential column count mismatch\
 CREATE TEMPORARY TABLE MYCSVTABLE_TEMP AS\
@@ -146,9 +168,10 @@ PATTERN = '.*contacts[2-5].csv.gz'\
 ON_ERROR = 'CONTINUE';\
 \
 
-\f2\b \cb6 -- OPTIONAL 
+\f2\b \cb5 -- OPTIONAL 
 \f1\b0 \
-\cb5 -- Copy only the rows with the correct column count to the target table\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb4 -- Copy only the rows with the correct column count to the target table\
 COPY INTO MYCSVTABLE\
 FROM MYCSVTABLE_TEMP\
 (FILE_FORMAT = (FORMAT_NAME = 'MYCSVFORMAT'))\
@@ -157,10 +180,12 @@ ON_ERROR = 'SKIP_FILE';\
 -- Drop the temporary table\
 DROP TABLE IF EXISTS MYCSVTABLE_TEMP;\
 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b \cb6 -- STEP -10
-\f1\b0 \cb5 \
+\f2\b \cf2 \cb5 -- STEP -10
+\f1\b0 \cb4 \
 \
 \
 -- Check the contents of MYCSVTABLE\
@@ -169,10 +194,12 @@ SELECT * FROM MYCSVTABLE;\
 -- Check the contents of MYJSONTABLE\
 SELECT * FROM MYJSONTABLE;\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f2\b\fs48 \cb3 DONE\
+\f2\b\fs70 \cf2 \cb3 DONE\
+\pard\pardeftab720\partightenfactor0
 
-\f1\b0\fs28 \cb5 \
+\f1\b0\fs50 \cf2 \cb4 \
 \
 \
 \

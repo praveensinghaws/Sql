@@ -1,11 +1,11 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2758
+{\rtf1\ansi\ansicpg1252\cocoartf2761
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 ArialMT;
 }
 {\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red0\green0\blue0;\red13\green13\blue13;
 }
 {\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\csgray\c0\c0;\cssrgb\c5882\c5882\c5882;
 }
-\paperw11900\paperh16840\margl1440\margr1440\vieww37900\viewh18160\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww35920\viewh6520\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -25,16 +25,15 @@ CREATE OR REPLACE TABLE home_sales (\
 \
 -- STEP 2\
 CREATE OR REPLACE FILE FORMAT sf_tut_csv_format\
-FIELD_OPTIONALLY_ENCLOSED_BY = '"'\
-FIELD_DELIMITER = ',' -- Update this based on your actual CSV format\
-RECORD_DELIMITER = '\\n'; -- Update this based on your actual CSV format\
+                                     field_delimiter = none\
+                                     record_delimiter = '\\\\n';\
 \
 -- STEP 3\
 CREATE OR REPLACE STAGE sf_tut_stage\
 FILE_FORMAT = 'sf_tut_csv_format';\
 \
 -- STEP 4\
-PUT file:///Users/praveen/Downloads/load/sales.json @sf_tut_stage;\
+PUT file:///Users/praveensingh/Downloads/load/sales.json @sf_tut_stage;\
 \
 -- STEP 5\
 LIST @sf_tut_stage;\
