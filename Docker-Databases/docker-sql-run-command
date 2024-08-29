@@ -6,7 +6,10 @@ docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Deve
 Copy Backup to Container:-
 Terminal Command to move Adventure Works to SQL Docker Container : 
 
-docker cp ~/Downloads/AdventureWorks2019.bak {containerID}:/var/opt/mssql/data/
+docker cp ~/Downloads/AdventureWorksDW2019.bak 145066556a7b:/var/opt/mssql/data/
+
+
+docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -p 1433:1433 -d --name SqlServer --restart always mcr.microsoft.com/azure-sql-edge
 
 
 
