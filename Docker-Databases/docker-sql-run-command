@@ -1,23 +1,13 @@
-Docker Run Command :
+Create Docker Container :- 
 
-docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD={password}" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
-
-(Change the password inside the curly braces {} and don't include the curly braces when you run the command.)
-
-Example :
-
-docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
+docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -p 1433:1433 -d --name SqlServer mcr.microsoft.com/azure-sql-edge
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+Copy Backup to Container:-
 Terminal Command to move Adventure Works to SQL Docker Container : 
 
 docker cp ~/Downloads/AdventureWorks2019.bak {containerID}:/var/opt/mssql/data/
 
-**Replace container ID and the curly braces with container ID from docker application. Also make sure File name matches the download.
-
-
-docker cp ~/Downloads/AdventureWorksDW2022.bak 834c36835c4d:/var/opt/mssql/
 
 
 
