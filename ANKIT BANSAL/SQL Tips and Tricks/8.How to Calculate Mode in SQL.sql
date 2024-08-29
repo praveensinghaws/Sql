@@ -23,7 +23,6 @@ WITH freq_cte AS (
   SELECT id, COUNT(*) AS freq FROM mode
   GROUP BY id
 )
-
 -- Select all rows from the 'frequency' CTE
 -- Filter rows where the total count is equal to the maximum total count in the 'frequency' CTE
 SELECT * FROM freq_cte
@@ -38,7 +37,6 @@ WITH freq_cte AS (
   SELECT id, COUNT(*) AS freq FROM mode
   GROUP BY id
 ),
-
 -- Select all columns from the 'freq_cte'
 -- Use the RANK() window function to assign a rank to each row based on the frequency in descending order
 -- Filter rows where the rank is equal to 1 (top-ranked, indicating the mode)
@@ -51,3 +49,20 @@ SELECT * FROM rnk_cte
 WHERE rn = 1;
 
 
+-- Method 3: Finding the Most Frequent 'id' Using RANK
+
+-- Step 1: Create a Common Table Expression (CTE) named 'freq_cte1'
+-- This CTE calculates the frequency of each 'id' in the 'mode' table
+WITH freq_cte1 AS (
+    SELECT id, 
+           COUNT(*) AS freq  -- Count occurrences of each 'id'
+    FROM mode
+    GROUP BY id              -- Group by 'id' to get frequency counts
+)
+-- Step 2: Use a subquery to rank the results based on frequency
+SELECT * 
+FROM (
+    SELECT *,
+           RANK() OVER (ORDER BY freq DESC) as rnk
+    FROM freq_cte1)x
+    WHERE rnk =1;

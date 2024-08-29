@@ -1,3 +1,4 @@
+
 -- Switch to the DEMODB database
 USE DEMODB;
 -- Select all information about tables in the current database

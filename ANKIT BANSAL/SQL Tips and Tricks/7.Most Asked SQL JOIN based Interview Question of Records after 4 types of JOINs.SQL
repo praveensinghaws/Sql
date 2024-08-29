@@ -30,5 +30,3 @@ RIGHT JOIN t2 ON t1.id1 = t2.id2;
 -- Full Join: Retrieves all rows when there is a match in either the left or right table. Non-matching rows in either table will contain NULL values.
 SELECT * FROM t1
 FULL JOIN t2 ON t1.id1 = t2.id2; -- select 3*2 + 2*2 + 1 + 1
-
-
