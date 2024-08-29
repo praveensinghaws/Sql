@@ -1,6 +1,7 @@
 Create Docker Container :- 
 
-docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -p 1433:1433 -d --name SqlServer mcr.microsoft.com/azure-sql-edge
+docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -p 1433:1433 -d --name SqlServer --restart always mcr.microsoft.com/azure-sql-edge
+
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Copy Backup to Container:-
@@ -9,7 +10,6 @@ Terminal Command to move Adventure Works to SQL Docker Container :
 docker cp ~/Downloads/AdventureWorksDW2019.bak 145066556a7b:/var/opt/mssql/data/
 
 
-docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -p 1433:1433 -d --name SqlServer --restart always mcr.microsoft.com/azure-sql-edge
 
 
 
