@@ -1,0 +1,2 @@
+// mongosh "mongodb://root:Admin260@localhost:27017/?authSource=admin" --file "/Users/praveen/Developer/Sql/MongoDB/3.read.js" 
+//mongosh "mongodb://praveen:Admin260@localhost:27017/?authSource=admin" --file "/Users/praveen/Developer/Sql/MongoDB/3.read.js" 
