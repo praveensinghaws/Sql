@@ -6,117 +6,173 @@
 2. Database business logic in the database
 3. Database becomers more secure
 */
-
-
--->>>>>
--- Changing Default Delimiter
-delimiter //
-delimiter ;
-
--->>>>>
--- Creating Stored Procedure
+------------------------------------------------------------------1
+DROP PROCEDURE IF EXISTS createtable_p;
 DELIMITER //
 
-CREATE PROCEDURE CreateUserTable()
+CREATE PROCEDURE createtable_p()
 BEGIN
     CREATE TABLE IF NOT EXISTS users (
-        user_id INT AUTO_INCREMENT PRIMARY KEY,
-        first_name VARCHAR(255),
-        last_name VARCHAR(255),
-        city VARCHAR(255)
+        user_id INT PRIMARY KEY AUTO_INCREMENT,
+        fname VARCHAR(255),
+        lname VARCHAR(255),
+        city VARCHAR(255),
+        mobile VARCHAR(15)
     );
     
-    INSERT INTO users (first_name, last_name, city) VALUES ('Praveen', 'Singh', 'Lucknow');
-    INSERT INTO users (first_name, last_name, city) VALUES ('Akhilesh', 'Yadav', 'Manpuri');
-    INSERT INTO users (first_name, last_name, city) VALUES ('Rahul', 'Gandhi', 'Delhi');
-
-    SELECT * FROM users;
-END //
+    INSERT INTO users (fname, lname, city, mobile) 
+    VALUES 
+        ('Kapil', 'Sharma', 'Punjab', '9876543210'),
+        ('Praveen', 'Singh', 'Sultanpur', '9876543211'),
+        ('Akhilesh', 'Yadav', 'Lucknow', '9876543212'),
+        ('Priyanka', 'Gandhi', 'Delhi', '9876543213'),
+        ('Rahul', 'Gandhi', 'Waynaad', '9876543214');
+END; //
 
 DELIMITER ;
 
-
--- To execute the procedure after creating it, use:
-CALL CreateUserTable();
-
--->>>>>
--- Variables
+CALL createtable_p();
+SELECT * FROM users;
+------------------------------------------------------------------2  VARIABLES
+DROP PROCEDURE IF EXISTS tablecount_p;
 DELIMITER //
 
-CREATE PROCEDURE CountItems()
+CREATE PROCEDURE tablecount_p()
 BEGIN
-    DECLARE cnt INT DEFAULT 0;  -- Declare a variable 'cnt' to hold the count value
-    
-    SELECT COUNT(*) INTO cnt FROM users;  -- Count the rows in the 'users' table and store it in 'cnt'
-    
-    SELECT cnt;  -- Output the count
-END //
+    DECLARE cnt_table INT DEFAULT 0;
+    SELECT COUNT(*) INTO cnt_table 
+    FROM users;
+    SELECT cnt_table;
+END; //
 
 DELIMITER ;
+CALL tablecount_p();
+----
+INSERT INTO users (fname, lname, city, mobile) 
+VALUES ('ABC', 'XYZ', 'XXX', '0000000000');
 
--- To execute the procedure after creating it, run:
-CALL CountItems();
-
-
--->>>>>
--- Paramters-IN, OUT, INOUT
+CALL tablecount_p();
+------------------------------------------------------------------3 PARAMETERS
+-- IN -- USE CASE:
+DROP PROCEDURE IF EXISTS fetchlname_p;
 DELIMITER //
 
-CREATE PROCEDURE SelectByLastName(IN l_name VARCHAR(255))
+CREATE PROCEDURE fetchlname_p(IN lastname VARCHAR(255))
 BEGIN
-    SELECT * FROM users WHERE last_name = l_name;  -- Select records where last_name matches the input parameter
-END //
+    SELECT * 
+    FROM users 
+    WHERE lname = lastname;
+END; //
 
 DELIMITER ;
 
--- To execute the procedure after creating it, run:
-CALL SelectByLastName('Yadav');
+CALL fetchlname_p('Singh');
 
+
+-- OUT -- USE CASE:
+
+DROP PROCEDURE IF EXISTS fetchcity_p;
 DELIMITER //
 
-CREATE PROCEDURE CountByLastName(IN l_name VARCHAR(255), OUT cnt_lname INT)
+CREATE PROCEDURE fetchcity_p(OUT city_name VARCHAR(255))
 BEGIN
-    SELECT COUNT(*) INTO cnt_lname FROM users WHERE last_name = l_name;  -- Count the rows where last_name matches the input parameter
+    SELECT city INTO city_name 
+    FROM users 
+    WHERE user_id = 1;  -- Example condition
 END //
 
 DELIMITER ;
 
--- To execute the procedure after creating it, run:
-CALL CountByLastName('Singh', @CountLast);
+CALL fetchcity_p(@cityname);
+SELECT @cityname;
 
 
--- Note : Correct Way to Call the Procedure:
--- Declare a session variable to hold the output value
-SET @cnt := 0;
+-- IN-OUT -- USE CASE:
+DROP PROCEDURE IF EXISTS fetchlnamecnt_p;
+DELIMITER //
 
--- Call the procedure, passing the input value and the session variable for the output
-CALL CountByLastName('Gandhi', @cnt);
+CREATE PROCEDURE fetchlnamecnt_p(IN lastname VARCHAR(255), OUT lnamecnt INT)
+BEGIN
+    SELECT COUNT(*) INTO lnamecnt 
+    FROM users 
+    WHERE lname = lastname;
+END //
 
--- Display the result stored in the session variable
-SELECT @cnt AS CountOfGandhi;
+DELIMITER ;
+
+CALL fetchlnamecnt_p('Gandhi', @lastnamecount);
+SELECT @lastnamecount;
+
+------------------------------------------------------------------4 ALTER PROCEDURE
+/*
+Note: MySQL does not support the ALTER PROCEDURE statement for modifying stored procedures. 
+Instead, you need to drop the existing procedure and then create it again with the desired changes.
+*/
+-- Drop the existing procedure
+DROP PROCEDURE IF EXISTS fetchfnamecnt_p;
+
+-- Set the delimiter to handle the procedure definition
+DELIMITER //
+
+-- Create the modified procedure
+CREATE PROCEDURE fetchfnamecnt_p(IN f_name VARCHAR(255), OUT f_namecnt INT)
+BEGIN
+    SELECT COUNT(*) INTO f_namecnt 
+    FROM users 
+    WHERE fname = f_name;
+END //
+
+-- Reset the delimiter back to the default
+DELIMITER ;
+
+-- Call the modified procedure
+CALL fetchfnamecnt_p('Akhilesh', @fnamecount);
+
+-- Display the result
+SELECT @fnamecount;
 
 
--->>>
--- Drop procedure
-DROP PROCEDURE CountItems;
-DROP PROCEDURE CountByLastName;
-DROP PROCEDURE CreateUserTable;
-DROP PROCEDURE SelectByLastName;
+------------------------------------------------------------------4 DROP PROCEDURE
+SHOW PROCEDURE STATUS 
+WHERE Db = 'demodb';
 
--- Alter procedure -- Pending
+-- SINGLE DROP
+DROP PROCEDURE fetchfnamecnt_p;
 
 
+-- BULK DROP :
+-- Generate drop statements for all procedures
+SELECT CONCAT('DROP PROCEDURE IF EXISTS ', ROUTINE_NAME, ';') AS drop_statement
+FROM INFORMATION_SCHEMA.ROUTINES
+WHERE ROUTINE_TYPE = 'PROCEDURE'
+AND ROUTINE_SCHEMA = DATABASE();
 
--->>>>
--- Listing Stored Procedures
+-- OUTPUT:
+/*
++-------------------------------------------+
+| drop_statement                            |
++-------------------------------------------+
+| DROP PROCEDURE IF EXISTS createtable_p;   |
+| DROP PROCEDURE IF EXISTS fetchcity_p;     |
+| DROP PROCEDURE IF EXISTS fetchlnamecnt_p; |
+| DROP PROCEDURE IF EXISTS fetchlname_p;    |
+| DROP PROCEDURE IF EXISTS tablecount_p;    |
++-------------------------------------------+
+5 rows in set (0.00 sec)
+*/
+DROP PROCEDURE IF EXISTS createtable_p;   
+DROP PROCEDURE IF EXISTS fetchlnamecnt_p; 
+DROP PROCEDURE IF EXISTS fetchlname_p;    
+DROP PROCEDURE IF EXISTS tablecount_p;  
 
--- Here’s how you can see the list of procedures in your current database:
-SHOW PROCEDURE STATUS WHERE Db = 'demodb';
 
--- Alternatively, if you are using the current database and want to see all procedures in it, you can use:
-SHOW PROCEDURE STATUS LIKE '%';
 
---Or, you can get a more detailed view directly from the information schema:
-SELECT * 
-FROM information_schema.ROUTINES 
-WHERE ROUTINE_TYPE = 'PROCEDURE' AND ROUTINE_SCHEMA = 'demodb';
+
+
+
+
+
+
+
+
+
