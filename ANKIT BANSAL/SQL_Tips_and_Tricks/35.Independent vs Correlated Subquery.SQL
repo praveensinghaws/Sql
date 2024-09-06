@@ -26,7 +26,7 @@ INSERT INTO emp VALUES (10, 'Rakesh', 300, 7000, 6, 50);
 -- Q. Write a SQL to print employee details whose salary is more than the department average salary.
 
 -- SOLUTION 1
-SELECT *
+SELECT e.*,d.avg_dep_salary
 FROM emp e
 -- Inner joining with a subquery that calculates the average salary for each department
 INNER JOIN (

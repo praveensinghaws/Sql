@@ -1,19 +1,4 @@
--- Drop existing tables to avoid conflicts
-IF OBJECT_ID('emp', 'U') IS NOT NULL
-BEGIN
-    DROP TABLE emp;
-END;
-
-IF OBJECT_ID('empnew', 'U') IS NOT NULL
-BEGIN
-    DROP TABLE empnew;
-END;
-
-IF OBJECT_ID('dept', 'U') IS NOT NULL
-BEGIN
-    DROP TABLE dept;
-END;
-
+DROP TABLE IF EXISTS emp;
 -- Create the emp table with relevant columns and data types
 CREATE TABLE emp (
     emp_id INT,           -- Unique identifier for each employee
@@ -210,3 +195,5 @@ SET customer_gender =
         WHEN customer_gender = 'Female' THEN 'Male'
     END
 WHERE customer_gender IN ('Male', 'Female');
+
+------------------------------------------------------------------------------------
