@@ -1,13 +1,12 @@
 version: "3.1"
 services:
   sql:
-    image: mcr.microsoft.com/azure-sql-edge
-    container_name: SqlServer
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: SqlServer2022
     restart: always
     environment:
-      ACCEPT_EULA: "1"
-      MSSQL_SA_PASSWORD: "Admin260"
-      MSSQL_PID: "Developer"
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Admin260"
     ports:
       - 1433:1433
     volumes:

@@ -1,32 +1,34 @@
-Create Docker Container :- 
 
-docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Admin260" -e "MSSQL_PID=Developer" -p 1433:1433 -d --name SqlServer --restart always mcr.microsoft.com/azure-sql-edge
+1. **Pull the image:**
 
+   docker pull mcr.microsoft.com/mssql/server:2022-latest
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Copy Backup to Container:-
-Terminal Command to move Adventure Works to SQL Docker Container : 
+2. **Run the container:**
 
 
-ON TERMINAL:-
-docker cp /Users/praveen/Downloads/AdventureWorksDW2019.bak SqlServer:/var/opt/mssql/data/
+   docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Admin260" \
+   -p 1433:1433 --name SqlServer2022 --restart unless-stopped \
+   --platform linux/amd64 \
+   -d mcr.microsoft.com/mssql/server:2022-latest
+   
+
+3. **Copy data into the container:**
+
+docker cp /Users/praveen/Developer/OTHERS/SQL-DatabaseFiles/dump/ContosoV210M.bak SqlServer2022:/var/opt/mssql/data/
 
 
-ON AZURE DATA STUDIO:
-
--- Step 1: Verify the logical file names from the backup (optional, if not already done)
-RESTORE FILELISTONLY 
-FROM DISK = '/var/opt/mssql/data/AdventureWorksDW2019.bak';
-GO
-
--- Step 2: Restore the database using the correct logical file names
-RESTORE DATABASE AdventureWorksDW2019
-FROM DISK = '/var/opt/mssql/data/AdventureWorksDW2019.bak'
-WITH MOVE 'AdventureWorksDW2019' TO '/var/opt/mssql/data/AdventureWorksDW2019.mdf',  -- Correct logical name for the data file
-MOVE 'AdventureWorksDW2019_log' TO '/var/opt/mssql/data/AdventureWorksDW2019.ldf',  -- Correct logical name for the log file
-REPLACE;  -- Overwrite the database if it already exists
-GO
+4. **Connect to SQL Server:**
 
 
+   docker exec -it SqlServer2022 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Admin260
 
 
+5. **Restore the database:**
+
+
+   RESTORE DATABASE YourDatabaseName
+   FROM DISK = '/var/opt/mssql/data/your_backup_file.bak'
+   WITH MOVE 'YourDataLogicalName' TO '/var/opt/mssql/data/YourDatabaseName.mdf',
+        MOVE 'YourLogLogicalName' TO '/var/opt/mssql/data/YourDatabaseName_log.ldf';
+   GO
+   
