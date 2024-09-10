@@ -21,8 +21,7 @@ INSERT INTO customer_orders VALUES
 -- Select all data from the customer_orders table
 SELECT * FROM customer_orders;
 
--- METHOD-1:
-
+-- 1. Method 1: CTE with Multiple Steps
 WITH first_visit_cte AS (
     -- Find the first visit date for each customer
     SELECT 
@@ -67,9 +66,7 @@ GROUP BY
 ORDER BY 
     order_date;
 
-
--- METHOD-2:
-
+-- 2. Method 2: CTE with Window Function
 WITH customer_orders_with_first_date AS (
     -- Determine the first order date for each customer
     SELECT 
@@ -93,13 +90,12 @@ GROUP BY
 ORDER BY 
     order_date;
 
--- METHOD-3:
-
+-- 3. Method 3: Simplified Aggregation with Window Function
 SELECT 
     order_date,
     SUM(CASE WHEN order_date = first_order_date THEN 1 ELSE 0 END) AS new_customer_count,
-    SUM(CASE WHEN order_date != first_order_date THEN 1 ELSE 0 END) AS repeat_customer_count,
     SUM(CASE WHEN order_date = first_order_date THEN order_amount ELSE 0 END) AS new_customer_amount,
+    SUM(CASE WHEN order_date != first_order_date THEN 1 ELSE 0 END) AS repeat_customer_count,    
     SUM(CASE WHEN order_date != first_order_date THEN order_amount ELSE 0 END) AS repeat_customer_amount
 FROM (
     SELECT 

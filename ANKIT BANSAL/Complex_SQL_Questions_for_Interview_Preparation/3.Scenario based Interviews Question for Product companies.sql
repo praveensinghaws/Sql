@@ -17,8 +17,14 @@ VALUES
     ('B', 'Bangalore', 'B1@gmail.com', 2, 'DESKTOP'),
     ('B', 'Bangalore', 'B2@gmail.com', 1, 'MONITOR');
 
+/*
+1.	Solution 1: Detailed and modular with multiple CTEs for clarity and organization.
+2.	Solution 2: Efficient use of window functions and aggregation, suitable for performance and readability.
+3.	Solution 3: Simplified, with direct aggregation and XML PATH for resource concatenation, 
+    offering a compact and efficient approach.
+*/
 ---------------------------------------------------------------------------------------------------
---                  SOLUTION:1
+--                  Solution 1: Multiple CTEs for Detailed Breakdown
 ---------------------------------------------------------------------------------------------------
 WITH cte_floor_visit AS (
     -- Determine the visit count per floor for each name
@@ -93,7 +99,7 @@ ON
     cv.name = cr.name;
 
 ---------------------------------------------------------------------------------------------------
---                  SOLUTION:2
+--                  Solution 2: Using Window Functions and Aggregation
 ---------------------------------------------------------------------------------------------------
 WITH
     distinct_resources AS (
@@ -132,7 +138,7 @@ WHERE
     fv.rn = 1;
 
 ---------------------------------------------------------------------------------------------------
---                  SOLUTION:3
+--            Solution 3: Simplified Aggregation and XML PATH for Resource Concatenation
 ---------------------------------------------------------------------------------------------------
 WITH 
     floor_visit AS (
