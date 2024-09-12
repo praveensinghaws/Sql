@@ -52,5 +52,54 @@ WITH repeat_counts AS (
 SELECT num1.n
 FROM numbers num1
 JOIN repeat_counts rc
-ON rc.r <= num1.n -- Ensure that each number is repeated according to its value
+    ON rc.r <= num1.n -- Ensure that each number is repeated according to its value
 ORDER BY num1.n, rc.r; -- Order by number and repeat count to match the desired output
+
+-----------------------------------------
+--  Non-Recursive CTE Approach - ANKIT-1
+-----------------------------------------
+
+-- Recursive CTE to generate a descending sequence from the max value in 'numbers' to 1
+WITH cte AS (
+    -- Anchor member: Start with the maximum number from the 'numbers' table
+    SELECT MAX(n) AS n 
+    FROM numbers
+    UNION ALL
+    -- Recursive member: Decrement the value by 1 until it reaches 1
+    SELECT n - 1 
+    FROM cte 
+    WHERE n - 1 >= 1
+)
+-- Join 'numbers' with the generated sequence to repeat each number according to its value
+SELECT num1.n, num2.n  
+FROM numbers num1
+INNER JOIN cte num2 
+    ON num1.n >= num2.n -- Join condition ensures each number is repeated according to its value
+ORDER BY num1.n, num2.n; -- Order by both columns to match the desired output
+
+-----------------------------------------
+--  Non-Recursive CTE Approach - ANKIT-2
+-----------------------------------------
+
+-- Using system views to generate a sequence
+WITH cte AS (
+    -- Generate a sequence using ROW_NUMBER over a large enough set
+    SELECT ROW_NUMBER() OVER(Order by (SELECT NULL)) AS n 
+    FROM sys.all_columns
+)
+-- Join the numbers table with the generated sequence to repeat numbers according to their values
+SELECT num1.n, num2.n  
+FROM numbers num1
+INNER JOIN cte num2 
+    ON num1.n >= num2.n 
+WHERE num2.n <= (SELECT MAX(n) FROM numbers) -- Limit the sequence up to the maximum value in the 'numbers' table
+ORDER BY num1.n, num2.n; -- Order by number and generated sequence
+
+
+/*
+Key Points:
+• Recursive CTE Approach: Uses a recursive CTE to incrementally build sequences for each number.
+• Non-Recursive CTE Approach: Uses a manual sequence creation with UNION ALL to repeat each number by joining with the sequence.
+• Non-Recursive CTE Approach - ANKIT-1: Uses a recursive CTE to generate a descending sequence from the maximum number down to 1.
+• Non-Recursive CTE Approach - ANKIT-2: Utilizes ROW_NUMBER() over sys.all_columns to generate a sequence and control repetitions by joining with the numbers table.
+*/

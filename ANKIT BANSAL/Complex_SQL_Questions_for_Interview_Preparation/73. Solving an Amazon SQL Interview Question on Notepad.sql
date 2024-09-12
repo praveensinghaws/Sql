@@ -1,9 +1,5 @@
 -- 1. Solving an Amazon SQL Interview Question on Notepad
-
--- Drop the existing database and create a new one
-DROP DATABASE IF EXISTS ankitdb;
-CREATE DATABASE ankitdb;
-USE ankitdb;
+USE demodb;
 
 -- Drop the table if it exists and create a new one
 DROP TABLE IF EXISTS subscription_history;
