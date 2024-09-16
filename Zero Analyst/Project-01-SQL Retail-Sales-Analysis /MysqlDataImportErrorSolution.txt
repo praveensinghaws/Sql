@@ -1,0 +1,93 @@
+Got it! Here’s a streamlined troubleshooting guide with steps:
+
+---
+
+### Troubleshooting Guide for Importing CSV Data into MySQL
+
+#### **1. Error: `Loading local data is disabled; this must be enabled on both the client and server sides`**
+
+**Step 1: Enable `local_infile` on the Server**
+1. Open the MySQL configuration file (`/usr/local/etc/my.cnf` or `/etc/my.cnf`).
+2. Add or update the following line under `[mysqld]`:
+   ```ini
+   [mysqld]
+   local_infile=1
+   ```
+3. Restart MySQL:
+   ```sh
+   brew services restart mysql
+   ```
+
+**Step 2: Enable `local_infile` on the Client**
+1. Start MySQL client with the `--local-infile=1` option:
+   ```sh
+   mysql --local-infile=1 -u root -p
+   ```
+
+#### **2. Error: `ERROR 1045 (28000): Access denied for user 'username'@'localhost'`**
+
+**Step 1: Verify Credentials**
+1. Ensure you are using the correct username and password.
+
+**Step 2: Check Privileges**
+1. Log in to MySQL with a user that has sufficient privileges:
+   ```sh
+   mysql -u root -p
+   ```
+2. Grant necessary permissions:
+   ```sql
+   GRANT FILE ON *.* TO 'username'@'localhost';
+   FLUSH PRIVILEGES;
+   ```
+
+#### **3. Error: `ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option`**
+
+**Step 1: Check the `secure_file_priv` Setting**
+1. Log in to MySQL:
+   ```sh
+   mysql -u root -p
+   ```
+2. Check the `secure_file_priv` variable:
+   ```sql
+   SHOW VARIABLES LIKE 'secure_file_priv';
+   ```
+3. Ensure your file is in the directory specified by `secure_file_priv`.
+
+**Step 2: Workaround**
+1. Move your CSV file to the directory specified by `secure_file_priv`.
+
+**Step 3: Temporarily Disable `secure_file_priv` (not recommended for production)**
+1. Modify MySQL configuration file (`/usr/local/etc/my.cnf` or `/etc/my.cnf`):
+   ```ini
+   [mysqld]
+   secure_file_priv=""
+   ```
+2. Restart MySQL:
+   ```sh
+   brew services restart mysql
+   ```
+
+#### **4. Error: `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)`**
+
+**Step 1: Verify MySQL Server Status**
+1. Check if MySQL is running:
+   ```sh
+   brew services list
+   ```
+2. Start MySQL if it's not running:
+   ```sh
+   brew services start mysql
+   ```
+
+**Step 2: Check Socket File Location**
+1. Verify the socket file path in MySQL configuration:
+   ```sh
+   mysql --verbose --help | grep "socket"
+   ```
+2. Update the MySQL client configuration (`/etc/my.cnf` or `~/.my.cnf`) if necessary:
+   ```ini
+   [client]
+   socket=/path/to/mysql.sock
+   ```
+
+---

@@ -1,0 +1,144 @@
+Here’s a streamlined, step-by-step guide for importing CSV data into SQL Server running in a Docker container. This includes SQL commands to configure SQL Server and the terminal commands for copying and checking the file.
+
+### Step-by-Step Guide for Importing CSV Data into SQL Server on Docker
+
+#### Step 1: **Configure SQL Server for Ad Hoc Distributed Queries**
+
+```sql
+-- Enable advanced options
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+
+-- Enable Ad Hoc Distributed Queries
+EXEC sp_configure 'Ad Hoc Distributed Queries', 1;
+RECONFIGURE;
+
+-- Verify the configuration
+EXEC sp_configure 'Ad Hoc Distributed Queries';
+```
+
+#### Step 2: **Create the Database and Table**
+
+```sql
+-- Create the database if it doesn't exist
+CREATE DATABASE sql_project1;
+GO
+
+-- Switch to the new database
+USE sql_project1;
+GO
+
+-- Create the table if it doesn't exist
+CREATE TABLE retail_sales
+(
+    transaction_id INT PRIMARY KEY,
+    sale_date DATE,
+    sale_time TIME,
+    customer_id INT,
+    gender VARCHAR(15),
+    age INT,
+    category VARCHAR(15),
+    quantity INT,
+    price_per_unit FLOAT,
+    cogs FLOAT,
+    total_sale FLOAT
+);
+GO
+```
+
+#### Step 3: **Prepare and Copy the CSV File**
+
+1. **Copy CSV File into Docker Container:**
+
+   Open your terminal and run:
+
+   ```sh
+   docker cp /Users/praveen/Downloads/Retail\ Sales\ Analysis.csv SqlServer2022:/var/opt/mssql/data/
+   ```
+
+2. **Access the Docker Container:**
+
+   ```sh
+   docker exec -it SqlServer2022 bash
+   ```
+
+3. **Verify the CSV File Location:**
+
+   ```sh
+   ls /var/opt/mssql/data/
+   ```
+
+   Ensure that `Retail Sales Analysis.csv` is listed.
+
+#### Step 4: **Import CSV Data Using `BULK INSERT`**
+
+```sql
+-- Import CSV data into the table
+BULK INSERT retail_sales
+FROM '/var/opt/mssql/data/Retail_Sales_Analysis.csv'
+WITH
+(
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    FIRSTROW = 2
+);
+```
+
+### Summary of Commands:
+
+**SQL Server Configuration:**
+
+```sql
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXEC sp_configure 'Ad Hoc Distributed Queries', 1;
+RECONFIGURE;
+EXEC sp_configure 'Ad Hoc Distributed Queries';
+```
+
+**Database and Table Creation:**
+
+```sql
+CREATE DATABASE sql_project1;
+GO
+USE sql_project1;
+GO
+CREATE TABLE retail_sales
+(
+    transaction_id INT PRIMARY KEY,
+    sale_date DATE,
+    sale_time TIME,
+    customer_id INT,
+    gender VARCHAR(15),
+    age INT,
+    category VARCHAR(15),
+    quantity INT,
+    price_per_unit FLOAT,
+    cogs FLOAT,
+    total_sale FLOAT
+);
+GO
+```
+
+**Terminal Commands:**
+
+```sh
+docker cp /Users/praveen/Downloads/Retail\ Sales\ Analysis.csv SqlServer2022:/var/opt/mssql/data/
+docker exec -it SqlServer2022 bash
+ls /var/opt/mssql/data/
+```
+
+**Import Data:**
+
+```sql
+BULK INSERT retail_sales
+FROM '/var/opt/mssql/data/Retail_Sales_Analysis.csv'
+WITH
+(
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    FIRSTROW = 2
+);
+```
+
+Feel free to save this guide for future reference. If you have any other questions or need further assistance, just let me know!
